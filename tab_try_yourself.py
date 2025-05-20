@@ -35,8 +35,8 @@ from chatbot import (
 logger = logging.getLogger("earnings_analyzer")
 
 # Hardcoded file paths
-STOCK_DATA_PATH = "C:\\Users\\kubic\\OneDrive\\Desktop\\MSFTSTREAMLIT\\HistoricalData_1747025804532.csv"
-SENTIMENT_DATA_PATH = "C:\\Users\\kubic\\OneDrive\\Desktop\\MSFTSTREAMLIT\\MSFTQ2_preload.csv.csv.csv"
+STOCK_DATA_PATH = current_dir / "HistoricalData_1747025804532.csv"
+SENTIMENT_DATA_PATH = current_dir / "MSFTQ2_preload.csv.csv,csv"
 
 # Microsoft colors for UI elements
 MICROSOFT_COLORS = {
