@@ -1,0 +1,1447 @@
+text,business_line,sentiment,section,processed,paragraph_id,paragraph,segment
+"Microsoft (MSFT 2.31%) 
+Q2 2025 Earnings Call 
+Jan 29, 2025, 5:30 p.m.",Other,neutral,main,True,0,"Microsoft (MSFT 2.31%) 
+Q2 2025 Earnings Call 
+Jan 29, 2025, 5:30 p.m.",Other
+"ET 
+Contents: 
+● Prepared Remarks 
+● Questions and Answers 
+● Call Participants 
+Prepared Remarks: 
+ 
+Operator 
+Greetings, and welcome to the Microsoft fiscal year 2025 second-quarter earnings conference 
+call.",Other,neutral,main,True,1,"ET 
+Contents: 
+● Prepared Remarks 
+● Questions and Answers 
+● Call Participants 
+Prepared Remarks: 
+...",Other
+"At this time, all participants are in a listen-only mode.",Other,neutral,main,True,2,"At this time, all participants are in a listen-only mode.",Other
+"A question-and-answer session will 
+follow the formal presentation. [Operator instructions] As a reminder, this conference is being 
+recorded.",Other,neutral,main,True,3,"A question-and-answer session will 
+follow the formal presentation. [Operator instructions] As a rem...",Other
+"It is now my pleasure to introduce your host, Brett Iversen, vice president of investor relations.",Other,neutral,main,True,4,"It is now my pleasure to introduce your host, Brett Iversen, vice president of investor relations.",Other
+Please go ahead.,Other,neutral,main,True,5,Please go ahead.,Other
+"Brett Iversen -- Vice President, Investor Relations 
+Good afternoon, and thank you for joining us today.",Other,neutral,main,True,6,"Brett Iversen -- Vice President, Investor Relations 
+Good afternoon, and thank you for joining us to...",Other
+"On the call with me are Satya Nadella, 
+chairman and chief executive officer; Amy Hood, chief financial officer; Alice Jolla, chief 
+accounting officer; and Keith Dolliver, corporate secretary and deputy general counsel.",Office Commercial,neutral,main,True,7,"On the call with me are Satya Nadella, 
+chairman and chief executive officer; Amy Hood, chief financ...",Productivity and Business Processes
+"On the 
+Microsoft Investor Relations website, you can find our earnings press release and financial 
+summary slide deck, which is intended to supplement our prepared remarks during today's call 
+and provides the reconciliation of differences between GAAP and non-GAAP financial 
+measures.",Office Commercial,neutral,main,True,8,"On the 
+Microsoft Investor Relations website, you can find our earnings press release and financial ...",Productivity and Business Processes
+"More detailed outlook slides will be available on the Microsoft Investor Relations 
+website when we provide outlook commentary on today's call.",Office Commercial,neutral,main,True,9,"More detailed outlook slides will be available on the Microsoft Investor Relations 
+website when we ...",Productivity and Business Processes
+"In this call, we will discuss certain non-GAAP items.",Office Commercial,neutral,main,True,10,"In this call, we will discuss certain non-GAAP items.",Productivity and Business Processes
+"The non-GAAP financial measures 
+provided should not be considered as a substitute for or superior to the measures of financial 
+performance prepared in accordance with GAAP.",Office Commercial,neutral,main,True,11,"The non-GAAP financial measures 
+provided should not be considered as a substitute for or superior t...",Productivity and Business Processes
+"They are included as additional clarifying 
+items to aid investors in further understanding the company's second-quarter performance in 
+addition to the impact these items and events have on the financial results.",Office Commercial,neutral,main,True,12,"They are included as additional clarifying 
+items to aid investors in further understanding the comp...",Productivity and Business Processes
+"All growth 
+comparisons we make on the call today relate to the corresponding period of last year unless 
+otherwise noted.",Office Commercial,neutral,main,True,13,"All growth 
+comparisons we make on the call today relate to the corresponding period of last year un...",Productivity and Business Processes
+"Where to invest $1,000 right now 
+When our analyst team has a stock tip, it can pay to listen.",Office Commercial,positive,main,True,14,"Where to invest $1,000 right now 
+When our analyst team has a stock tip, it can pay to listen.",Productivity and Business Processes
+"After all, Stock Advisor’s total 
+average return is 906% — a market-crushing outperformance compared to 164% for the S&P 
+500.",Office Commercial,positive,main,True,15,"After all, Stock Advisor’s total 
+average return is 906% — a market-crushing outperformance compared...",Productivity and Business Processes
+"They just revealed what they believe are the 10 best stocks for investors to buy right now… 
+Learn more › 
+*Stock Advisor returns as of April 28, 2025 
+We will also provide growth rates in constant currency when available as a framework for 
+assessing how our underlying businesses performed, excluding the effect of foreign currency 
+rate fluctuations.",Office Commercial,neutral,main,True,16,"They just revealed what they believe are the 10 best stocks for investors to buy right now… 
+Learn m...",Productivity and Business Processes
+"Where growth rates are the same in constant currency, we will refer to the 
+growth rate only.",Office Commercial,neutral,main,True,17,"Where growth rates are the same in constant currency, we will refer to the 
+growth rate only.",Productivity and Business Processes
+"We will post our prepared remarks to our website immediately following the call 
+until the complete transcript is available.",Office Commercial,neutral,main,True,18,"We will post our prepared remarks to our website immediately following the call 
+until the complete ...",Productivity and Business Processes
+Today's call is being webcast live and recorded.,Office Commercial,neutral,main,True,19,Today's call is being webcast live and recorded.,Productivity and Business Processes
+"If you ask a question, it will be included in our live transmission, in the transcript, and in any 
+future use of the recording.",Office Commercial,neutral,main,True,20,"If you ask a question, it will be included in our live transmission, in the transcript, and in any 
+...",Productivity and Business Processes
+"You can replay the call and view the transcript on the Microsoft 
+Investor Relations website.",Office Commercial,neutral,main,True,21,"You can replay the call and view the transcript on the Microsoft 
+Investor Relations website.",Productivity and Business Processes
+"During this call, we will be making forward-looking statements, which 
+are predictions, projections, or other statements about future events.",Office Commercial,neutral,main,True,22,"During this call, we will be making forward-looking statements, which 
+are predictions, projections,...",Productivity and Business Processes
+"These statements are 
+based on current expectations and assumptions that are subject to risks and uncertainties.",Office Commercial,neutral,main,True,23,"These statements are 
+based on current expectations and assumptions that are subject to risks and un...",Productivity and Business Processes
+"Actual results could materially differ because of factors discussed in today's earnings press 
+release, in the comments made during this conference call, and in the Risk Factors section of 
+our Form 10-K, Form 10-Q, and other reports and filings with the Securities and Exchange 
+Commission.",Office Commercial,negative,main,True,24,"Actual results could materially differ because of factors discussed in today's earnings press 
+relea...",Productivity and Business Processes
+We do not undertake any duty to update any forward-looking statement.,Office Commercial,neutral,main,True,25,We do not undertake any duty to update any forward-looking statement.,Productivity and Business Processes
+"And with 
+that, I'll turn the call over to Satya.",Office Commercial,neutral,main,True,26,"And with 
+that, I'll turn the call over to Satya.",Productivity and Business Processes
+"Satya Nadella -- Chair and Chief Executive Officer 
+Thank you, Brett.",Office Commercial,neutral,main,True,27,"Satya Nadella -- Chair and Chief Executive Officer 
+Thank you, Brett.",Productivity and Business Processes
+"This quarter, we saw continued strength in Microsoft Cloud, which surpassed 
+$40 billion in revenue for the first time, up 21% year over year.",Office Commercial,positive,main,True,28,"This quarter, we saw continued strength in Microsoft Cloud, which surpassed 
+$40 billion in revenue ...",Productivity and Business Processes
+"Enterprises are beginning to 
+move from proof of concepts to enterprisewide deployments to unlock the full ROI of AI.",Office Commercial,positive,main,True,29,"Enterprises are beginning to 
+move from proof of concepts to enterprisewide deployments to unlock th...",Productivity and Business Processes
+"And our 
+AI business has now surpassed an annual revenue run rate of $13 billion, up 175% year over 
+year.",Office Commercial,positive,main,True,30,"And our 
+AI business has now surpassed an annual revenue run rate of $13 billion, up 175% year over ...",Productivity and Business Processes
+"Before I get into the details of the quarter, I want to comment on the core thesis behind our 
+approach to how we manage our fleet and how we allocate our capital to compute.",Office Commercial,neutral,main,True,31,"Before I get into the details of the quarter, I want to comment on the core thesis behind our 
+appro...",Productivity and Business Processes
+"AI scaling 
+laws continue to compound across both pre-training and inference time compute.",Office Commercial,neutral,main,True,32,"AI scaling 
+laws continue to compound across both pre-training and inference time compute.",Productivity and Business Processes
+"We ourselves 
+have been seeing significant efficiency gains in both training and inference for years now.",Office Commercial,positive,main,True,33,"We ourselves 
+have been seeing significant efficiency gains in both training and inference for years...",Productivity and Business Processes
+"On 
+inference, we have typically seen more than 2x price performance gain for every hardware 
+generation and more than 10x for every model generation due to software optimizations.",Office Commercial,positive,main,True,34,"On 
+inference, we have typically seen more than 2x price performance gain for every hardware 
+genera...",Productivity and Business Processes
+"And as AI becomes more efficient and accessible, we will see exponentially more demand.",Office Commercial,positive,main,True,35,"And as AI becomes more efficient and accessible, we will see exponentially more demand.",Productivity and Business Processes
+"Therefore, much as we have done with the commercial cloud, we are focused on continuously 
+scaling our fleet globally and maintaining the right balance across training and inference as well 
+as geo-distribution.",Office Commercial,positive,main,True,36,"Therefore, much as we have done with the commercial cloud, we are focused on continuously 
+scaling o...",Productivity and Business Processes
+"From now on, it's a more continuous cycle governed by both revenue growth 
+and capability growth thanks to the compounding effects of software-driven AI scaling laws and 
+Moore's Law.",Office Commercial,positive,main,True,37,"From now on, it's a more continuous cycle governed by both revenue growth 
+and capability growth tha...",Productivity and Business Processes
+"With that, I will walk through the progress we are making across every layer of the 
+tech stack.",Office Commercial,neutral,main,True,38,"With that, I will walk through the progress we are making across every layer of the 
+tech stack.",Productivity and Business Processes
+Azure is the infrastructure layer for AI.,Server products and cloud services,neutral,main,True,39,Azure is the infrastructure layer for AI.,Intelligent Cloud
+"We continue to expand our data center capacity in line 
+with both near-term and long-term demand signals.",Server products and cloud services,neutral,main,True,40,"We continue to expand our data center capacity in line 
+with both near-term and long-term demand sig...",Intelligent Cloud
+"We have more than doubled our overall 
+data center capacity in the last three years, and we have added more capacity last year than 
+any other year in our history.",Server products and cloud services,positive,main,True,41,"We have more than doubled our overall 
+data center capacity in the last three years, and we have add...",Intelligent Cloud
+"Our data centers, networks, racks, and silicon are all coming 
+together as a complete system to drive new efficiencies to power both the cloud workloads of 
+today and the next-generation AI workloads.",Server products and cloud services,positive,main,True,42,"Our data centers, networks, racks, and silicon are all coming 
+together as a complete system to driv...",Intelligent Cloud
+"We continue to take advantage of Moore's Law and refresh our fleet as evidenced by our 
+support of the latest from AMD, Intel, NVIDIA, as well as our first-party silicon innovation from 
+Maia, Cobalt, Boost, and HSM.",Server products and cloud services,positive,main,True,43,"We continue to take advantage of Moore's Law and refresh our fleet as evidenced by our 
+support of t...",Intelligent Cloud
+"When it comes to cloud migrations, we continue to see 
+customers like UBS move workloads to Azure.",Server products and cloud services,neutral,main,True,44,"When it comes to cloud migrations, we continue to see 
+customers like UBS move workloads to Azure.",Intelligent Cloud
+"UBS alone migrated mainframe workloads 
+encompassing nearly 400 billion records and two petabytes of data.",Server products and cloud services,neutral,main,True,45,"UBS alone migrated mainframe workloads 
+encompassing nearly 400 billion records and two petabytes of...",Intelligent Cloud
+"And we remain the cloud of 
+choice for customers' mission-critical Oracle, SAP, and VMware apps.",Server products and cloud services,positive,main,True,46,"And we remain the cloud of 
+choice for customers' mission-critical Oracle, SAP, and VMware apps.",Intelligent Cloud
+"At the data layer, we are seeing Microsoft Fabric break out.",Server products and cloud services,neutral,main,True,47,"At the data layer, we are seeing Microsoft Fabric break out.",Intelligent Cloud
+"We now have over 19,000 paid 
+customers from Hitachi to Johnson Controls to Schaeffler.",Server products and cloud services,positive,main,True,48,"We now have over 19,000 paid 
+customers from Hitachi to Johnson Controls to Schaeffler.",Intelligent Cloud
+"Fabric is now the fastest-growing 
+analytics product in our history.",Server products and cloud services,positive,main,True,49,"Fabric is now the fastest-growing 
+analytics product in our history.",Intelligent Cloud
+"Power BI is also deeply integrated with Fabric with over 30 
+million monthly active users, up 40% since last year.",Server products and cloud services,positive,main,True,50,"Power BI is also deeply integrated with Fabric with over 30 
+million monthly active users, up 40% si...",Intelligent Cloud
+"Beyond Fabric, we are seeing new AI-driven data patterns emerge.",Server products and cloud services,neutral,main,True,51,"Beyond Fabric, we are seeing new AI-driven data patterns emerge.",Intelligent Cloud
+"If you look underneath 
+ChatGPT or Copilot or enterprise AI apps, you see the growth of raw storage, database 
+services, and app platform services as these workloads scale.",Gaming,neutral,main,True,52,"If you look underneath 
+ChatGPT or Copilot or enterprise AI apps, you see the growth of raw storage,...",More Personal Computing
+"The number of Azure OpenAI 
+apps running on Azure databases and Azure App Services more than doubled year over year, 
+driving significant growth in adoption across SQL, hyperscale, and Cosmos DB.",Gaming,positive,main,True,53,"The number of Azure OpenAI 
+apps running on Azure databases and Azure App Services more than doubled...",More Personal Computing
+"Now, on to AI 
+platform and tools.",Gaming,neutral,main,True,54,"Now, on to AI 
+platform and tools.",More Personal Computing
+"As we shared last week, we are thrilled OpenAI has made a new large Azure commitment.",Server products and cloud services,positive,main,True,55,"As we shared last week, we are thrilled OpenAI has made a new large Azure commitment.",Intelligent Cloud
+"Through our strategic partnership, we continue to benefit mutually from each other's growth.",Server products and cloud services,positive,main,True,56,"Through our strategic partnership, we continue to benefit mutually from each other's growth.",Intelligent Cloud
+"And with OpenAI's APIs exclusively running on Azure, customers can count on us to get access 
+to the world's leading models.",Server products and cloud services,positive,main,True,57,"And with OpenAI's APIs exclusively running on Azure, customers can count on us to get access 
+to the...",Intelligent Cloud
+"And OpenAI has a lot more coming soon, so stay tuned.",Server products and cloud services,neutral,main,True,58,"And OpenAI has a lot more coming soon, so stay tuned.",Intelligent Cloud
+"Azure AI Foundry features best-in-class tooling run times to build agents, multi-agent apps, 
+AIOps, API access to thousands of models.",Server products and cloud services,positive,main,True,59,"Azure AI Foundry features best-in-class tooling run times to build agents, multi-agent apps, 
+AIOps,...",Intelligent Cloud
+"Two months in, we already have more than 200,000 
+monthly active users, and we are well positioned with our support of both OpenAI's leading 
+models and the best selection of open-source models and SLMs.",Server products and cloud services,positive,main,True,60,"Two months in, we already have more than 200,000 
+monthly active users, and we are well positioned w...",Intelligent Cloud
+"DeepSeek's R1 launched 
+today via the model catalog on Foundry and GitHub with automated red teaming, content safety 
+integration, and security scanning.",Server products and cloud services,neutral,main,True,61,"DeepSeek's R1 launched 
+today via the model catalog on Foundry and GitHub with automated red teaming...",Intelligent Cloud
+"Our Phi family of SLMs has now been downloaded over 20 
+million times.",Server products and cloud services,positive,main,True,62,"Our Phi family of SLMs has now been downloaded over 20 
+million times.",Intelligent Cloud
+"And we also have more than 30 models from partners like Bayer, PAYG AI, Rockwell 
+Automation, Siemens to address industry-specific use cases.",Server products and cloud services,neutral,main,True,63,"And we also have more than 30 models from partners like Bayer, PAYG AI, Rockwell 
+Automation, Siemen...",Intelligent Cloud
+"With AI, how we build, deploy, and 
+maintain code is fundamentally changing, and GitHub Copilot is increasingly the tool of choice 
+for both digital natives like ASOS and Spotify as well as world's largest enterprises like HP, 
+HSBC, and KPMG.",Server products and cloud services,positive,main,True,64,"With AI, how we build, deploy, and 
+maintain code is fundamentally changing, and GitHub Copilot is i...",Intelligent Cloud
+"We have been delighted by the early response to GitHub Copilot and VS 
+Code with more than 1 million sign-ups in just the first week post launch.",Server products and cloud services,positive,main,True,65,"We have been delighted by the early response to GitHub Copilot and VS 
+Code with more than 1 million...",Intelligent Cloud
+"All up, GitHub now is 
+home to 150 million developers, up 50% over the past two years.",Server products and cloud services,positive,main,True,66,"All up, GitHub now is 
+home to 150 million developers, up 50% over the past two years.",Intelligent Cloud
+"Now, on to the future of work.",Server products and cloud services,neutral,main,True,67,"Now, on to the future of work.",Intelligent Cloud
+Microsoft 365 Copilot is the UI for AI.,Server products and cloud services,neutral,main,True,68,Microsoft 365 Copilot is the UI for AI.,Intelligent Cloud
+"It helps supercharge 
+employee productivity and provides access to a swarm of intelligent agents to streamline 
+employee workflow.",Server products and cloud services,positive,main,True,69,"It helps supercharge 
+employee productivity and provides access to a swarm of intelligent agents to ...",Intelligent Cloud
+"We are seeing accelerated customer adoption across all deal sizes as we 
+win new Microsoft 365 Copilot customers and see the majority of existing enterprise customers 
+come back to purchase more seats.",Server products and cloud services,positive,main,True,70,"We are seeing accelerated customer adoption across all deal sizes as we 
+win new Microsoft 365 Copil...",Intelligent Cloud
+"When you look at customers who purchased Copilot during the first quarter of availability, they 
+have expanded their seat collectively by more than 10x over the past 18 months.",Server products and cloud services,positive,main,True,71,"When you look at customers who purchased Copilot during the first quarter of availability, they 
+hav...",Intelligent Cloud
+"To share just 
+one example, Novartis has added thousands of seats each quarter over the past year and now 
+have 40,000 seats.",Server products and cloud services,positive,main,True,72,"To share just 
+one example, Novartis has added thousands of seats each quarter over the past year an...",Intelligent Cloud
+"Barclays, Carrier Group, Pearson, and University of Miami all purchased 
+10,000 or more seats this quarter.",Server products and cloud services,positive,main,True,73,"Barclays, Carrier Group, Pearson, and University of Miami all purchased 
+10,000 or more seats this q...",Intelligent Cloud
+"And overall, the number of people who use Copilot daily, 
+again, more than doubled quarter over quarter.",Server products and cloud services,positive,main,True,74,"And overall, the number of people who use Copilot daily, 
+again, more than doubled quarter over quar...",Intelligent Cloud
+Employees are also engaging with Copilot more than ever.,Server products and cloud services,neutral,main,True,75,Employees are also engaging with Copilot more than ever.,Intelligent Cloud
+"Usage intensity increased more than 
+60% quarter over quarter, and we are expanding our TAM with Copilot Chat, which was 
+announced earlier this month.",Server products and cloud services,positive,main,True,76,"Usage intensity increased more than 
+60% quarter over quarter, and we are expanding our TAM with Cop...",Intelligent Cloud
+"Copilot Chat, along with Copilot Studio, is now available to every 
+employee to start using agents right in the flow of work.",Server products and cloud services,neutral,main,True,77,"Copilot Chat, along with Copilot Studio, is now available to every 
+employee to start using agents r...",Intelligent Cloud
+"With Copilot Studio, we are making it as 
+simple to build an agent as it is to create an Excel spreadsheet.",Server products and cloud services,neutral,main,True,78,"With Copilot Studio, we are making it as 
+simple to build an agent as it is to create an Excel sprea...",Intelligent Cloud
+"More than 160,000 organizations have already used for Copilot Studio, and they collectively 
+created more than 400,000 custom agents in the last three months alone, up over 2x quarter 
+over quarter.",Server products and cloud services,positive,main,True,79,"More than 160,000 organizations have already used for Copilot Studio, and they collectively 
+created...",Intelligent Cloud
+"We've also introduced our own first-party agents to facilitate meetings, manage 
+projects, resolve common HR and IT queries, and access SharePoint data.",Office Commercial,neutral,main,True,80,"We've also introduced our own first-party agents to facilitate meetings, manage 
+projects, resolve c...",Productivity and Business Processes
+"And we also 
+continue to see partners like Adobe, SAP, ServiceNow, and Workday build their third-party 
+agents and integrate with Copilot.",Office Commercial,neutral,main,True,81,"And we also 
+continue to see partners like Adobe, SAP, ServiceNow, and Workday build their third-par...",Productivity and Business Processes
+"What is driving Copilot as the UI for AI as well as our 
+momentum with agents is our rich data cloud, which is the world's largest source of 
+organizational knowledge.",Office Commercial,positive,main,True,82,"What is driving Copilot as the UI for AI as well as our 
+momentum with agents is our rich data cloud...",Productivity and Business Processes
+"Billions of emails, documents, and chats, hundreds of millions of Teams meetings, and millions 
+of SharePoint sites are added each day.",Office Commercial,neutral,main,True,83,"Billions of emails, documents, and chats, hundreds of millions of Teams meetings, and millions 
+of S...",Productivity and Business Processes
+This is the enterprise knowledge cloud.,Office Commercial,neutral,main,True,84,This is the enterprise knowledge cloud.,Productivity and Business Processes
+"It is growing 
+fast, up over 25% year over year.",Office Commercial,positive,main,True,85,"It is growing 
+fast, up over 25% year over year.",Productivity and Business Processes
+"More broadly, what we are seeing is Copilot plus agents 
+disrupting business applications, and we are leaning into this.",Office Commercial,positive,main,True,86,"More broadly, what we are seeing is Copilot plus agents 
+disrupting business applications, and we ar...",Productivity and Business Processes
+"With Dynamics 365, we took share as organizations like Ecolab, Lenovo, RTX, TotalEnergies, 
+and Vizient switched to our AI-powered apps from legacy providers.",Office Commercial,positive,main,True,87,"With Dynamics 365, we took share as organizations like Ecolab, Lenovo, RTX, TotalEnergies, 
+and Vizi...",Productivity and Business Processes
+"In healthcare, DAX Copilot 
+surpassed 2 million monthly physician-patient encounters, up 54% quarter over quarter.",Office Commercial,positive,main,True,88,"In healthcare, DAX Copilot 
+surpassed 2 million monthly physician-patient encounters, up 54% quarter...",Productivity and Business Processes
+"It is 
+being used by top providers like Mass General Brigham, Michigan Medicine, Vanderbilt 
+University Medical Center to increase productivity of their physicians.",Office Commercial,positive,main,True,89,"It is 
+being used by top providers like Mass General Brigham, Michigan Medicine, Vanderbilt 
+Univers...",Productivity and Business Processes
+"When it comes to 
+Windows, we are seeing momentum build as we approach end of support for Windows 10.",Windows,positive,main,True,90,"When it comes to 
+Windows, we are seeing momentum build as we approach end of support for Windows 10...",More Personal Computing
+"Customers are choosing the latest Windows 11 devices for their enhanced security and 
+advanced AI capabilities. 15% premium-priced laptops in the U.S. this holiday were Copilot+ 
+PCs, and we expect the majority of the PCs sold in the next several years to be Copilots+ PCs.",Windows,positive,main,True,91,"Customers are choosing the latest Windows 11 devices for their enhanced security and 
+advanced AI ca...",More Personal Computing
+"We also see more and more developers from Adobe and CapCut to WhatsApp build apps that 
+leverage built-in NPUs.",Windows,neutral,main,True,92,"We also see more and more developers from Adobe and CapCut to WhatsApp build apps that 
+leverage bui...",More Personal Computing
+"And they will soon be able to run DeepSeek's R1 distal models locally on Copilot+ PCs as well 
+as the vast ecosystem of GPUs available on Windows.",Windows,neutral,main,True,93,"And they will soon be able to run DeepSeek's R1 distal models locally on Copilot+ PCs as well 
+as th...",More Personal Computing
+"And beyond Copilot+ PCs, the most 
+powerful AI workstation for local development is a Windows PC running WSL2 powered by 
+NVIDIA RTX GPUs.",Windows,positive,main,True,94,"And beyond Copilot+ PCs, the most 
+powerful AI workstation for local development is a Windows PC run...",More Personal Computing
+"Now, on to security.",Windows,neutral,main,True,95,"Now, on to security.",More Personal Computing
+"We continue to make progress with our Secure Future 
+initiative, and we are applying what we have learned, introducing over 80 new product 
+capabilities over the past year.",Windows,positive,main,True,96,"We continue to make progress with our Secure Future 
+initiative, and we are applying what we have le...",More Personal Computing
+"With Security Copilot organizations across private and public sector like City of Johannesburg, 
+Eastman, Intesa, National Australia Bank, NTT can resolve incidents 30% faster.",Windows,positive,main,True,97,"With Security Copilot organizations across private and public sector like City of Johannesburg, 
+Eas...",More Personal Computing
+"Data 
+governance is increasingly critical, and customers now use Microsoft purview to audit over 2 
+billion Copilot interactions for safe and compliant use.",Windows,neutral,main,True,98,"Data 
+governance is increasingly critical, and customers now use Microsoft purview to audit over 2 
+...",More Personal Computing
+"Now, on to our consumer businesses, 
+starting with LinkedIn.",Office Commercial,neutral,main,True,99,"Now, on to our consumer businesses, 
+starting with LinkedIn.",Productivity and Business Processes
+"More professionals than ever are engaging in high-value conversations 
+on LinkedIn with comments up 37% year over year.",Office Commercial,positive,main,True,100,"More professionals than ever are engaging in high-value conversations 
+on LinkedIn with comments up ...",Productivity and Business Processes
+"Short-form video continues to grow on the platform, with video creation all up growing at twice 
+the rate of other post formats.",Office Commercial,positive,main,True,101,"Short-form video continues to grow on the platform, with video creation all up growing at twice 
+the...",Productivity and Business Processes
+"We're also innovating with agents to help recruiters and small 
+businesses find qualified candidates faster, and our hiring business again took share.",Office Commercial,positive,main,True,102,"We're also innovating with agents to help recruiters and small 
+businesses find qualified candidates...",Productivity and Business Processes
+"In 
+subscriptions, LinkedIn premiums surpassed $2 billion in annual revenue for the first time this 
+quarter.",Office Commercial,positive,main,True,103,"In 
+subscriptions, LinkedIn premiums surpassed $2 billion in annual revenue for the first time this ...",Productivity and Business Processes
+"Subscriber growth has increased nearly 50% over the past two years, and nearly 40% 
+of subscribers have used our AI features to improve their profiles.",Office Commercial,positive,main,True,104,"Subscriber growth has increased nearly 50% over the past two years, and nearly 40% 
+of subscribers h...",Productivity and Business Processes
+And LinkedIn Marketing Solution remains the leader in B2B advertising.,Office Commercial,positive,main,True,105,And LinkedIn Marketing Solution remains the leader in B2B advertising.,Productivity and Business Processes
+"Now, on to search, 
+advertising, and news.",Gaming,neutral,main,True,106,"Now, on to search, 
+advertising, and news.",More Personal Computing
+We once again took share across Bing and Edge.,Other,positive,main,True,107,We once again took share across Bing and Edge.,Other
+"Edge surpassed 30% 
+market share in the U.S. 
+on Windows and has taken share for 15 consecutive quarters.",Windows,positive,main,True,108,"Edge surpassed 30% 
+market share in the U.S. 
+on Windows and has taken share for 15 consecutive quar...",More Personal Computing
+"The investments we have made 
+in improving our ad rates are paying off and advertisers increasingly see our network as an 
+essential platform to optimize ROI.",Windows,positive,main,True,109,"The investments we have made 
+in improving our ad rates are paying off and advertisers increasingly ...",More Personal Computing
+"And our Copilot consumer app is seeing increased 
+engagement and retention with its improved speed, unique personality, first-of-its-kind features 
+like Copilot Vision.",Windows,positive,main,True,110,"And our Copilot consumer app is seeing increased 
+engagement and retention with its improved speed, ...",More Personal Computing
+"Just today, we made Think Deeper, powered by o1, free for all Copilot users 
+globally.",Windows,positive,main,True,111,"Just today, we made Think Deeper, powered by o1, free for all Copilot users 
+globally.",More Personal Computing
+"Now, on to gaming.",Gaming,neutral,main,True,112,"Now, on to gaming.",More Personal Computing
+"We are focused on improving the profitability of the business in order to 
+position it for long-term growth driven by higher-margin content and platform services, and we 
+are delivering on this plan.",Gaming,positive,main,True,113,"We are focused on improving the profitability of the business in order to 
+position it for long-term...",More Personal Computing
+"Black Ops 6 was top-selling game on Xbox and PlayStation this 
+quarter and saw more players in its launch quarter than any other paid release in the franchise 
+history.",Gaming,positive,main,True,114,"Black Ops 6 was top-selling game on Xbox and PlayStation this 
+quarter and saw more players in its l...",More Personal Computing
+"And we saw rave reviews of Indiana Jones and the Great Circle, which has already 
+been played by more than 4 million people.",Gaming,positive,main,True,115,"And we saw rave reviews of Indiana Jones and the Great Circle, which has already 
+been played by mor...",More Personal Computing
+"We also continue to see strong momentum for Xbox Cloud Gaming with a record 140 million 
+hours streamed this quarter.",Gaming,positive,main,True,116,"We also continue to see strong momentum for Xbox Cloud Gaming with a record 140 million 
+hours strea...",More Personal Computing
+"All up, Game Pass set a new quarterly record for revenue and 
+grew its PC subscriber base by over 30% as we focus on driving fully paid subscribers across 
+endpoints.",Gaming,positive,main,True,117,"All up, Game Pass set a new quarterly record for revenue and 
+grew its PC subscriber base by over 30...",More Personal Computing
+"In closing, we continue to innovate across our tech stack to help our customers in 
+this AI era, and I'm energized by the many opportunities ahead.",Gaming,positive,main,True,118,"In closing, we continue to innovate across our tech stack to help our customers in 
+this AI era, and...",More Personal Computing
+"With that, let me turn it over to 
+Amy.",Gaming,neutral,main,True,119,"With that, let me turn it over to 
+Amy.",More Personal Computing
+Amy E.,Gaming,neutral,main,True,120,Amy E.,More Personal Computing
+"Hood -- Executive Vice President, Chief Financial Officer 
+Thank you, Satya, and good afternoon, everyone.",Office Commercial,neutral,main,True,121,"Hood -- Executive Vice President, Chief Financial Officer 
+Thank you, Satya, and good afternoon, eve...",Productivity and Business Processes
+"This quarter, revenue was $69.6 billion, up 
+12%.",Office Commercial,positive,main,True,122,"This quarter, revenue was $69.6 billion, up 
+12%.",Productivity and Business Processes
+"Gross margin dollars increased 13% and 12% in constant currency, while operating 
+income increased 17% and 16% in constant currency.",Office Commercial,positive,main,True,123,"Gross margin dollars increased 13% and 12% in constant currency, while operating 
+income increased 1...",Productivity and Business Processes
+"Earnings per share was $3.23, an 
+increase of 10%.",Office Commercial,positive,main,True,124,"Earnings per share was $3.23, an 
+increase of 10%.",Productivity and Business Processes
+We delivered another quarter of double-digit top- and bottom-line growth.,Office Commercial,positive,main,True,125,We delivered another quarter of double-digit top- and bottom-line growth.,Productivity and Business Processes
+"Results were driven 
+by strong demand for our cloud and AI offerings, while we also improved our operating leverage 
+with higher-than-expected operating income growth.",Office Commercial,positive,main,True,126,"Results were driven 
+by strong demand for our cloud and AI offerings, while we also improved our ope...",Productivity and Business Processes
+"As you heard from Satya, our AI business 
+annual revenue run rate surpassed $13 billion and was above expectations.",Office Commercial,positive,main,True,127,"As you heard from Satya, our AI business 
+annual revenue run rate surpassed $13 billion and was abov...",Productivity and Business Processes
+"Commercial 
+bookings increased 67% and 75% in constant currency and were significantly ahead of 
+expectations driven by Azure commitments from OpenAI.",Server products and cloud services,positive,main,True,128,"Commercial 
+bookings increased 67% and 75% in constant currency and were significantly ahead of 
+exp...",Intelligent Cloud
+"Execution was strong across our core annuity sales motions with growth in the number of $100 
+million-plus contracts for both Azure and Microsoft 365.",Server products and cloud services,positive,main,True,129,"Execution was strong across our core annuity sales motions with growth in the number of $100 
+millio...",Intelligent Cloud
+"Commercial remaining performance 
+obligation increased to $298 billion, up 34% and 36% in constant currency.",Server products and cloud services,positive,main,True,130,"Commercial remaining performance 
+obligation increased to $298 billion, up 34% and 36% in constant c...",Intelligent Cloud
+"Roughly 40% will be 
+recognized in revenue in the next 12 months, up 21% year over year.",Server products and cloud services,positive,main,True,131,"Roughly 40% will be 
+recognized in revenue in the next 12 months, up 21% year over year.",Intelligent Cloud
+"The remaining portion 
+recognized beyond the next 12 months increased 45%.",Server products and cloud services,positive,main,True,132,"The remaining portion 
+recognized beyond the next 12 months increased 45%.",Intelligent Cloud
+"And this quarter, our annuity mix was 97%.",Server products and cloud services,neutral,main,True,133,"And this quarter, our annuity mix was 97%.",Intelligent Cloud
+"FX did not have a significant impact on our results 
+and was roughly in line with expectations on total company revenue, more personal computing 
+revenue, total company COGS, and operating expense.",Server products and cloud services,neutral,main,True,134,"FX did not have a significant impact on our results 
+and was roughly in line with expectations on to...",Intelligent Cloud
+"FX decreased revenue more than 
+expected in our commercial segments.",Server products and cloud services,negative,main,True,135,"FX decreased revenue more than 
+expected in our commercial segments.",Intelligent Cloud
+"Microsoft Cloud revenue was $40.9 billion and grew 
+21%.",Server products and cloud services,positive,main,True,136,"Microsoft Cloud revenue was $40.9 billion and grew 
+21%.",Intelligent Cloud
+"Microsoft Cloud gross margin percentage was 70%, in line with expectations, and decreased 
+two points year over year, driven by scaling our AI infrastructure.",Server products and cloud services,neutral,main,True,137,"Microsoft Cloud gross margin percentage was 70%, in line with expectations, and decreased 
+two point...",Intelligent Cloud
+"Company gross margin 
+percentage increased slightly year over year to 69%, primarily driven by sales mix shift to 
+higher-margin businesses as well as improvement in gaming and search, partially offset by the 
+impact of scaling our AI infrastructure.",Gaming,positive,main,True,138,"Company gross margin 
+percentage increased slightly year over year to 69%, primarily driven by sales...",More Personal Computing
+"Operating expenses increased 5%, lower than expected, 
+and operating margins increased two points year over year to 45%.",Gaming,positive,main,True,139,"Operating expenses increased 5%, lower than expected, 
+and operating margins increased two points ye...",More Personal Computing
+"The better-than-expected 
+margin expansion was driven by delivering efficiencies across our businesses as we invest to 
+scale AI infrastructure and build AI applications.",Gaming,positive,main,True,140,"The better-than-expected 
+margin expansion was driven by delivering efficiencies across our business...",More Personal Computing
+"At a total company level, head count at the end of December was 2% higher than a year ago 
+and was relatively unchanged from last quarter.",Gaming,neutral,main,True,141,"At a total company level, head count at the end of December was 2% higher than a year ago 
+and was r...",More Personal Computing
+"Now, to our segment results.",Gaming,neutral,main,True,142,"Now, to our segment results.",More Personal Computing
+"Revenue from 
+Productivity and Business Processes was $29.4 billion and grew 14% and 13% in constant 
+currency, even with the unfavorable FX impact noted earlier.",Gaming,positive,main,True,143,"Revenue from 
+Productivity and Business Processes was $29.4 billion and grew 14% and 13% in constant...",More Personal Computing
+"Results were ahead of 
+expectations driven by Microsoft 365 Commercial.",Gaming,positive,main,True,144,"Results were ahead of 
+expectations driven by Microsoft 365 Commercial.",More Personal Computing
+"Microsoft 365 Commercial Cloud revenue increased 16% and 15% in constant currency, slightly 
+ahead of expectations due to better-than-expected performance in E5 and Microsoft 365 
+Copilot.",Gaming,positive,main,True,145,"Microsoft 365 Commercial Cloud revenue increased 16% and 15% in constant currency, slightly 
+ahead o...",More Personal Computing
+"With M365 Copilot, we continue to see growth in adoption, expansion, and usage.",Gaming,positive,main,True,146,"With M365 Copilot, we continue to see growth in adoption, expansion, and usage.",More Personal Computing
+ARPU growth was again driven by E5 and M365 Copilot.,Gaming,positive,main,True,147,ARPU growth was again driven by E5 and M365 Copilot.,More Personal Computing
+"Paid M365 commercial seats grew 7% 
+year over year, with installed base expansion across all customer segments, though primarily in 
+our small and medium business and frontline worker offerings.",Gaming,positive,main,True,148,"Paid M365 commercial seats grew 7% 
+year over year, with installed base expansion across all custome...",More Personal Computing
+"M365 commercial products revenue increased 13%, significantly ahead of expectations, driven 
+by higher-than-expected transactional purchasing with the launch of Office 2024 as well as the 
+Windows commercial on-premises components from the better-than-expected performance of 
+M365 suites noted earlier.",Office Commercial,positive,main,True,149,"M365 commercial products revenue increased 13%, significantly ahead of expectations, driven 
+by high...",Productivity and Business Processes
+"M365 consumer cloud revenue increased 8%, slightly ahead of 
+expectations.",Office Commercial,positive,main,True,150,"M365 consumer cloud revenue increased 8%, slightly ahead of 
+expectations.",Productivity and Business Processes
+"We saw continued momentum in M365 consumer subscriptions, which grew 10% 
+to $86.3 million, with mix shift to M365 basic.",Office Commercial,positive,main,True,151,"We saw continued momentum in M365 consumer subscriptions, which grew 10% 
+to $86.3 million, with mix...",Productivity and Business Processes
+"LinkedIn revenue increased 9% with continued 
+growth across all lines of business.",Office Commercial,positive,main,True,152,"LinkedIn revenue increased 9% with continued 
+growth across all lines of business.",Productivity and Business Processes
+"In our Talent Solutions business, results were slightly below expectations, driven by continued 
+weakness in the hiring market in key verticals.",Office Commercial,negative,main,True,153,"In our Talent Solutions business, results were slightly below expectations, driven by continued 
+wea...",Productivity and Business Processes
+"Dynamics 365 revenue increased 19% and 18% 
+in constant currency, slightly ahead of expectations with growth across all workloads.",Office Commercial,positive,main,True,154,"Dynamics 365 revenue increased 19% and 18% 
+in constant currency, slightly ahead of expectations wit...",Productivity and Business Processes
+"Segment 
+gross margin dollars increased 13% and 12% in constant currency, and gross margin 
+percentage decreased slightly year over year, driven by scaling our AI infrastructure.",Office Commercial,neutral,main,True,155,"Segment 
+gross margin dollars increased 13% and 12% in constant currency, and gross margin 
+percenta...",Productivity and Business Processes
+"Operating 
+expenses increased 6% and operating income increased 16% and 15% in constant currency.",Office Commercial,positive,main,True,156,"Operating 
+expenses increased 6% and operating income increased 16% and 15% in constant currency.",Productivity and Business Processes
+"Next, the Intelligent Cloud segment.",Office Commercial,neutral,main,True,157,"Next, the Intelligent Cloud segment.",Productivity and Business Processes
+"Revenue was $25.5 billion and grew 19% with more 
+unfavorable FX impact than expected.",Office Commercial,positive,main,True,158,"Revenue was $25.5 billion and grew 19% with more 
+unfavorable FX impact than expected.",Productivity and Business Processes
+"Excluding the unfavorable FX impact, results in Azure 
+non-AI services, on-prem server, and enterprise and partner services were slightly lower than 
+expected, partially offset by better-than-expected results in Azure AI services.",Server products and cloud services,neutral,main,True,159,"Excluding the unfavorable FX impact, results in Azure 
+non-AI services, on-prem server, and enterpri...",Intelligent Cloud
+"Azure other cloud 
+services revenue grew 31%.",Server products and cloud services,positive,main,True,160,"Azure other cloud 
+services revenue grew 31%.",Intelligent Cloud
+"Azure growth included 13 points from AI services, which grew 157% year over year, and was 
+ahead of expectations even as demand continued to be higher than our available capacity.",Server products and cloud services,positive,main,True,161,"Azure growth included 13 points from AI services, which grew 157% year over year, and was 
+ahead of ...",Intelligent Cloud
+"Growth in our non-AI services was slightly lower than expected due to go-to-market execution 
+challenges, particularly with our customers that we primarily reach through our scale motions as 
+we balance driving near-term non-AI consumption with AI growth.",Gaming,negative,main,True,162,"Growth in our non-AI services was slightly lower than expected due to go-to-market execution 
+challe...",More Personal Computing
+"In our on-premises server 
+business, revenue decreased 3%, slightly below expectations, driven by slower-than-expected 
+purchasing around Windows Server 2025 launch.",Server products and cloud services,negative,main,True,163,"In our on-premises server 
+business, revenue decreased 3%, slightly below expectations, driven by sl...",Intelligent Cloud
+"Enterprise and Partner Services revenue 
+decreased 1%, below expectations, with lower-than-expected performance across Enterprise 
+Support Services and Industry Solutions.",Other,negative,main,True,164,"Enterprise and Partner Services revenue 
+decreased 1%, below expectations, with lower-than-expected ...",Other
+"Segment gross margin dollars increased 12% and 13% in constant currency, and gross margin 
+percentage decreased four points year over year, driven by scaling our AI infrastructure.",Other,neutral,main,True,165,"Segment gross margin dollars increased 12% and 13% in constant currency, and gross margin 
+percentag...",Other
+Operating expenses increased 10% and operating income grew 14%.,Other,positive,main,True,166,Operating expenses increased 10% and operating income grew 14%.,Other
+"Now, to More Personal 
+Computing.",Other,neutral,main,True,167,"Now, to More Personal 
+Computing.",Other
+"Revenue was $14.7 billion, relatively unchanged year over year, with 
+better-than-expected results driven primarily by Windows OEM prebuilds, usage from a 
+third-party partnership in search as well as Call of Duty launch performance in gaming.",Windows,positive,main,True,168,"Revenue was $14.7 billion, relatively unchanged year over year, with 
+better-than-expected results d...",More Personal Computing
+"Windows OEM and devices revenue increased 4% year over year, ahead of expectations, 
+driven by commercial inventory builds in advance of Windows 10 end support as well as 
+uncertainty around tariffs.",Windows,positive,main,True,169,"Windows OEM and devices revenue increased 4% year over year, ahead of expectations, 
+driven by comme...",More Personal Computing
+"Search and news advertising revenue ex-TAC increased 21% and 
+20% in constant currency, ahead of expectations, driven by usage from a third-party partnership.",Gaming,positive,main,True,170,"Search and news advertising revenue ex-TAC increased 21% and 
+20% in constant currency, ahead of exp...",More Personal Computing
+"Growth continues to be driven by rate expansion and healthy volume growth in both Edge and 
+Bing.",Other,positive,main,True,171,"Growth continues to be driven by rate expansion and healthy volume growth in both Edge and 
+Bing.",Other
+"And in gaming, revenue decreased 7% and 8% in constant currency as content and 
+services growth continued to be offset by hardware declines.",Gaming,negative,main,True,172,"And in gaming, revenue decreased 7% and 8% in constant currency as content and 
+services growth cont...",More Personal Computing
+"Xbox content and services revenue increased 2%, ahead of expectations, driven by 
+stronger-than-expected performance in Blizzard and Activision content, including Call of Duty.",Gaming,positive,main,True,173,"Xbox content and services revenue increased 2%, ahead of expectations, driven by 
+stronger-than-expe...",More Personal Computing
+Segment gross margin dollars increased 13% and 12% in constant currency.,Gaming,positive,main,True,174,Segment gross margin dollars increased 13% and 12% in constant currency.,More Personal Computing
+"Gross margin 
+percentage increased six points year over year, driven by sales mix shift to higher-margin 
+businesses as well as strong execution on margin improvement in gaming and search.",Gaming,positive,main,True,175,"Gross margin 
+percentage increased six points year over year, driven by sales mix shift to higher-ma...",More Personal Computing
+Operating expenses decreased 1%.,Gaming,neutral,main,True,176,Operating expenses decreased 1%.,More Personal Computing
+"Operating income increased 32% and 30% in constant currency, driven by continued 
+prioritization of higher-margin opportunities.",Gaming,positive,main,True,177,"Operating income increased 32% and 30% in constant currency, driven by continued 
+prioritization of ...",More Personal Computing
+"Now, back to total company results.",Gaming,neutral,main,True,178,"Now, back to total company results.",More Personal Computing
+"Capital 
+expenditures, including finance leases, were $22.6 billion, in line with expectations, and cash 
+paid for PP&E was $15.8 billion.",Gaming,neutral,main,True,179,"Capital 
+expenditures, including finance leases, were $22.6 billion, in line with expectations, and ...",More Personal Computing
+"More than half of our cloud and AI-related spend was on 
+long-lived assets that will support monetization over the next 15 years and beyond.",Gaming,positive,main,True,180,"More than half of our cloud and AI-related spend was on 
+long-lived assets that will support monetiz...",More Personal Computing
+"The remaining cloud and AI spend was primarily for servers, both CPUs and GPUs, to serve 
+customers based on demand signals, including our customer-contracted backlog.",Gaming,neutral,main,True,181,"The remaining cloud and AI spend was primarily for servers, both CPUs and GPUs, to serve 
+customers ...",More Personal Computing
+"Cash flow 
+from operations was $22.3 billion, up 18%, driven by strong cloud billings and collections, 
+partially offset by higher supplier, employee, and tax payments.",Gaming,positive,main,True,182,"Cash flow 
+from operations was $22.3 billion, up 18%, driven by strong cloud billings and collection...",More Personal Computing
+"Free cash flow was $6.5 billion, 
+down 29% year over year, reflecting the capital expenditures noted earlier.",Gaming,negative,main,True,183,"Free cash flow was $6.5 billion, 
+down 29% year over year, reflecting the capital expenditures noted...",More Personal Computing
+"This quarter, other 
+income and expense was negative $2.3 billion, lower than our October guidance due to the 
+impairment charge from our Cruise investment.",Gaming,negative,main,True,184,"This quarter, other 
+income and expense was negative $2.3 billion, lower than our October guidance d...",More Personal Computing
+Our effective tax rate came in slightly lower than anticipated at 18%.,Gaming,positive,main,True,185,Our effective tax rate came in slightly lower than anticipated at 18%.,More Personal Computing
+"And finally, we returned 
+$9.7 billion to shareholders through dividends and share repurchases.",Gaming,positive,main,True,186,"And finally, we returned 
+$9.7 billion to shareholders through dividends and share repurchases.",More Personal Computing
+"Now, moving to our Q3 
+outlook, which unless specifically noted otherwise, is on a U.S. dollar basis.",Gaming,neutral,main,True,187,"Now, moving to our Q3 
+outlook, which unless specifically noted otherwise, is on a U.S. dollar basis...",More Personal Computing
+"First, FX.",Gaming,neutral,main,True,188,"First, FX.",More Personal Computing
+"With the strengthening of the U.S. dollar since October, we now expect FX to 
+decrease total revenue growth by two points.",Gaming,negative,main,True,189,"With the strengthening of the U.S. dollar since October, we now expect FX to 
+decrease total revenue...",More Personal Computing
+"Within the segments, we expect FX to decrease 
+revenue growth by two points in Productivity and Business Processes and Intelligent Cloud and 
+roughly one point in More Personal Computing.",Gaming,negative,main,True,190,"Within the segments, we expect FX to decrease 
+revenue growth by two points in Productivity and Busi...",More Personal Computing
+"When compared to our October guidance assumptions on Q3 FX impact, this is a decrease to 
+total revenue of roughly $1 billion.",Gaming,negative,main,True,191,"When compared to our October guidance assumptions on Q3 FX impact, this is a decrease to 
+total reve...",More Personal Computing
+"We expect FX to decrease COGS growth by approximately 
+two points and operating expense growth by approximately one point.",Gaming,negative,main,True,192,"We expect FX to decrease COGS growth by approximately 
+two points and operating expense growth by ap...",More Personal Computing
+"Our outlook has many of 
+the trends we saw in Q2 continue through Q3.",Gaming,neutral,main,True,193,"Our outlook has many of 
+the trends we saw in Q2 continue through Q3.",More Personal Computing
+"Demand for our differentiated cloud and AI 
+offerings across the Microsoft Cloud should drive another quarter of strong growth.",Gaming,positive,main,True,194,"Demand for our differentiated cloud and AI 
+offerings across the Microsoft Cloud should drive anothe...",More Personal Computing
+"In commercial bookings, with a relatively flat expiry base and a strong prior year comparable in 
+terms of large Azure contracts, we expect growth to be roughly flat year over year.",Server products and cloud services,neutral,main,True,195,"In commercial bookings, with a relatively flat expiry base and a strong prior year comparable in 
+te...",Intelligent Cloud
+"We expect 
+consistent execution across our core annuity sales motions and continued long-term 
+commitments to our platform.",Server products and cloud services,positive,main,True,196,"We expect 
+consistent execution across our core annuity sales motions and continued long-term 
+commi...",Intelligent Cloud
+"As a reminder, larger long-term Azure contracts, which are more 
+unpredictable in their timing, can drive increased quarterly volatility in our bookings growth rate.",Server products and cloud services,neutral,main,True,197,"As a reminder, larger long-term Azure contracts, which are more 
+unpredictable in their timing, can ...",Intelligent Cloud
+"Microsoft Cloud gross margin percentage should be roughly 69%, down year over year, driven 
+by the impact of scaling our AI infrastructure.",Server products and cloud services,negative,main,True,198,"Microsoft Cloud gross margin percentage should be roughly 69%, down year over year, driven 
+by the i...",Intelligent Cloud
+"Next, to segment guidance.",Server products and cloud services,neutral,main,True,199,"Next, to segment guidance.",Intelligent Cloud
+"In Productivity and Business Processes, we expect revenue to grow 
+between 11% and 12% in constant currency, or USD 29.4 billion to USD 29.7 billion.",Server products and cloud services,positive,main,True,200,"In Productivity and Business Processes, we expect revenue to grow 
+between 11% and 12% in constant c...",Intelligent Cloud
+"Microsoft 
+365 commercial cloud revenue growth should be between 14% and 15% in constant currency, 
+relatively stable compared to our better-than-expected Q2 results.",Server products and cloud services,neutral,main,True,201,"Microsoft 
+365 commercial cloud revenue growth should be between 14% and 15% in constant currency, 
+...",Intelligent Cloud
+"We expect continued ARPU 
+growth through E5 and M365 Copilot, and we again expect some seat growth moderation given 
+the size of the installed base.",Server products and cloud services,neutral,main,True,202,"We expect continued ARPU 
+growth through E5 and M365 Copilot, and we again expect some seat growth m...",Intelligent Cloud
+"For M365 commercial products, we expect revenue to be relatively unchanged year over year.",Server products and cloud services,neutral,main,True,203,"For M365 commercial products, we expect revenue to be relatively unchanged year over year.",Intelligent Cloud
+"As a reminder, M365 commercial products include Windows commercial on-premises 
+components of M365 suites.",Windows,neutral,main,True,204,"As a reminder, M365 commercial products include Windows commercial on-premises 
+components of M365 s...",More Personal Computing
+"So, our quarterly revenue growth can have variability primarily from 
+in-period revenue recognition depending on the mix of contracts.",Windows,neutral,main,True,205,"So, our quarterly revenue growth can have variability primarily from 
+in-period revenue recognition ...",More Personal Computing
+"M365 consumer cloud revenue 
+growth should be in the mid- to high single digits, driven by M365 subscriptions.",Windows,positive,main,True,206,"M365 consumer cloud revenue 
+growth should be in the mid- to high single digits, driven by M365 subs...",More Personal Computing
+"For LinkedIn, we expect revenue growth in the low to mid-single digits.",Office Commercial,positive,main,True,207,"For LinkedIn, we expect revenue growth in the low to mid-single digits.",Productivity and Business Processes
+"Although we expect 
+growth across all businesses, the Q2 trends in Talent Solutions should continue in Q3 as a 
+headwind to growth.",Office Commercial,neutral,main,True,208,"Although we expect 
+growth across all businesses, the Q2 trends in Talent Solutions should continue ...",Productivity and Business Processes
+"And in Dynamics 365, we expect revenue growth to be in the mid-teens 
+driven by continued growth across all workloads.",Office Commercial,positive,main,True,209,"And in Dynamics 365, we expect revenue growth to be in the mid-teens 
+driven by continued growth acr...",Productivity and Business Processes
+"For Intelligent Cloud, we expect revenue to 
+grow between 19% and 20% in constant currency, or USD 25.9 billion to USD 26.2 billion.",Office Commercial,positive,main,True,210,"For Intelligent Cloud, we expect revenue to 
+grow between 19% and 20% in constant currency, or USD 2...",Productivity and Business Processes
+"Revenue will continue to be driven by Azure, which, as a reminder, can have quarterly variability 
+primarily from in-period revenue recognition depending on the mix of contracts.",Server products and cloud services,neutral,main,True,211,"Revenue will continue to be driven by Azure, which, as a reminder, can have quarterly variability 
+p...",Intelligent Cloud
+"In Azure, we 
+expect Q3 revenue growth to be between 31% and 32% in constant currency driven by strong 
+demand for our portfolio of services.",Server products and cloud services,positive,main,True,212,"In Azure, we 
+expect Q3 revenue growth to be between 31% and 32% in constant currency driven by stro...",Intelligent Cloud
+"As we shared in October, the contribution from our AI 
+services will grow from increased AI capacity coming online.",Gaming,positive,main,True,213,"As we shared in October, the contribution from our AI 
+services will grow from increased AI capacity...",More Personal Computing
+"In non-AI services, healthy growth 
+continues, although we expect ongoing impact through H2 as we work to address the execution 
+challenges noted earlier.",Gaming,neutral,main,True,214,"In non-AI services, healthy growth 
+continues, although we expect ongoing impact through H2 as we wo...",More Personal Computing
+"And while we expect to be AI capacity-constrained in Q3, by the end of FY '25, we should be 
+roughly in line with near-term demand given our significant capital investments.",Gaming,neutral,main,True,215,"And while we expect to be AI capacity-constrained in Q3, by the end of FY '25, we should be 
+roughly...",More Personal Computing
+"In our 
+on-premises server business, we expect revenue to decline in the mid-single digits, driven by a 
+decrease in transactional purchasing.",Gaming,negative,main,True,216,"In our 
+on-premises server business, we expect revenue to decline in the mid-single digits, driven b...",More Personal Computing
+"And in Enterprise and Partner Services, we expect 
+revenue growth to be in the low to mid-single digits.",Gaming,positive,main,True,217,"And in Enterprise and Partner Services, we expect 
+revenue growth to be in the low to mid-single dig...",More Personal Computing
+"In More Personal Computing, we expect 
+revenue to be USD 12.4 billion to USD 12.8 billion with continued prioritization of higher-margin 
+opportunities.",Gaming,positive,main,True,218,"In More Personal Computing, we expect 
+revenue to be USD 12.4 billion to USD 12.8 billion with conti...",More Personal Computing
+Windows OEM and devices revenue should decline in the low to mid-single digits.,Windows,negative,main,True,219,Windows OEM and devices revenue should decline in the low to mid-single digits.,More Personal Computing
+"We expect 
+revenue from Windows OEM to be relatively flat year over year as our outlook assumes 
+inventory levels will normalize.",Windows,neutral,main,True,220,"We expect 
+revenue from Windows OEM to be relatively flat year over year as our outlook assumes 
+inv...",More Personal Computing
+Actual results may differ based on current tariff uncertainties.,Windows,neutral,main,True,221,Actual results may differ based on current tariff uncertainties.,More Personal Computing
+Devices revenue will decline.,Other,negative,main,True,222,Devices revenue will decline.,Other
+"Search and news advertising ex-TAC revenue growth should be in the mid-teens from continued 
+growth in both volume and revenue per search with share gains across Edge and Bing.",Gaming,positive,main,True,223,"Search and news advertising ex-TAC revenue growth should be in the mid-teens from continued 
+growth ...",More Personal Computing
+"Growth 
+is expected to moderate from last quarter, primarily due to additional FX impact and as the 
+third-party partnership usage noted earlier returns to more normal levels.",Gaming,neutral,main,True,224,"Growth 
+is expected to moderate from last quarter, primarily due to additional FX impact and as the ...",More Personal Computing
+"Search ex-TAC growth 
+will be higher than overall search and news advertising revenue growth, which we expect to be 
+in the mid- to high single digits.",Gaming,positive,main,True,225,"Search ex-TAC growth 
+will be higher than overall search and news advertising revenue growth, which ...",More Personal Computing
+"And in gaming, we expect revenue growth to be in the low single 
+digits.",Gaming,positive,main,True,226,"And in gaming, we expect revenue growth to be in the low single 
+digits.",More Personal Computing
+"We expect Xbox content and services revenue growth to be in the low to mid-single digits driven 
+by first-party content as well as Xbox Game Pass.",Gaming,positive,main,True,227,"We expect Xbox content and services revenue growth to be in the low to mid-single digits driven 
+by ...",More Personal Computing
+Hardware revenue will decline year over year.,Gaming,negative,main,True,228,Hardware revenue will decline year over year.,More Personal Computing
+"Now, back to company guidance.",Gaming,neutral,main,True,229,"Now, back to company guidance.",More Personal Computing
+"We expect COGS to grow between 19% and 20% in constant 
+currency or to be between USD 21.65 billion to USD 21.85 billion and operating expense to 
+grow between 5% and 6% in constant currency or to be between USD 16.4 billion and USD 
+16.5 billion.",Gaming,neutral,main,True,230,"We expect COGS to grow between 19% and 20% in constant 
+currency or to be between USD 21.65 billion ...",More Personal Computing
+"Other income and expense is expected to be roughly negative $1 billion, primarily driven by 
+investments accounted for under the equity method.",Gaming,neutral,main,True,231,"Other income and expense is expected to be roughly negative $1 billion, primarily driven by 
+investm...",More Personal Computing
+"As a reminder, we do not recognize 
+mark-to-market gains or losses on equity method investments.",Gaming,neutral,main,True,232,"As a reminder, we do not recognize 
+mark-to-market gains or losses on equity method investments.",More Personal Computing
+"And lastly, we expect our Q3 
+effective tax rate to be approximately 18%.",Gaming,neutral,main,True,233,"And lastly, we expect our Q3 
+effective tax rate to be approximately 18%.",More Personal Computing
+"Now, some additional thoughts on the rest of the 
+fiscal year and beyond.",Gaming,neutral,main,True,234,"Now, some additional thoughts on the rest of the 
+fiscal year and beyond.",More Personal Computing
+"First, FX.",Gaming,neutral,main,True,235,"First, FX.",More Personal Computing
+"With the strengthening of the U.S. dollar since October, we now expect FX to 
+decrease Q4 revenue and COGS growth by more than one point and operating expense growth 
+by roughly one point.",Gaming,negative,main,True,236,"With the strengthening of the U.S. dollar since October, we now expect FX to 
+decrease Q4 revenue an...",More Personal Computing
+"Next, capital expenditures.",Gaming,neutral,main,True,237,"Next, capital expenditures.",More Personal Computing
+We expect quarterly spend in Q3 and Q4 to remain at similar levels as our Q2 spend.,Gaming,neutral,main,True,238,We expect quarterly spend in Q3 and Q4 to remain at similar levels as our Q2 spend.,More Personal Computing
+"In FY '26, 
+we expect to continue investing against strong demand signals, including customer contracted 
+backlog we need to deliver against across the entirety of our Microsoft Cloud.",Gaming,positive,main,True,239,"In FY '26, 
+we expect to continue investing against strong demand signals, including customer contra...",More Personal Computing
+"However, the 
+growth rate will be lower than FY '25 and the mix of spend will begin to shift back to short-lived 
+assets, which are more correlated to revenue growth.",Gaming,neutral,main,True,240,"However, the 
+growth rate will be lower than FY '25 and the mix of spend will begin to shift back to...",More Personal Computing
+"As a reminder, our long-lived 
+infrastructure investments are fungible, enabling us to remain agile as we meet customer 
+demand globally across our Microsoft Cloud, including AI workloads.",Gaming,positive,main,True,241,"As a reminder, our long-lived 
+infrastructure investments are fungible, enabling us to remain agile ...",More Personal Computing
+"As always, there can be quarterly spend variability from cloud infrastructure build-outs and the 
+timing of delivery of finance leases.",Gaming,neutral,main,True,242,"As always, there can be quarterly spend variability from cloud infrastructure build-outs and the 
+ti...",More Personal Computing
+"For the full fiscal year, we continue to expect double-digit 
+revenue and operating income growth as we focus on delivering efficiencies across both COGS 
+and operating expense.",Gaming,positive,main,True,243,"For the full fiscal year, we continue to expect double-digit 
+revenue and operating income growth as...",More Personal Computing
+"And given the operating leverage that we've delivered throughout the 
+year, inclusive of efficiency gains as we scale our AI infrastructure and utilize our own AI 
+solutions, we now expect FY '25 operating margins to be up slightly year over year.",Gaming,positive,main,True,244,"And given the operating leverage that we've delivered throughout the 
+year, inclusive of efficiency ...",More Personal Computing
+"And finally, 
+our FY '25 full-year effective tax rate should be between 18% and 19%.",Gaming,neutral,main,True,245,"And finally, 
+our FY '25 full-year effective tax rate should be between 18% and 19%.",More Personal Computing
+"In closing, we are committed to delivering real-world AI solutions to help customers grow and 
+improve their results.",Gaming,positive,main,True,246,"In closing, we are committed to delivering real-world AI solutions to help customers grow and 
+impro...",More Personal Computing
+"We are confident in our leadership position as we grow with our 
+customers.",Gaming,positive,main,True,247,"We are confident in our leadership position as we grow with our 
+customers.",More Personal Computing
+"Before turning to Q&A, I have one special thank you.",Gaming,neutral,qa,True,248,"Before turning to Q&A, I have one special thank you.",More Personal Computing
+"Brett Iversen is moving to a 
+new role here as the Head of our Americas sales finance team.",Gaming,neutral,main,True,249,"Brett Iversen is moving to a 
+new role here as the Head of our Americas sales finance team.",More Personal Computing
+"On behalf of the company, thank you for your tremendous impact leading Investor Relations for 
+the past four years and for the partnership with both Satya and me.",Gaming,positive,main,True,250,"On behalf of the company, thank you for your tremendous impact leading Investor Relations for 
+the p...",More Personal Computing
+"And I'd like to welcome 
+Jonathan Neilson, the former head of finance for our security products, who is returning to 
+Investor Relations to lead the team.",Gaming,neutral,main,True,251,"And I'd like to welcome 
+Jonathan Neilson, the former head of finance for our security products, who...",More Personal Computing
+"With that, let's go to Q&A, Brett.",Gaming,neutral,qa,True,252,"With that, let's go to Q&A, Brett.",More Personal Computing
+"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Amy.",Gaming,neutral,main,True,253,"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Amy.",More Personal Computing
+We'll now move over to Q&A.,Gaming,neutral,qa,True,254,We'll now move over to Q&A.,More Personal Computing
+"Out of respect for others on the call, we request that 
+participants please only ask one question.",Gaming,neutral,main,True,255,"Out of respect for others on the call, we request that 
+participants please only ask one question.",More Personal Computing
+"Operator, can you please repeat your instructions?",Gaming,neutral,main,True,256,"Operator, can you please repeat your instructions?",More Personal Computing
+"Questions & Answers: 
+ 
+Operator 
+Thank you. [Operator instructions] And our first question comes from the line of Keith Weiss with 
+Morgan Stanley.",Gaming,neutral,main,True,257,"Questions & Answers: 
+ 
+Operator 
+Thank you. [Operator instructions] And our first question comes fr...",More Personal Computing
+Please proceed.,Gaming,neutral,main,True,258,Please proceed.,More Personal Computing
+"Keith Weiss -- Analyst 
+Excellent.",Gaming,positive,main,True,259,"Keith Weiss -- Analyst 
+Excellent.",More Personal Computing
+"Thank you, guys, for taking the question.",Gaming,neutral,main,True,260,"Thank you, guys, for taking the question.",More Personal Computing
+"And echoing Amy's comments, Brett, 
+congratulations on the new role.",Gaming,positive,main,True,261,"And echoing Amy's comments, Brett, 
+congratulations on the new role.",More Personal Computing
+"It's been a pleasure working with you, and best of luck in that 
+new role.",Gaming,positive,main,True,262,"It's been a pleasure working with you, and best of luck in that 
+new role.",More Personal Computing
+"Looking at the quarter, another really solid quarter when it comes to commercial bookings.",Gaming,positive,main,True,263,"Looking at the quarter, another really solid quarter when it comes to commercial bookings.",More Personal Computing
+"But 
+again, we were a little bit disappointed on Azure coming in at the bottom end of the guidance 
+range.",Server products and cloud services,negative,main,True,264,"But 
+again, we were a little bit disappointed on Azure coming in at the bottom end of the guidance 
+...",Intelligent Cloud
+"Amy, I was hoping you could dig into perhaps what some of those execution issues were, 
+what the resolution to those issues were.",Server products and cloud services,neutral,main,True,265,"Amy, I was hoping you could dig into perhaps what some of those execution issues were, 
+what the res...",Intelligent Cloud
+"And do we still feel comfortable in the acceleration into 
+the back half of the year that you were talking about after the June quarter and after last 
+quarter?",Server products and cloud services,neutral,main,True,266,"And do we still feel comfortable in the acceleration into 
+the back half of the year that you were t...",Intelligent Cloud
+Thank you very much.,Server products and cloud services,neutral,main,True,267,Thank you very much.,Intelligent Cloud
+Amy E.,Server products and cloud services,neutral,main,True,268,Amy E.,Intelligent Cloud
+"Hood -- Executive Vice President, Chief Financial Officer 
+Thanks, Keith.",Office Commercial,neutral,main,True,269,"Hood -- Executive Vice President, Chief Financial Officer 
+Thanks, Keith.",Productivity and Business Processes
+"Let me spend a little time on that about what we saw in Q2 and give you some 
+additional background on the near-term execution issues that we're talking about.",Office Commercial,neutral,main,True,270,"Let me spend a little time on that about what we saw in Q2 and give you some 
+additional background ...",Productivity and Business Processes
+"First, let me 
+be very specific, they are in the non-AI ACR component.",Office Commercial,neutral,main,True,271,"First, let me 
+be very specific, they are in the non-AI ACR component.",Productivity and Business Processes
+"Our Azure AI results were better than 
+we thought due to very good work by the operating teams pulling in some delivery dates even 
+by weeks.",Server products and cloud services,positive,main,True,272,"Our Azure AI results were better than 
+we thought due to very good work by the operating teams pulli...",Intelligent Cloud
+"When you're capacity-constrained, weeks matter, and it was good execution by the team, and 
+you see that in the revenue results.",Server products and cloud services,positive,main,True,273,"When you're capacity-constrained, weeks matter, and it was good execution by the team, and 
+you see ...",Intelligent Cloud
+"On the non-AI side, really, the challenges were in what we 
+call the scale motions.",Server products and cloud services,negative,main,True,274,"On the non-AI side, really, the challenges were in what we 
+call the scale motions.",Intelligent Cloud
+"So, think about primarily, these are customers we reach through partners 
+and through more indirect methods of selling.",Server products and cloud services,neutral,main,True,275,"So, think about primarily, these are customers we reach through partners 
+and through more indirect ...",Intelligent Cloud
+"And really, the art form there is as these 
+customers, which we reach in this way, are trying to balance how do you do an AI workload with 
+continuing some of the work they've done on migrations and other fundamentals, we then took 
+our sales motions in the summer and really changed to try to balance those two.",Server products and cloud services,neutral,main,True,276,"And really, the art form there is as these 
+customers, which we reach in this way, are trying to bal...",Intelligent Cloud
+"As you do that, you learn with your customers and with your partners on sort of getting that 
+balance right between where to put our investments, where to put the marketing dollars, and 
+importantly, where to put people in terms of coverage and being able to help customers make 
+those transitions.",Server products and cloud services,neutral,main,True,277,"As you do that, you learn with your customers and with your partners on sort of getting that 
+balanc...",Intelligent Cloud
+"And I think we are going to make some adjustments to make sure we are in 
+balance because when you make those changes in the summer, by the time it works its way 
+through the system, you can see the impacts on whether you have that balance right.",Server products and cloud services,neutral,main,True,278,"And I think we are going to make some adjustments to make sure we are in 
+balance because when you m...",Intelligent Cloud
+"And so, 
+the teams are working through that.",Server products and cloud services,neutral,main,True,279,"And so, 
+the teams are working through that.",Intelligent Cloud
+They're already making adjustments.,Server products and cloud services,neutral,main,True,280,They're already making adjustments.,Intelligent Cloud
+"And I expect while we will see some impact through H2 just because when you work through 
+the scale motion, it can take some time for that to adjust.",Server products and cloud services,neutral,main,True,281,"And I expect while we will see some impact through H2 just because when you work through 
+the scale ...",Intelligent Cloud
+"I feel good that the teams understand 
+and are working through that.",Server products and cloud services,positive,main,True,282,"I feel good that the teams understand 
+and are working through that.",Intelligent Cloud
+"So, hopefully, that's just helpful on that.",Server products and cloud services,neutral,main,True,283,"So, hopefully, that's just helpful on that.",Intelligent Cloud
+"Then we talked a little bit 
+about Q3.",Server products and cloud services,neutral,main,True,284,"Then we talked a little bit 
+about Q3.",Intelligent Cloud
+"And so, we've talked about 31 to 32 after publishing a 31 this quarter.",Server products and cloud services,neutral,main,True,285,"And so, we've talked about 31 to 32 after publishing a 31 this quarter.",Intelligent Cloud
+"Our AI results that we had 
+felt good about and talked about our ability to land that revenue is the same.",Server products and cloud services,positive,main,True,286,"Our AI results that we had 
+felt good about and talked about our ability to land that revenue is the...",Intelligent Cloud
+"So, again, in Q3, 
+we are working from a pretty constrained capacity place, and that's no different than it was our 
+expectation to be in that position last October when I talked to you all.",Server products and cloud services,neutral,main,True,287,"So, again, in Q3, 
+we are working from a pretty constrained capacity place, and that's no different ...",Intelligent Cloud
+"And when I talk about 
+being capacity-constrained, it takes two things.",Server products and cloud services,neutral,main,True,288,"And when I talk about 
+being capacity-constrained, it takes two things.",Intelligent Cloud
+"You have to have space, which I generally call long-lived assets, right?",Server products and cloud services,neutral,main,True,289,"You have to have space, which I generally call long-lived assets, right?",Intelligent Cloud
+"That's the infrastructure 
+and the land and then you have to have kits.",Server products and cloud services,neutral,main,True,290,"That's the infrastructure 
+and the land and then you have to have kits.",Intelligent Cloud
+"We're continuing, and you've seen that's why our 
+spend has pivoted this way, to be in the long-lived investment.",Server products and cloud services,neutral,main,True,291,"We're continuing, and you've seen that's why our 
+spend has pivoted this way, to be in the long-live...",Intelligent Cloud
+"We have been short power and 
+space.",Server products and cloud services,negative,main,True,292,"We have been short power and 
+space.",Intelligent Cloud
+"And so, as you see those investments land that we've made over the past three years, 
+we get closer to that balance by the end of this year.",Server products and cloud services,positive,main,True,293,"And so, as you see those investments land that we've made over the past three years, 
+we get closer ...",Intelligent Cloud
+"And so, the confidence on the AI side continues to be there in terms of being able to sell, utilize, 
+and be, I think, encouraged by the signals.",Server products and cloud services,positive,main,True,294,"And so, the confidence on the AI side continues to be there in terms of being able to sell, utilize,...",Intelligent Cloud
+"What we're seeing is waiting to see just how the 
+non-AI ACR works through the scale motions in H2.",Server products and cloud services,neutral,main,True,295,"What we're seeing is waiting to see just how the 
+non-AI ACR works through the scale motions in H2.",Intelligent Cloud
+"But in general, the only thing that's changed 
+is really that scale motion from my seat, Keith.",Server products and cloud services,neutral,main,True,296,"But in general, the only thing that's changed 
+is really that scale motion from my seat, Keith.",Intelligent Cloud
+I hope that's helpful.,Server products and cloud services,neutral,main,True,297,I hope that's helpful.,Intelligent Cloud
+Satya?,Server products and cloud services,neutral,main,True,298,Satya?,Intelligent Cloud
+"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Office Commercial,neutral,main,True,299,"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Productivity and Business Processes
+"I think, Amy, just one thing I'd add, Keith, to your question is, as Amy said, AI growth rate 
+is actually better than what we expected, and we worked through some of the supply stuff and 
+more importantly, some of the workloads are scaling well.",Office Commercial,positive,main,True,300,"I think, Amy, just one thing I'd add, Keith, to your question is, as Amy said, AI growth rate 
+is ac...",Productivity and Business Processes
+"And when you look underneath any of 
+these AI workloads, the other thing that is good is the ratio of even what we would call just 
+regular storage, data services, app services.",Gaming,positive,main,True,301,"And when you look underneath any of 
+these AI workloads, the other thing that is good is the ratio o...",More Personal Computing
+"So, underneath a ChatGPT or a Copilot or even 
+the emerging AI workloads in the enterprise, so that's all good.",Gaming,positive,main,True,302,"So, underneath a ChatGPT or a Copilot or even 
+the emerging AI workloads in the enterprise, so that'...",More Personal Computing
+"The enterprise workloads, whether it's SAP or whether it's VMware migrations, what have you, 
+that's also in good shape.",Gaming,positive,main,True,303,"The enterprise workloads, whether it's SAP or whether it's VMware migrations, what have you, 
+that's...",More Personal Computing
+"And it's just the scale place where Amy talked about this nuance, 
+right, how do you really tweak the incentives, go-to-market?",Server products and cloud services,neutral,main,True,304,"And it's just the scale place where Amy talked about this nuance, 
+right, how do you really tweak th...",Intelligent Cloud
+"At a time of platform shifts, you kind 
+of want to make sure you lean into even the new design wins, and you just don't keep doing the 
+stuff that you did in the previous generation.",Server products and cloud services,neutral,main,True,305,"At a time of platform shifts, you kind 
+of want to make sure you lean into even the new design wins,...",Intelligent Cloud
+"And that's the art form Amy was referencing to, to 
+make sure you get the right balance.",Server products and cloud services,neutral,main,True,306,"And that's the art form Amy was referencing to, to 
+make sure you get the right balance.",Intelligent Cloud
+But let me put it this way.,Server products and cloud services,neutral,main,True,307,But let me put it this way.,Intelligent Cloud
+You would rather win the new than just protect the past.,Server products and cloud services,positive,main,True,308,You would rather win the new than just protect the past.,Intelligent Cloud
+"And that's sort of another thing that we 
+definitely will lean into always.",Server products and cloud services,positive,main,True,309,"And that's sort of another thing that we 
+definitely will lean into always.",Intelligent Cloud
+"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Keith.",Server products and cloud services,neutral,main,True,310,"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Keith.",Intelligent Cloud
+"Operator, next question, please.",Server products and cloud services,neutral,main,True,311,"Operator, next question, please.",Intelligent Cloud
+"Operator 
+The next question comes from the line of Mark Moerdler with Bernstein Research.",Server products and cloud services,neutral,main,True,312,"Operator 
+The next question comes from the line of Mark Moerdler with Bernstein Research.",Intelligent Cloud
+"Please 
+proceed.",Server products and cloud services,neutral,main,True,313,"Please 
+proceed.",Intelligent Cloud
+"Mark Moerdler -- Analyst 
+Thank you very much for taking my question.",Server products and cloud services,neutral,main,True,314,"Mark Moerdler -- Analyst 
+Thank you very much for taking my question.",Intelligent Cloud
+"Can you give more color on what drove the far 
+larger-than-expected Microsoft AI revenue?",Server products and cloud services,neutral,main,True,315,"Can you give more color on what drove the far 
+larger-than-expected Microsoft AI revenue?",Intelligent Cloud
+We talked a bit about the Azure AI component of it.,Server products and cloud services,neutral,main,True,316,We talked a bit about the Azure AI component of it.,Intelligent Cloud
+But can you give more color on that?,Server products and cloud services,neutral,main,True,317,But can you give more color on that?,Intelligent Cloud
+"And our estimates are that the Copilot was much bigger 
+than we had expected and growing much faster.",Server products and cloud services,positive,main,True,318,"And our estimates are that the Copilot was much bigger 
+than we had expected and growing much faster...",Intelligent Cloud
+"Any more details on the breakdown of what 
+that Microsoft AI beat would be great.",Server products and cloud services,neutral,main,True,319,"Any more details on the breakdown of what 
+that Microsoft AI beat would be great.",Intelligent Cloud
+Thanks.,Server products and cloud services,neutral,main,True,320,Thanks.,Intelligent Cloud
+Amy E.,Server products and cloud services,neutral,main,True,321,Amy E.,Intelligent Cloud
+"Hood -- Executive Vice President, Chief Financial Officer 
+Thanks, Mark, for the question.",Office Commercial,neutral,main,True,322,"Hood -- Executive Vice President, Chief Financial Officer 
+Thanks, Mark, for the question.",Productivity and Business Processes
+"Yes, that was, as we talked about, better than expected.",Office Commercial,positive,main,True,323,"Yes, that was, as we talked about, better than expected.",Productivity and Business Processes
+"A 
+couple of pieces to that, which you correctly identified, number one is the Azure component we 
+just talked about.",Server products and cloud services,neutral,main,True,324,"A 
+couple of pieces to that, which you correctly identified, number one is the Azure component we 
+j...",Intelligent Cloud
+"And the second piece, you're right, Microsoft Copilot was better.",Server products and cloud services,positive,main,True,325,"And the second piece, you're right, Microsoft Copilot was better.",Intelligent Cloud
+"And what was important about that, we saw strength both in seats, both new seats and 
+expansion seats, as Satya talked about.",Server products and cloud services,positive,main,True,326,"And what was important about that, we saw strength both in seats, both new seats and 
+expansion seat...",Intelligent Cloud
+"And usage doesn't directly impact revenue, but of 
+course, indirectly does as people get more and more value added.",Server products and cloud services,neutral,main,True,327,"And usage doesn't directly impact revenue, but of 
+course, indirectly does as people get more and mo...",Intelligent Cloud
+"And also, price per seat was 
+actually quite good.",Server products and cloud services,positive,main,True,328,"And also, price per seat was 
+actually quite good.",Intelligent Cloud
+We still have a good signal for value.,Server products and cloud services,positive,main,True,329,We still have a good signal for value.,Intelligent Cloud
+"So, those are the biggest pieces, Mark, of that sort of outperformance in terms of our 
+expectations.",Server products and cloud services,positive,main,True,330,"So, those are the biggest pieces, Mark, of that sort of outperformance in terms of our 
+expectations...",Intelligent Cloud
+"Brett Iversen -- Vice President, Investor Relations 
+Thank you, Mark.",Server products and cloud services,neutral,main,True,331,"Brett Iversen -- Vice President, Investor Relations 
+Thank you, Mark.",Intelligent Cloud
+"Operator, next question, please.",Server products and cloud services,neutral,main,True,332,"Operator, next question, please.",Intelligent Cloud
+"Operator 
+The next question comes from the line of Brent Thill with Jefferies.",Server products and cloud services,neutral,main,True,333,"Operator 
+The next question comes from the line of Brent Thill with Jefferies.",Intelligent Cloud
+Please proceed.,Server products and cloud services,neutral,main,True,334,Please proceed.,Intelligent Cloud
+"Brent Thill -- Analyst 
+Thanks.",Server products and cloud services,neutral,main,True,335,"Brent Thill -- Analyst 
+Thanks.",Intelligent Cloud
+"Satya, you mentioned DeepSeek a couple of times in your prepared remarks.",Server products and cloud services,neutral,main,True,336,"Satya, you mentioned DeepSeek a couple of times in your prepared remarks.",Intelligent Cloud
+"I think 
+everyone would love your thoughts on what you're seeing there.",Server products and cloud services,neutral,main,True,337,"I think 
+everyone would love your thoughts on what you're seeing there.",Intelligent Cloud
+"And are we seeing AI scale 
+now at a lower cost?",Server products and cloud services,neutral,main,True,338,"And are we seeing AI scale 
+now at a lower cost?",Intelligent Cloud
+Are we reaching a mark where you can see that?,Server products and cloud services,neutral,main,True,339,Are we reaching a mark where you can see that?,Intelligent Cloud
+"Or do we still have some 
+time to go?",Server products and cloud services,neutral,main,True,340,"Or do we still have some 
+time to go?",Intelligent Cloud
+Thanks for your thoughts on this.,Server products and cloud services,neutral,main,True,341,Thanks for your thoughts on this.,Intelligent Cloud
+"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Office Commercial,neutral,main,True,342,"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Productivity and Business Processes
+"Thanks, Brent.",Office Commercial,neutral,main,True,343,"Thanks, Brent.",Productivity and Business Processes
+"So, yeah, in my remarks, I talked about, in some sense, what's happening 
+with AI.",Office Commercial,neutral,main,True,344,"So, yeah, in my remarks, I talked about, in some sense, what's happening 
+with AI.",Productivity and Business Processes
+It's no different than what was happening with the regular compute cycle.,Office Commercial,neutral,main,True,345,It's no different than what was happening with the regular compute cycle.,Productivity and Business Processes
+It's always about bending the curve and then putting more points up the curve.,Office Commercial,neutral,main,True,346,It's always about bending the curve and then putting more points up the curve.,Productivity and Business Processes
+"So, there's 
+Moore's Law that's working and hyperdrive.",Office Commercial,neutral,main,True,347,"So, there's 
+Moore's Law that's working and hyperdrive.",Productivity and Business Processes
+"Then on top of that, there is the AI scaling laws, 
+both the pretraining and the inference time compute that compound, and that's all software.",Office Commercial,positive,main,True,348,"Then on top of that, there is the AI scaling laws, 
+both the pretraining and the inference time comp...",Productivity and Business Processes
+"You 
+should think of what I said in my remarks, which we have observed for a while, which is 10x on 
+improvements per cycle just because of all the software optimizations on inference.",Office Commercial,positive,main,True,349,"You 
+should think of what I said in my remarks, which we have observed for a while, which is 10x on ...",Productivity and Business Processes
+"And so, that's what you see.",Office Commercial,neutral,main,True,350,"And so, that's what you see.",Productivity and Business Processes
+"And add to that, I think DeepSeek has had some real innovations.",Office Commercial,positive,main,True,351,"And add to that, I think DeepSeek has had some real innovations.",Productivity and Business Processes
+And that is some of the things that even OpenAI found in '01.,Office Commercial,neutral,main,True,352,And that is some of the things that even OpenAI found in '01.,Productivity and Business Processes
+"And so, we are going to -- 
+obviously, now that all gets commoditized and it's going to get broadly used.",Office Commercial,neutral,main,True,353,"And so, we are going to -- 
+obviously, now that all gets commoditized and it's going to get broadly ...",Productivity and Business Processes
+"And the big beneficiaries of any software cycle like that is the customers, right?",Office Commercial,positive,main,True,354,"And the big beneficiaries of any software cycle like that is the customers, right?",Productivity and Business Processes
+"Because at the 
+end of the day, if you think about it, right, what was the big lesson learned from client server to 
+cloud?",Office Commercial,neutral,main,True,355,"Because at the 
+end of the day, if you think about it, right, what was the big lesson learned from c...",Productivity and Business Processes
+"More people bought servers, except it was called cloud.",Office Commercial,neutral,main,True,356,"More people bought servers, except it was called cloud.",Productivity and Business Processes
+"And so, when token prices fall, 
+inference computing prices fall, that means people can consume more, and there will be more 
+apps written.",Office Commercial,positive,main,True,357,"And so, when token prices fall, 
+inference computing prices fall, that means people can consume more...",Productivity and Business Processes
+"And it's interesting to see that when I referenced these models that are pretty 
+powerful, it's unimaginable to think that here we are in sort of beginning of '25, where on the PC, 
+you can run a model that required pretty massive cloud infrastructure.",Office Commercial,positive,main,True,358,"And it's interesting to see that when I referenced these models that are pretty 
+powerful, it's unim...",Productivity and Business Processes
+"So, that type of 
+optimization means AI will be much more ubiquitous.",Office Commercial,positive,main,True,359,"So, that type of 
+optimization means AI will be much more ubiquitous.",Productivity and Business Processes
+"And so, therefore, for a hyperscaler like us, a PC platform provider like us, this is all good news 
+as far as I'm concerned.",Office Commercial,positive,main,True,360,"And so, therefore, for a hyperscaler like us, a PC platform provider like us, this is all good news ...",Productivity and Business Processes
+"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brent.",Office Commercial,neutral,main,True,361,"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brent.",Productivity and Business Processes
+"Operator, next question, please.",Office Commercial,neutral,main,True,362,"Operator, next question, please.",Productivity and Business Processes
+"Operator 
+The next question comes from the line of Karl Keirstead with UBS.",Office Commercial,neutral,main,True,363,"Operator 
+The next question comes from the line of Karl Keirstead with UBS.",Productivity and Business Processes
+Please proceed.,Office Commercial,neutral,main,True,364,Please proceed.,Productivity and Business Processes
+"Karl Keirstead -- Analyst 
+Thank you.",Office Commercial,neutral,main,True,365,"Karl Keirstead -- Analyst 
+Thank you.",Productivity and Business Processes
+"Maybe this one is well for Satya, and it's also away from the numbers.",Office Commercial,neutral,main,True,366,"Maybe this one is well for Satya, and it's also away from the numbers.",Productivity and Business Processes
+"But Satya, I 
+wanted to ask you about the Stargate news and the announced changes in the OpenAI 
+relationship last week.",Office Commercial,neutral,main,True,367,"But Satya, I 
+wanted to ask you about the Stargate news and the announced changes in the OpenAI 
+rel...",Productivity and Business Processes
+"It seems that most of your investors have interpreted this as Microsoft, 
+for sure, remaining very committed to OpenAI's success, but electing to take more of a backseat 
+in terms of funding OpenAI's future training capex needs.",Office Commercial,neutral,main,True,368,"It seems that most of your investors have interpreted this as Microsoft, 
+for sure, remaining very c...",Productivity and Business Processes
+"I was hoping you might frame your strategic decision here around Stargate, and Amy, whether 
+there's any takeaway for investors from that decision in terms of how you're thinking about 
+capex needs over the next several years?",Office Commercial,neutral,main,True,369,"I was hoping you might frame your strategic decision here around Stargate, and Amy, whether 
+there's...",Productivity and Business Processes
+Thank you.,Office Commercial,neutral,main,True,370,Thank you.,Productivity and Business Processes
+"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Office Commercial,neutral,main,True,371,"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Productivity and Business Processes
+Thanks for the question.,Office Commercial,neutral,main,True,372,Thanks for the question.,Productivity and Business Processes
+"So, we remain very happy with the partnership with OpenAI.",Office Commercial,positive,main,True,373,"So, we remain very happy with the partnership with OpenAI.",Productivity and Business Processes
+"And 
+as you saw, they have committed in a big way to Azure, and even in the bookings, what we 
+recognized is just the first tranche of it.",Server products and cloud services,positive,main,True,374,"And 
+as you saw, they have committed in a big way to Azure, and even in the bookings, what we 
+recog...",Intelligent Cloud
+"And so, you'll see given the ROFR we have more benefits of that even into the future.",Server products and cloud services,positive,main,True,375,"And so, you'll see given the ROFR we have more benefits of that even into the future.",Intelligent Cloud
+"And 
+obviously, their success is our success because even all the other commercial arrangements 
+that we detailed out in the blog that we put out even commensurate with that announcement.",Server products and cloud services,positive,main,True,376,"And 
+obviously, their success is our success because even all the other commercial arrangements 
+tha...",Intelligent Cloud
+"But to your overall point, the thing that I would say is we are building a pretty fungible fleet, 
+right?",Server products and cloud services,neutral,main,True,377,"But to your overall point, the thing that I would say is we are building a pretty fungible fleet, 
+r...",Intelligent Cloud
+We are making sure that there's the right balance between training and inference.,Server products and cloud services,neutral,main,True,378,We are making sure that there's the right balance between training and inference.,Intelligent Cloud
+"It's 
+geo-distributed.",Server products and cloud services,neutral,main,True,379,"It's 
+geo-distributed.",Intelligent Cloud
+"We are working super hard on all the software optimizations, right?",Server products and cloud services,neutral,main,True,380,"We are working super hard on all the software optimizations, right?",Intelligent Cloud
+"I mean, just not the software 
+optimizations that come because of what DeepSeek has done, but all the work we have done 
+to, for example, reduce the prices of GPT models over the years in partnership with OpenAI.",Server products and cloud services,positive,main,True,381,"I mean, just not the software 
+optimizations that come because of what DeepSeek has done, but all th...",Intelligent Cloud
+"In 
+fact, we did a lot of the work on the inference optimizations on it, and that's been key to driving, 
+right?",Server products and cloud services,positive,main,True,382,"In 
+fact, we did a lot of the work on the inference optimizations on it, and that's been key to driv...",Intelligent Cloud
+"One of the key things to note in AI is you just don't launch the frontier model -- but if it's 
+too expensive to serve, it's no good, right?",Server products and cloud services,neutral,main,True,383,"One of the key things to note in AI is you just don't launch the frontier model -- but if it's 
+too ...",Intelligent Cloud
+It does -- it won't generate any demand.,Server products and cloud services,negative,main,True,384,It does -- it won't generate any demand.,Intelligent Cloud
+"So, you've 
+got to have that optimization so that inferencing costs are coming down and they can be 
+consumed broadly.",Server products and cloud services,positive,main,True,385,"So, you've 
+got to have that optimization so that inferencing costs are coming down and they can be ...",Intelligent Cloud
+"And so, that's the fleet physics we are managing.",Server products and cloud services,neutral,main,True,386,"And so, that's the fleet physics we are managing.",Intelligent Cloud
+"And also, remember, you don't want to buy too much of anything at one time because the 
+Moore's Law every year is going to give you 2x, your optimization is going to give you 10x.",Server products and cloud services,neutral,main,True,387,"And also, remember, you don't want to buy too much of anything at one time because the 
+Moore's Law ...",Intelligent Cloud
+"You 
+want to continuously upgrade the fleet, modernize the fleet, age the fleet, and at the end of the 
+day, have the right ratio of monetization and demand-driven monetization to what you think of as 
+the training expense.",Server products and cloud services,neutral,main,True,388,"You 
+want to continuously upgrade the fleet, modernize the fleet, age the fleet, and at the end of t...",Intelligent Cloud
+"So, I feel very good about the investment we are making, and it's fungible, 
+and it just allows us to scale more long-term business.",Server products and cloud services,positive,main,True,389,"So, I feel very good about the investment we are making, and it's fungible, 
+and it just allows us t...",Intelligent Cloud
+Amy E.,Server products and cloud services,neutral,main,True,390,Amy E.,Intelligent Cloud
+"Hood -- Executive Vice President, Chief Financial Officer 
+And maybe, Karl, just to reiterate a little of the comments that I made on capex because I think 
+it's helpful to ground a bit more in what Satya is saying, a fungible fleet means.",Office Commercial,neutral,main,True,391,"Hood -- Executive Vice President, Chief Financial Officer 
+And maybe, Karl, just to reiterate a litt...",Productivity and Business Processes
+"We have, and I 
+think we talked about it, close to $300 billion of RPO.",Office Commercial,positive,main,True,392,"We have, and I 
+think we talked about it, close to $300 billion of RPO.",Productivity and Business Processes
+"That is committed customer contracts that 
+need to be delivered on.",Office Commercial,neutral,main,True,393,"That is committed customer contracts that 
+need to be delivered on.",Productivity and Business Processes
+"And the faster we can do that and the more efficiently we can do that, 
+the better off we are, not just the OpenAI partnership, which is a piece of that, but with the entire 
+platform that we need to deliver for our customers.",Office Commercial,positive,main,True,394,"And the faster we can do that and the more efficiently we can do that, 
+the better off we are, not j...",Productivity and Business Processes
+"And I think the other thing that's sometimes missing is when we say fungible, we mean not just 
+the primary use, which we've always talked about, which is inference.",Office Commercial,neutral,main,True,395,"And I think the other thing that's sometimes missing is when we say fungible, we mean not just 
+the ...",Productivity and Business Processes
+"But there is some training 
+post training, which is a key component.",Office Commercial,neutral,main,True,396,"But there is some training 
+post training, which is a key component.",Productivity and Business Processes
+"And then they're just running the commercial cloud, 
+which at every layer under every modern AI app that's going to be built will be required.",Office Commercial,neutral,main,True,397,"And then they're just running the commercial cloud, 
+which at every layer under every modern AI app ...",Productivity and Business Processes
+"It will be 
+required to be distributed, and it will be required to be global.",Office Commercial,neutral,main,True,398,"It will be 
+required to be distributed, and it will be required to be global.",Productivity and Business Processes
+And all of those things are really important because it then means you're the most efficient.,Office Commercial,positive,main,True,399,And all of those things are really important because it then means you're the most efficient.,Productivity and Business Processes
+"And 
+so, the investment you see us make in capex, you're right, the front end has been this sort of 
+infrastructure build that lets us really catch up not just on the AI infrastructure we needed, but 
+think about that as the building itself, data centers, but also some of the catch-up we need to do 
+on the commercial cloud side.",Office Commercial,neutral,main,True,400,"And 
+so, the investment you see us make in capex, you're right, the front end has been this sort of ...",Productivity and Business Processes
+And then you'll see the pivot to more CPU and GPU.,Office Commercial,neutral,main,True,401,And then you'll see the pivot to more CPU and GPU.,Productivity and Business Processes
+"And that 
+pivot will more directly correlate to revenue, and it will be contracted either with the partnership 
+that you asked about with OpenAI or with others.",Office Commercial,positive,main,True,402,"And that 
+pivot will more directly correlate to revenue, and it will be contracted either with the p...",Productivity and Business Processes
+"And so, I do think the way I want everyone to internalize it is that the capex growth is going 
+through that cycle pivot, which is far more correlated to customer contract delivery, no matter 
+who the end customer is.",Office Commercial,positive,main,True,403,"And so, I do think the way I want everyone to internalize it is that the capex growth is going 
+thro...",Productivity and Business Processes
+"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Karl.",Office Commercial,neutral,main,True,404,"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Karl.",Productivity and Business Processes
+"Operator, next question, please.",Office Commercial,neutral,main,True,405,"Operator, next question, please.",Productivity and Business Processes
+"Operator 
+And our next question comes from the line of Brad Zelnick with Deutsche Bank.",Office Commercial,neutral,main,True,406,"Operator 
+And our next question comes from the line of Brad Zelnick with Deutsche Bank.",Productivity and Business Processes
+"Please 
+proceed.",Office Commercial,neutral,main,True,407,"Please 
+proceed.",Productivity and Business Processes
+"Brad Zelnick -- Analyst 
+Thank you very much for taking my question.",Office Commercial,neutral,main,True,408,"Brad Zelnick -- Analyst 
+Thank you very much for taking my question.",Productivity and Business Processes
+"And I'll echo my congrats and gratitude to Brett as 
+well.",Office Commercial,neutral,main,True,409,"And I'll echo my congrats and gratitude to Brett as 
+well.",Productivity and Business Processes
+"Satya, as we think about Microsoft's very rich Copilot portfolio, now having been in market 
+for over a year with the products and precision only getting better and the cost of inference 
+coming down, how do you think about the journey from here and perhaps the ability to package 
+and evolve the go-to-market to address the broadest range of customers and customer 
+requirements out there?",Office Commercial,positive,main,True,410,"Satya, as we think about Microsoft's very rich Copilot portfolio, now having been in market 
+for ove...",Productivity and Business Processes
+Thanks.,Office Commercial,neutral,main,True,411,Thanks.,Productivity and Business Processes
+"Satya Nadella -- Chair and Chief Executive Officer 
+Well, thanks, Brad, for the question.",Office Commercial,neutral,main,True,412,"Satya Nadella -- Chair and Chief Executive Officer 
+Well, thanks, Brad, for the question.",Productivity and Business Processes
+"In fact, you saw us make two announcements recently.",Office Commercial,neutral,main,True,413,"In fact, you saw us make two announcements recently.",Productivity and Business Processes
+"One 
+is on the M365 Copilot side, we now have the Copilot chat.",Office Commercial,positive,main,True,414,"One 
+is on the M365 Copilot side, we now have the Copilot chat.",Productivity and Business Processes
+"So, this is now going to be broadly 
+deployed across the entire installed base effectively because you can go have this now turned 
+on by IT and everybody can start using web-grounded chat with all the enterprise controls right 
+away, and it has Copilot Studio built in.",Office Commercial,positive,main,True,415,"So, this is now going to be broadly 
+deployed across the entire installed base effectively because y...",Productivity and Business Processes
+"And so, that means they can start building agents.",Office Commercial,neutral,main,True,416,"And so, that means they can start building agents.",Productivity and Business Processes
+"So, we think of that plus the full Copilot as a 
+good combination that I think will accelerate, quite frankly, in terms of just seat usage and agent 
+building and what have you.",Office Commercial,positive,main,True,417,"So, we think of that plus the full Copilot as a 
+good combination that I think will accelerate, quit...",Productivity and Business Processes
+"So, that's sort of one.",Office Commercial,neutral,main,True,418,"So, that's sort of one.",Productivity and Business Processes
+"And the other thing is you also see, even on 
+the consumer side, we just, yesterday, launched one -- or the ThinkHarder feature on Copilot 
+now that's powered by o1.",Office Commercial,positive,main,True,419,"And the other thing is you also see, even on 
+the consumer side, we just, yesterday, launched one --...",Productivity and Business Processes
+"It's available globally, right?",Office Commercial,neutral,main,True,420,"It's available globally, right?",Productivity and Business Processes
+"So, you can see the benefits of inference optimization and the cost 
+coming down means you can drive more ubiquity of what were features that ones were sort of 
+premium tier, and that's all definitely something that we will do across, right?",Office Commercial,positive,main,True,421,"So, you can see the benefits of inference optimization and the cost 
+coming down means you can drive...",Productivity and Business Processes
+"The same thing is 
+happening in GitHub Copilot, same thing in security Copilot.",Server products and cloud services,neutral,main,True,422,"The same thing is 
+happening in GitHub Copilot, same thing in security Copilot.",Intelligent Cloud
+"So, across the length and breadth 
+of our portfolio, you'll see that.",Server products and cloud services,neutral,main,True,423,"So, across the length and breadth 
+of our portfolio, you'll see that.",Intelligent Cloud
+"Brad Zelnick -- Analyst 
+Thank you.",Server products and cloud services,neutral,main,True,424,"Brad Zelnick -- Analyst 
+Thank you.",Intelligent Cloud
+"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brad.",Server products and cloud services,neutral,main,True,425,"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brad.",Intelligent Cloud
+"Operator, next question, please.",Server products and cloud services,neutral,main,True,426,"Operator, next question, please.",Intelligent Cloud
+"Operator 
+The next question comes from the line of Brad Reback with Stifel.",Server products and cloud services,neutral,main,True,427,"Operator 
+The next question comes from the line of Brad Reback with Stifel.",Intelligent Cloud
+Please proceed.,Server products and cloud services,neutral,main,True,428,Please proceed.,Intelligent Cloud
+"Brad Reback -- Analyst 
+That's great.",Server products and cloud services,positive,main,True,429,"Brad Reback -- Analyst 
+That's great.",Intelligent Cloud
+Thank you very much.,Server products and cloud services,neutral,main,True,430,Thank you very much.,Intelligent Cloud
+"Satya, if you look out several years, any sense of what 
+percent of inference done on Azure will be done on proprietary models versus open models?",Server products and cloud services,neutral,main,True,431,"Satya, if you look out several years, any sense of what 
+percent of inference done on Azure will be ...",Intelligent Cloud
+"And with that said, does it matter to Microsoft at the end of the day?",Server products and cloud services,neutral,main,True,432,"And with that said, does it matter to Microsoft at the end of the day?",Intelligent Cloud
+Thanks.,Server products and cloud services,neutral,main,True,433,Thanks.,Intelligent Cloud
+"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Office Commercial,neutral,main,True,434,"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Productivity and Business Processes
+"It's a good question because at some level, what you're seeing is effectively lots of 
+models that get used in any application, right?",Office Commercial,neutral,main,True,435,"It's a good question because at some level, what you're seeing is effectively lots of 
+models that g...",Productivity and Business Processes
+"When you look underneath even a Copilot or a 
+GitHub Copilot or what have you, you already see lots of many different models.",Server products and cloud services,neutral,main,True,436,"When you look underneath even a Copilot or a 
+GitHub Copilot or what have you, you already see lots ...",Intelligent Cloud
+"You build 
+models, you fine-tune models, you distill models.",Server products and cloud services,neutral,main,True,437,"You build 
+models, you fine-tune models, you distill models.",Intelligent Cloud
+"Some of them are models that you distill into 
+an open-source model.",Server products and cloud services,neutral,main,True,438,"Some of them are models that you distill into 
+an open-source model.",Intelligent Cloud
+"So, there's going to be a combination.",Server products and cloud services,neutral,main,True,439,"So, there's going to be a combination.",Intelligent Cloud
+"So, we've always maintained that it's always good to 
+have frontier models.",Server products and cloud services,neutral,main,True,440,"So, we've always maintained that it's always good to 
+have frontier models.",Intelligent Cloud
+"You want to always build your application with high ambition using the 
+best. model that is available and then optimize from there on.",Server products and cloud services,positive,main,True,441,"You want to always build your application with high ambition using the 
+best. model that is availabl...",Intelligent Cloud
+"So, that's also another side.",Server products and cloud services,neutral,main,True,442,"So, that's also another side.",Intelligent Cloud
+"Like there's a temporality to it, right?",Server products and cloud services,neutral,main,True,443,"Like there's a temporality to it, right?",Intelligent Cloud
+"What you start with as a given 
+COGS profile doesn't need to be the end because you continuously optimize for latency and 
+COGS and putting in different models.",Server products and cloud services,positive,main,True,444,"What you start with as a given 
+COGS profile doesn't need to be the end because you continuously opt...",Intelligent Cloud
+"And in fact, all that complexity, by the way, has to be 
+managed by a new app server.",Server products and cloud services,neutral,main,True,445,"And in fact, all that complexity, by the way, has to be 
+managed by a new app server.",Intelligent Cloud
+"So, one of the things that we are investing heavily on is foundry 
+because from an app developer perspective, you kind of want to keep pace with this flurry of 
+models that are coming in, and you want to have an evergreen way for your application to 
+benefit from all that innovation, but not have all the dev cost or the DevOps cost or what people 
+talk about AIOps cost.",Server products and cloud services,positive,main,True,446,"So, one of the things that we are investing heavily on is foundry 
+because from an app developer per...",Intelligent Cloud
+"So, we are also investing significantly in all the app server for any workload to be able to benefit 
+from all these different models, open source, close source, different weight classes, and at the 
+same time, from an operations perspective, it's faster, easier for you.",Server products and cloud services,positive,main,True,447,"So, we are also investing significantly in all the app server for any workload to be able to benefit...",Intelligent Cloud
+"Brad Reback -- Analyst 
+Great.",Server products and cloud services,neutral,main,True,448,"Brad Reback -- Analyst 
+Great.",Intelligent Cloud
+Thank you.,Server products and cloud services,neutral,main,True,449,Thank you.,Intelligent Cloud
+"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brad.",Server products and cloud services,neutral,main,True,450,"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brad.",Intelligent Cloud
+"Operator, next question, please.",Server products and cloud services,neutral,main,True,451,"Operator, next question, please.",Intelligent Cloud
+"Operator 
+And the next question comes from the line of Brad Sills with Bank of America.",Server products and cloud services,neutral,main,True,452,"Operator 
+And the next question comes from the line of Brad Sills with Bank of America.",Intelligent Cloud
+Please proceed.,Server products and cloud services,neutral,main,True,453,Please proceed.,Intelligent Cloud
+"Brad Sills -- Analyst 
+Wonderful.",Server products and cloud services,neutral,main,True,454,"Brad Sills -- Analyst 
+Wonderful.",Intelligent Cloud
+Thank you so much.,Server products and cloud services,neutral,main,True,455,Thank you so much.,Intelligent Cloud
+Great to hear about the strength you're seeing in Copilot.,Server products and cloud services,positive,main,True,456,Great to hear about the strength you're seeing in Copilot.,Intelligent Cloud
+Would love to get some color as to where you're seeing that strength.,Server products and cloud services,neutral,main,True,457,Would love to get some color as to where you're seeing that strength.,Intelligent Cloud
+"Is it departmental deals, customers moving from proof of concept to departmental deals, maybe 
+multiple departmental deals in the enterprise?",Server products and cloud services,neutral,main,True,458,"Is it departmental deals, customers moving from proof of concept to departmental deals, maybe 
+multi...",Intelligent Cloud
+And you mentioned some uptick in usage trends.,Server products and cloud services,neutral,main,True,459,And you mentioned some uptick in usage trends.,Intelligent Cloud
+"Would love to get some color on just the common use cases that you're seeing that give you 
+that confidence that that will ramp into monetization later.",Server products and cloud services,neutral,main,True,460,"Would love to get some color on just the common use cases that you're seeing that give you 
+that con...",Intelligent Cloud
+Thank you.,Server products and cloud services,neutral,main,True,461,Thank you.,Intelligent Cloud
+"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Office Commercial,neutral,main,True,462,"Satya Nadella -- Chair and Chief Executive Officer 
+Yeah.",Productivity and Business Processes
+"I mean, I think the initial sort of set of seats were for places where there's more belief in 
+immediate productivity, a sales team, in finance, or in supply chain where there is a lot of, like, 
+for example, SharePoint grounded data that you want to be able to use in conjunction with web 
+data and have it produce results that are beneficial.",Office Commercial,positive,main,True,463,"I mean, I think the initial sort of set of seats were for places where there's more belief in 
+immed...",Productivity and Business Processes
+"But then what's happening very much like 
+what we have seen in these previous generation productivity things is that people collaborate 
+across functions, across roles, right?",Office Commercial,positive,main,True,464,"But then what's happening very much like 
+what we have seen in these previous generation productivit...",Productivity and Business Processes
+"For example, even in my own daily habit, I go to chat.",Office Commercial,neutral,main,True,465,"For example, even in my own daily habit, I go to chat.",Productivity and Business Processes
+"I use 
+work tab and get results, and then I immediately share using pages with colleagues.",Office Commercial,neutral,main,True,466,"I use 
+work tab and get results, and then I immediately share using pages with colleagues.",Productivity and Business Processes
+I sort of call it think with AI and work with people.,Office Commercial,neutral,main,True,467,I sort of call it think with AI and work with people.,Productivity and Business Processes
+"And that pattern then requires you to make it 
+more of a standard issue across the enterprise.",Office Commercial,positive,main,True,468,"And that pattern then requires you to make it 
+more of a standard issue across the enterprise.",Productivity and Business Processes
+"And so, that's what we're seeing.",Office Commercial,neutral,main,True,469,"And so, that's what we're seeing.",Productivity and Business Processes
+"It starts maybe 
+at a departmental level.",Office Commercial,neutral,main,True,470,"It starts maybe 
+at a departmental level.",Productivity and Business Processes
+"Quickly, the collaboration network effects will effectively demand that you spread it across.",Office Commercial,positive,main,True,471,"Quickly, the collaboration network effects will effectively demand that you spread it across.",Productivity and Business Processes
+"You 
+can do it by cohort and what have you.",Office Commercial,neutral,main,True,472,"You 
+can do it by cohort and what have you.",Productivity and Business Processes
+"And so, what we've made it easier even is to start with 
+Copilot Chat plus this.",Office Commercial,positive,main,True,473,"And so, what we've made it easier even is to start with 
+Copilot Chat plus this.",Productivity and Business Processes
+"And so, that gives the enterprise customers even more flexibility to have 
+something that's more ubiquitous.",Office Commercial,positive,main,True,474,"And so, that gives the enterprise customers even more flexibility to have 
+something that's more ubi...",Productivity and Business Processes
+"Brad Sills -- Analyst 
+Wonderful.",Office Commercial,neutral,main,True,475,"Brad Sills -- Analyst 
+Wonderful.",Productivity and Business Processes
+Thank you so much.,Office Commercial,neutral,main,True,476,Thank you so much.,Productivity and Business Processes
+"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brad.",Office Commercial,neutral,main,True,477,"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brad.",Productivity and Business Processes
+"Operator, we have time for one last question.",Office Commercial,neutral,main,True,478,"Operator, we have time for one last question.",Productivity and Business Processes
+"Operator 
+And the last question will come from the line of Brent Bracelin with Piper Sandler.",Office Commercial,neutral,main,True,479,"Operator 
+And the last question will come from the line of Brent Bracelin with Piper Sandler.",Productivity and Business Processes
+"Please 
+proceed.",Office Commercial,neutral,main,True,480,"Please 
+proceed.",Productivity and Business Processes
+"Brent Bracelin -- Analyst 
+Thank you for taking the question here.",Office Commercial,neutral,main,True,481,"Brent Bracelin -- Analyst 
+Thank you for taking the question here.",Productivity and Business Processes
+Good afternoon.,Office Commercial,neutral,main,True,482,Good afternoon.,Productivity and Business Processes
+"I wanted to go back to commercial 
+bookings.",Office Commercial,neutral,main,True,483,"I wanted to go back to commercial 
+bookings.",Productivity and Business Processes
+"Commercial RPO, I think, increased $39 billion sequentially.",Office Commercial,positive,main,True,484,"Commercial RPO, I think, increased $39 billion sequentially.",Productivity and Business Processes
+"That's the most we've ever seen on a sequential basis, commercial bookings growth, 75% 
+constant currency.",Office Commercial,positive,main,True,485,"That's the most we've ever seen on a sequential basis, commercial bookings growth, 75% 
+constant cur...",Productivity and Business Processes
+That's 2x higher than we've seen in the last decade.,Office Commercial,positive,main,True,486,That's 2x higher than we've seen in the last decade.,Productivity and Business Processes
+"I appreciate there's 
+some volatility with this metric, but it does feel like this quarter, there was a bit of a sea change 
+relative to momentum on backlog and bookings.",Office Commercial,positive,main,True,487,"I appreciate there's 
+some volatility with this metric, but it does feel like this quarter, there wa...",Productivity and Business Processes
+"Can you just talk about maybe the breadth of 
+where that strength came from?",Office Commercial,neutral,main,True,488,"Can you just talk about maybe the breadth of 
+where that strength came from?",Productivity and Business Processes
+Was it broad-based?,Office Commercial,neutral,main,True,489,Was it broad-based?,Productivity and Business Processes
+Was there a couple of large deals?,Office Commercial,neutral,main,True,490,Was there a couple of large deals?,Productivity and Business Processes
+"Any 
+color there would be helpful.",Office Commercial,neutral,main,True,491,"Any 
+color there would be helpful.",Productivity and Business Processes
+Thanks.,Office Commercial,neutral,main,True,492,Thanks.,Productivity and Business Processes
+Amy E.,Office Commercial,neutral,main,True,493,Amy E.,Productivity and Business Processes
+"Hood -- Executive Vice President, Chief Financial Officer 
+Thanks, Brent.",Office Commercial,neutral,main,True,494,"Hood -- Executive Vice President, Chief Financial Officer 
+Thanks, Brent.",Productivity and Business Processes
+It's a great question.,Office Commercial,neutral,main,True,495,It's a great question.,Productivity and Business Processes
+"We talked a little bit about one of the main drivers, which 
+was one of the Azure commitments that OpenAI has made.",Server products and cloud services,neutral,main,True,496,"We talked a little bit about one of the main drivers, which 
+was one of the Azure commitments that O...",Intelligent Cloud
+"And I do want to say, while that is 
+obviously a big component, you'll continue to see OpenAI make commitments.",Server products and cloud services,neutral,main,True,497,"And I do want to say, while that is 
+obviously a big component, you'll continue to see OpenAI make c...",Intelligent Cloud
+"So, I don't -- I want to separate the concept that it's one-time versus an ongoing relationship that 
+will grow as they grow, which it absolutely will.",Server products and cloud services,positive,main,True,498,"So, I don't -- I want to separate the concept that it's one-time versus an ongoing relationship that...",Intelligent Cloud
+"And to your question on what else is participating 
+in that number.",Server products and cloud services,neutral,main,True,499,"And to your question on what else is participating 
+in that number.",Intelligent Cloud
+"First, we did have very good core motions.",Server products and cloud services,positive,main,True,500,"First, we did have very good core motions.",Intelligent Cloud
+"Our core motions are things like, to 
+your point, renewals of our existing contracts, add-ons to those contracts, upsells, like, for 
+example, Copilot or GitHub Copilot or other processes.",Server products and cloud services,neutral,main,True,501,"Our core motions are things like, to 
+your point, renewals of our existing contracts, add-ons to tho...",Intelligent Cloud
+And I think that's important.,Server products and cloud services,neutral,main,True,502,And I think that's important.,Intelligent Cloud
+"We also had a good E5 quarter, which when we talk a lot about 
+M365 Copilot, I sometimes forget to also talk about Suite momentum, and we saw that as well 
+this quarter, which we felt very good about.",Server products and cloud services,positive,main,True,503,"We also had a good E5 quarter, which when we talk a lot about 
+M365 Copilot, I sometimes forget to a...",Intelligent Cloud
+"And then the final component is large Azure 
+commitments.",Server products and cloud services,neutral,main,True,504,"And then the final component is large Azure 
+commitments.",Intelligent Cloud
+"And those really did look as we expected, which is good.",Server products and cloud services,positive,main,True,505,"And those really did look as we expected, which is good.",Intelligent Cloud
+"To your point, and that you're seeing a really broad-based growth.",Server products and cloud services,positive,main,True,506,"To your point, and that you're seeing a really broad-based growth.",Intelligent Cloud
+"Those Azure commitments 
+take two forms.",Server products and cloud services,neutral,main,True,507,"Those Azure commitments 
+take two forms.",Intelligent Cloud
+"One, it's existing customers who've worked through their commitments and are 
+making larger commitments, which is a good commitment signed for the platform.",Server products and cloud services,positive,main,True,508,"One, it's existing customers who've worked through their commitments and are 
+making larger commitme...",Intelligent Cloud
+"And then you 
+have new customers making commitments, and we also saw that this quarter.",Server products and cloud services,positive,main,True,509,"And then you 
+have new customers making commitments, and we also saw that this quarter.",Intelligent Cloud
+"And so, to your point, sometimes I think a big number that looks like this can make you think it's 
+just one thing.",Server products and cloud services,neutral,main,True,510,"And so, to your point, sometimes I think a big number that looks like this can make you think it's 
+...",Intelligent Cloud
+I think you're right.,Server products and cloud services,neutral,main,True,511,I think you're right.,Intelligent Cloud
+"Some of it was one thing, but a lot of it was good execution 
+consistently across the workloads.",Server products and cloud services,positive,main,True,512,"Some of it was one thing, but a lot of it was good execution 
+consistently across the workloads.",Intelligent Cloud
+"Brent Bracelin -- Analyst 
+Thank you.",Server products and cloud services,neutral,main,True,513,"Brent Bracelin -- Analyst 
+Thank you.",Intelligent Cloud
+"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brent.",Server products and cloud services,neutral,main,True,514,"Brett Iversen -- Vice President, Investor Relations 
+Thanks, Brent.",Intelligent Cloud
+That wraps up the Q&A portion of today's earnings call.,Server products and cloud services,neutral,qa,True,515,That wraps up the Q&A portion of today's earnings call.,Intelligent Cloud
+"Thank you for joining us 
+today, and we look forward to speaking with all of you soon.",Server products and cloud services,neutral,main,True,516,"Thank you for joining us 
+today, and we look forward to speaking with all of you soon.",Intelligent Cloud
