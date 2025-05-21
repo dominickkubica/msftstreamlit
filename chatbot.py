@@ -16,7 +16,7 @@ def load_stock_data():
     """
     Load stock data from the CSV file with proper date handling
     """
-    file_path = Path(__file__).parent / "HistoricalData_1747025804532.csv"
+    file_path = "HistoricalData_1747025804532.csv"
     
     if not os.path.exists(file_path):
         st.error(f"Stock data file not found at: {file_path}")
