@@ -13,13 +13,12 @@ ASSETS_DIR = BASE_DIR / "assets"
 # Ensure the assets directory exists
 ASSETS_DIR.mkdir(exist_ok=True)
 
-# Use exact filenames from the repository as shown in the screenshot
 PHOTO_MAP = {
     "Dylan Gordon":       "DYLAN.png",
     "Dominick Kubica":    "DOMINICK.png",
     "Nanami Emura":       "NANAMI.png",
     "Derleen Saini":      "DERLEEN.png",
-    "Charles Goldenberg": "charles.png",  # Lowercase as seen in the screenshot
+    "Charles Goldenberg": "charles.png",
 }
 
 def get_image_as_base64(file_path):
@@ -38,13 +37,17 @@ def display_profile_image(name: str):
     Display a teammate's photo or a gray placeholder if the file is missing.
     Uses consistent sizing for all images.
     """
-    # 1) Use exact filename from PHOTO_MAP 
+    # 1) Exact mapping first
     filename = PHOTO_MAP.get(name)
+
+    # 2) If not in map: try FIRSTNAME.png (legacy convenience)
+    if filename is None:
+        filename = f"{name.split()[0].upper()}.png"
 
     # Try multiple locations for the image file
     possible_paths = [
-        BASE_DIR / filename,    # Check main directory first (as shown in screenshot)
-        ASSETS_DIR / filename,  # Then check assets directory
+        ASSETS_DIR / filename,  # Check assets directory first
+        BASE_DIR / filename,    # Then check main directory
         Path(filename)          # Finally check relative path
     ]
     
@@ -56,9 +59,9 @@ def display_profile_image(name: str):
             if encoded_image:
                 # Set consistent image styling with fixed height and width
                 html = f'''
-                <div class="image-container">
+                <div style="height:200px; display:flex; justify-content:center; align-items:center; overflow:hidden;">
                     <img src="data:image/png;base64,{encoded_image}" 
-                    class="profile-image">
+                    style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
                 </div>
                 '''
                 st.markdown(html, unsafe_allow_html=True)
@@ -66,18 +69,23 @@ def display_profile_image(name: str):
                 break
     
     if not img_found:
-        # Create a nicer placeholder with person icon
+        # Draw simple placeholder with consistent sizing
         size = 200
-        ph = Image.new("RGB", (size, size), color="#E0E0E0")
+        ph = Image.new("RGB", (size, size), color="#CCCCCC")
         d = ImageDraw.Draw(ph)
-        d.text((size * 0.25, size * 0.45), f"No Photo\n{name.split()[0]}", fill="#555555")
+        d.text((size * 0.35, size * 0.45), "No\nPhoto", fill="black")
         
         # Display placeholder with consistent container sizing
-        st.markdown('<div class="image-container">', unsafe_allow_html=True)
+        st.markdown(
+            '''
+            <div style="height:200px; display:flex; justify-content:center; align-items:center;">
+            ''', 
+            unsafe_allow_html=True
+        )
         st.image(ph, width=200)
         st.markdown('</div>', unsafe_allow_html=True)
         
-        # Log the error
+        # Use print instead of st.debug - won't show in UI but will appear in console
         print(f"No image found for {name}. Checked paths: {possible_paths}")
 
 ###############################################################################
@@ -89,53 +97,6 @@ def render_about_us_tab(microsoft_colors: dict):
         "We are a group of passionate data scientists and financial analysts "
         "working to revolutionize how earnings calls are analyzed."
     )
-
-    # Add CSS for better styling
-    st.markdown("""
-    <style>
-    .profile-card {
-        background-color: #f9f9f9;
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .profile-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-    .profile-card h3 {
-        margin-top: 12px;
-        margin-bottom: 5px;
-        color: #2F2F2F;
-    }
-    .profile-content {
-        flex-grow: 1;
-    }
-    .image-container {
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        border-radius: 8px;
-    }
-    .profile-image {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 8px;
-        transition: transform 0.3s;
-    }
-    .profile-image:hover {
-        transform: scale(1.03);
-    }
-    </style>
-    """, unsafe_allow_html=True)
 
     team_members = [
         # (unchanged) ----------------------------------------------------------
@@ -180,34 +141,62 @@ def render_about_us_tab(microsoft_colors: dict):
             "contact": "cgoldenberg@scu.edu",
         },
     ]
-    
-    # Improved layout with even spacing - first row of 3, second row of 2 centered
-    col1, col2, col3 = st.columns(3)
-    col4, empty_col, col5 = st.columns([1, 1, 1])  # Center the bottom row
-    
-    columns = [col1, col2, col3, col4, col5]
-    
-    for i, member in enumerate(team_members):
-        with columns[i]:
-            st.markdown('<div class="profile-card">', unsafe_allow_html=True)
-            
-            display_profile_image(member["name"])
 
-            st.markdown(
-                f"""
-                <div class="profile-content">
-                    <h3>{member['name']}</h3>
-                    <p style="color:{microsoft_colors['primary']};font-weight:bold;">
-                        {member['role']}
-                    </p>
-                    <p>{member['about']}</p>
-                    <p><strong>Interests:</strong> {member['interests']}</p>
-                    <p><strong>Contact:</strong> {member['contact']}</p>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-            st.markdown("</div>", unsafe_allow_html=True)
+    # Add CSS for profile cards
+    st.markdown("""
+    <style>
+    .profile-card {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-card h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .profile-content {
+        flex-grow: 1;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # layout: 3 + 2
+    rows = [st.columns(3), st.columns(2)]
+    idx = 0
+    for cols in rows:
+        for col in cols:
+            if idx >= len(team_members):
+                break
+            member = team_members[idx]
+            idx += 1
+
+            with col:
+                st.markdown('<div class="profile-card">', unsafe_allow_html=True)
+                
+                display_profile_image(member["name"])
+
+                st.markdown(
+                    f"""
+                    <div class="profile-content">
+                        <h3>{member['name']}</h3>
+                        <p style="color:{microsoft_colors['primary']};font-weight:bold;">
+                            {member['role']}
+                        </p>
+                        <p>{member['about']}</p>
+                        <p><strong>Interests:</strong> {member['interests']}</p>
+                        <p><strong>Contact:</strong> {member['contact']}</p>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+                st.markdown("</div>", unsafe_allow_html=True)
+
+    # Contact form removed as requested
 
 ###############################################################################
 #  Quick standalone test
@@ -220,12 +209,12 @@ if __name__ == "__main__":
         st.warning("""
         **Image Setup Required**: 
         
-        Please place your team member images in the same directory as this script:
+        Please create an 'assets' folder in the same directory as this script and place your team member images there:
         - DYLAN.png
         - DOMINICK.png
         - NANAMI.png
-        - DERLEEN.png 
-        - charles.png (lowercase as shown in repository)
+        - DERLEEN.png
+        - charles.png
         """)
     
     render_about_us_tab({"primary": "#0078d4"})
