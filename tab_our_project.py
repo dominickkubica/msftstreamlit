@@ -155,13 +155,13 @@ def render_our_project_tab(microsoft_colors):
                     st.markdown("""
                     We’ve been actively sharing our findings through a variety of channels:
 
-                    1. **Microsoft Internal Report** (April 2025)  
-                    – Detailed technical write‑up of Copilot 365 vs. LLM benchmarking, circulated within Microsoft Research.
+                    ##1. **Microsoft Internal Report** (April 2025)  
+                    ##– Detailed technical write‑up of Copilot 365 vs. LLM benchmarking, circulated within Microsoft Research.
 
-                    2. **Microsoft AI Blog Submission** (May 2025)  
+                    1. **Microsoft AI Blog Submission** (May 2025)  
                     – Draft blog post titled *“Benchmarking Copilot & ChatGPT‑4o for Financial Sentiment Analysis”* under review by the Microsoft AI content team.
 
-                    3. **MIT Technology Review Manuscript** (Under Review)  
+                    2. **MIT Technology Review Manuscript** (Under Review)  
                     – Paper **“Can AI Read Between the Lines? Benchmarking LLMs on Financial Transcripts”** submitted for external publication.
                     """)
                 st.markdown("</div>", unsafe_allow_html=True)
