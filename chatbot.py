@@ -7,6 +7,7 @@ import openai
 from datetime import datetime, timedelta
 import os.path
 import re
+from pathlib import Path
 
 # Setup logger
 logger = logging.getLogger("earnings_analyzer")
