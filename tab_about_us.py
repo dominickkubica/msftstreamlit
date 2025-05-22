@@ -348,7 +348,7 @@ def render_about_us_tab(microsoft_colors: dict):
             "name": "Dominick Kubica",
             "role": "University Researcher", 
             "about": "Dominick is an aspiring home-grown data scientist with a passion for finance and technology. ML and AI enthusiast focused on practical applications.",
-            "interests": "Data Science, Weightlifting, Cooking",
+            "interests": "Singularity, Weightlifting, Cooking",
             "contact": "dominickkubica@gmail.com",
         },
         {
@@ -362,14 +362,14 @@ def render_about_us_tab(microsoft_colors: dict):
             "name": "Nanami Emura",
             "role": "University Researcher",
             "about": "Nanami developed the core sentiment analysis algorithm and specializes in transformer models for financial text analysis, pushing the boundaries of NLP in finance.",
-            "interests": "Deep Learning, Soccer, Photography", 
+            "interests": "Tennis, Scuba Diving, Travel", 
             "contact": "nemura@scu.edu",
         },
         {
             "name": "Derleen Saini",
             "role": "University Researcher",
             "about": "Derleen created this Streamlit application and specializes in data visualization and user-experience design, making complex data accessible and beautiful.",
-            "interests": "UI/UX Design, Photography, Yoga",
+            "interests": "Soccer, Dance, Traveling",
             "contact": "dsaini@scu.edu",
         },
         {
