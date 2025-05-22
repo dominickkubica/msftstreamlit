@@ -325,7 +325,6 @@ def render_about_us_tab(microsoft_colors: dict):
         
         .team-description {
             font-size: 1rem;
-            text-align: center;
             
         }
     }
