@@ -39,26 +39,46 @@ def display_profile_image(name: str):
         filename = f"{name.split()[0].upper()}.png"
 
     # Try multiple locations for the image file
+    # Get the directory where this script is located
+    script_dir = Path(__file__).parent
+    
     possible_paths = [
-        Path(filename)          # Finally check relative path
+        # Check in the same directory as the script
+        script_dir / filename,
+        # Check in the root directory (one level up if script is in a subdirectory)
+        script_dir.parent / filename,
+        # Check relative to current working directory
+        Path(filename),
+        # Check in an assets folder
+        script_dir / "assets" / filename,
+        # Check for common variations (lowercase)
+        script_dir / filename.lower(),
+        script_dir.parent / filename.lower(),
+        # Check in root with lowercase
+        Path(filename.lower()),
     ]
     
     img_found = False
     for img_path in possible_paths:
         if img_path.exists():
-            # Use base64 encoding for reliable image display
-            encoded_image = get_image_as_base64(img_path)
-            if encoded_image:
-                # Set consistent image styling with fixed height and width
-                html = f'''
-                <div style="height:200px; display:flex; justify-content:center; align-items:center; overflow:hidden;">
-                    <img src="data:image/png;base64,{encoded_image}" 
-                    style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
-                </div>
-                '''
-                st.markdown(html, unsafe_allow_html=True)
-                img_found = True
-                break
+            try:
+                # Use base64 encoding for reliable image display
+                encoded_image = get_image_as_base64(img_path)
+                if encoded_image:
+                    # Set consistent image styling with fixed height and width
+                    html = f'''
+                    <div style="height:200px; display:flex; justify-content:center; align-items:center; overflow:hidden;">
+                        <img src="data:image/png;base64,{encoded_image}" 
+                        style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+                    </div>
+                    '''
+                    st.markdown(html, unsafe_allow_html=True)
+                    img_found = True
+                    print(f"Successfully loaded image for {name} from: {img_path}")
+                    break
+            except Exception as e:
+                print(f"Error loading image {img_path}: {e}")
+                continue
     
     if not img_found:
         # Draw simple placeholder with consistent sizing
@@ -77,8 +97,13 @@ def display_profile_image(name: str):
         st.image(ph, width=200)
         st.markdown('</div>', unsafe_allow_html=True)
         
-        # Use print instead of st.debug - won't show in UI but will appear in console
-        print(f"No image found for {name}. Checked paths: {possible_paths}")
+        # Enhanced debugging information
+        print(f"No image found for {name}. Filename: {filename}")
+        print(f"Searched paths:")
+        for path in possible_paths:
+            print(f"  - {path} (exists: {path.exists()})")
+        print(f"Current working directory: {Path.cwd()}")
+        print(f"Script directory: {script_dir}")
 
 ###############################################################################
 #  Main component
