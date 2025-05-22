@@ -157,7 +157,7 @@ def render_our_project_tab(microsoft_colors):
 
                     1. **Microsoft AI Blog Submission** (May 2025)  
                     – *“Benchmarking Copilot & ChatGPT‑4o for Financial Sentiment Analysis”* officially posted on the Microsoft Tech Community Blog! 
-                    - Here is the link if you want to check it is: https://techcommunity.microsoft.com/blog/microsoft365copilotblog/llms-can-read-but-can-they-understand-wall-street-benchmarking-their-financial-i/4412043
+                    - Here is the link if you want to check it out: https://techcommunity.microsoft.com/blog/microsoft365copilotblog/llms-can-read-but-can-they-understand-wall-street-benchmarking-their-financial-i/4412043
 
                     2. **MIT Technology Review Manuscript** (Under Review)  
                     – Paper **“Can AI Read Between the Lines? Benchmarking LLMs on Financial Transcripts”** submitted for external publication.
