@@ -11,7 +11,7 @@ PHOTO_MAP = {
     "Dylan Gordon":       "DJR38489.JPG",
     "Dominick Kubica":    "DOMINICK.jpg",
     "Nanami Emura":       "NANAMI.jpg",
-    "Derleen Saini":      "DERLEEN.png",
+    "Derleen Saini":      "DJR38151.JPG",
     "Charles Goldenberg": "Goldenberg_Charles_1.jpg",
 }
 
