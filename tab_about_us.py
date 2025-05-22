@@ -236,12 +236,14 @@ def render_about_us_tab(microsoft_colors: dict):
         margin-bottom: 1.5rem;
         flex-grow: 1;
         font-size: 0.95rem;
+        text-align: center;
     }
     
     .profile-details {
         border-top: 1px solid #e2e8f0;
         padding-top: 1.5rem;
         margin-top: auto;
+        text-align: center;
     }
     
     .profile-interests, .profile-contact {
@@ -339,18 +341,18 @@ def render_about_us_tab(microsoft_colors: dict):
     # Team data
     team_members = [
         {
-            "name": "Dylan Gordon",
-            "role": "University Researcher",
-            "about": "Dylan is a former chemical engineer turned data scientist. He specializes in optimization and machine learning, bringing analytical precision to financial data analysis.",
-            "interests": "Stocks, Pickleball, Boxing",
-            "contact": "dtgordon@scu.edu",
-        },
-        {
             "name": "Dominick Kubica",
             "role": "University Researcher", 
             "about": "Dominick is an aspiring home-grown data scientist with a passion for finance and technology. ML and AI enthusiast focused on practical applications.",
             "interests": "Data Science, Weightlifting, Cooking",
             "contact": "dominickkubica@gmail.com",
+        },
+        {
+            "name": "Dylan Gordon",
+            "role": "University Researcher",
+            "about": "Dylan is a former chemical engineer turned data scientist. He specializes in optimization and machine learning, bringing analytical precision to financial data analysis.",
+            "interests": "Stocks, Pickleball, Boxing",
+            "contact": "dtgordon@scu.edu",
         },
         {
             "name": "Nanami Emura",
