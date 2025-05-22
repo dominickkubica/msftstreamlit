@@ -8,11 +8,11 @@ from PIL import Image, ImageDraw
 ###############################################################################
 
 PHOTO_MAP = {
-    "Dylan Gordon":       "DYLAN.jpg",
+    "Dylan Gordon":       "DYLAN.png",
     "Dominick Kubica":    "DOMINICK.jpg",
     "Nanami Emura":       "NANAMI.jpg",
-    "Derleen Saini":      "DERLEEN.jpg",
-    "Charles Goldenberg": "charles.jpg",
+    "Derleen Saini":      "DERLEEN.png",
+    "Charles Goldenberg": "charles.png",
 }
 
 def get_image_as_base64(file_path):
