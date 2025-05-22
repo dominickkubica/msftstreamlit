@@ -6,12 +6,6 @@ from PIL import Image, ImageDraw
 ###############################################################################
 #  Photo location helpers
 ###############################################################################
-BASE_DIR = Path(__file__).resolve().parent
-# Create a specific assets directory for images
-ASSETS_DIR = BASE_DIR / "assets"
-
-# Ensure the assets directory exists
-ASSETS_DIR.mkdir(exist_ok=True)
 
 PHOTO_MAP = {
     "Dylan Gordon":       "DYLAN.jpg",
@@ -46,8 +40,6 @@ def display_profile_image(name: str):
 
     # Try multiple locations for the image file
     possible_paths = [
-        ASSETS_DIR / filename,  # Check assets directory first
-        BASE_DIR / filename,    # Then check main directory
         Path(filename)          # Finally check relative path
     ]
     
