@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw
 ###############################################################################
 
 PHOTO_MAP = {
-    "Dylan Gordon":       "DYLAN.png",
+    "Dylan Gordon":       "DJR38489.JPG",
     "Dominick Kubica":    "DOMINICK.jpg",
     "Nanami Emura":       "NANAMI.jpg",
     "Derleen Saini":      "DERLEEN.png",
