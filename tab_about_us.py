@@ -286,6 +286,8 @@ def render_about_us_tab(microsoft_colors: dict):
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        text-align: center;
+        
     }
     
     .team-description {
@@ -323,6 +325,8 @@ def render_about_us_tab(microsoft_colors: dict):
         
         .team-description {
             font-size: 1rem;
+            text-align: center;
+            
         }
     }
     
