@@ -14,10 +14,10 @@ ASSETS_DIR = BASE_DIR / "assets"
 ASSETS_DIR.mkdir(exist_ok=True)
 
 PHOTO_MAP = {
-    "Dylan Gordon":       "DYLAN.png",
-    "Dominick Kubica":    "DOMINICK.png",
-    "Nanami Emura":       "NANAMI.png",
-    "Derleen Saini":      "DERLEEN.png",
+    "Dylan Gordon":       "DYLAN.jpg",
+    "Dominick Kubica":    "DOMINICK.jpg",
+    "Nanami Emura":       "NANAMI.jpg",
+    "Derleen Saini":      "DERLEEN.jpg",
     "Charles Goldenberg": "charles.png",
 }
 
