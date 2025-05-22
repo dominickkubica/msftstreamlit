@@ -294,6 +294,7 @@ def render_about_us_tab(microsoft_colors: dict):
         max-width: 600px;
         margin: 0 auto;
         line-height: 1.6;
+        text-align: center;
     }
     
     /* Responsive adjustments */
