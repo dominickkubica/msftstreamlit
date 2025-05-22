@@ -12,7 +12,7 @@ PHOTO_MAP = {
     "Dominick Kubica":    "DOMINICK.jpg",
     "Nanami Emura":       "NANAMI.jpg",
     "Derleen Saini":      "DERLEEN.png",
-    "Charles Goldenberg": "charles.png",
+    "Charles Goldenberg": "Goldenberg_Charles_1.jpg",
 }
 
 def get_image_as_base64(file_path):
