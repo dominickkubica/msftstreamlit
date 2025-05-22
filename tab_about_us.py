@@ -365,7 +365,7 @@ def render_about_us_tab(microsoft_colors: dict):
         {
             "name": "Derleen Saini",
             "role": "University Researcher",
-            "about": "Derleen created this Streamlit application and specializes in data visualization and user-experience design, making complex data accessible and beautiful.",
+            "about": "Derleen specializes in data visualization and user-experience design, making complex data accessible and beautiful.",
             "interests": "Soccer, Dance, Traveling",
             "contact": "dsaini@scu.edu",
         },
