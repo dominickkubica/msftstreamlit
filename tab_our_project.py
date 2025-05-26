@@ -71,7 +71,7 @@ def render_our_project_tab(microsoft_colors):
                 Our findings demonstrate that LLMs significantly outperform conventional models, particularly in capturing financial nuance and 
                 contextual meaning within earnings transcripts.
 
-                To validate these insights, we conducted a case study on Microsoft’s last eight quarterly earnings calls, analyzing the sentiment 
+                To validate these insights, we conducted a case study on Microsoft's last eight quarterly earnings calls, analyzing the sentiment 
                 across business segments and correlating it with same-day stock performance. Our results suggest that certain divisions, such as Search tools and Reporter Q&A
                 ,have a disproportionate impact on investor sentiment and price movement.
 
@@ -97,9 +97,15 @@ def render_our_project_tab(microsoft_colors):
 
                     1. **Data Collection**: Financial Phrasebank from Kaggle, with 3‑label sentiment (Positive, Negative, Neutral).  
                     2. **Preprocessing**: NLTK & SpaCy for traditional models; skipped for LLMs.  
-                    3. **Sentiment Analysis**: Fin‑BERT, Vader (NLTK), TextBlob, Copilot 365, Copilot Chat & App, ChatGPT‑4o (± prompts), and Gemini 2.0 Flash.  
+                    3. **Sentiment Analysis**: Fin‑BERT, Vader (NLTK), TextBlob, Copilot 365, Copilot Chat & App, ChatGPT‑4o (± prompts), and Gemini 2.0 Flash.  
                     4. **Metrics**: Accuracy, Lift, plus Pearson correlation for business‑line sentiment vs. stock returns.
                     """)
+
+                with fig_col:
+                    # Display the benchmarking performance chart
+                    st.image("Updated Accuracy.png", 
+                            caption="Model Performance Comparison on Financial Phrasebank Dataset",
+                            use_column_width=True)
 
                 st.markdown("</div>", unsafe_allow_html=True)
 
@@ -113,17 +119,23 @@ def render_our_project_tab(microsoft_colors):
                 with text_col:
                     st.markdown("**Key Findings**")
                     st.write("""
-                    - **Segmented sentiment drives insight** – Business‐line sentiment (e.g. Devices, Search & Advertising) often correlates more closely to next‐day stock moves than overall tone.
-                    - **Inverse signals** – Positive spikes in “Search & News Advertising” preceded sell‐offs, suggesting over‑optimism can trigger defensive selling.
-                    - **Model choice matters** – ChatGPT‑4o handled batch transcript processing more cleanly than Copilot for large‐scale analysis.
+                    - **Segmented sentiment drives insight** – Business‐line sentiment (e.g. Devices, Search & Advertising) often correlates more closely to next‐day stock moves than overall tone.
+                    - **Inverse signals** – Positive spikes in "Search & News Advertising" preceded sell‐offs, suggesting over‑optimism can trigger defensive selling.
+                    - **Model choice matters** – ChatGPT‑4o handled batch transcript processing more cleanly than Copilot for large‐scale analysis.
                     """)
 
                     st.markdown("**Optimization Recommendations**")
                     st.write("""
-                    1. **Automate segmentation** – Build an LLM‑powered pipeline that tags transcripts by business unit before sentiment extraction.  
-                    2. **Overlay price data** – Pull stock price changes via an API (e.g. yfinance) and dynamically plot movements next to sentiment.
-                    3. **Interactive visuals** – Use Streamlit’s Plotly or Altair integration to let users toggle segments and date ranges.
+                    1. **Automate segmentation** – Build an LLM‑powered pipeline that tags transcripts by business unit before sentiment extraction.  
+                    2. **Overlay price data** – Pull stock price changes via an API (e.g. yfinance) and dynamically plot movements next to sentiment.
+                    3. **Interactive visuals** – Use Streamlit's Plotly or Altair integration to let users toggle segments and date ranges.
                     """)
+
+                with img_col:
+                    # Display the Microsoft sentiment analysis chart
+                    st.image("image.png", 
+                            caption="Positive Sentiment by Business Line - Microsoft Earnings Analysis",
+                            use_column_width=True)
 
                 st.markdown("</div>", unsafe_allow_html=True)
 
@@ -153,15 +165,13 @@ def render_our_project_tab(microsoft_colors):
 
                 with text_col:
                     st.markdown("""
-                    We’ve been actively sharing our findings through a variety of channels:
+                    We've been actively sharing our findings through a variety of channels:
 
-                    1. **Microsoft AI Blog Submission** (May 2025)  
-                    – *“Benchmarking Copilot & ChatGPT‑4o for Financial Sentiment Analysis”* officially posted on the Microsoft 365 Copilot Blog! 
+                    1. **Microsoft AI Blog Submission** (May 2025)  
+                    – *"Benchmarking Copilot & ChatGPT‑4o for Financial Sentiment Analysis"* officially posted on the Microsoft 365 Copilot Blog! 
                     - Here is the link if you want to check it out: https://techcommunity.microsoft.com/blog/microsoft365copilotblog/llms-can-read-but-can-they-understand-wall-street-benchmarking-their-financial-i/4412043
 
                     2. **MIT Technology Review Manuscript** (Under Review)  
-                    – Paper **“Can AI Read Between the Lines? Benchmarking LLMs on Financial Transcripts”** submitted for external publication.
+                    – Paper **"Can AI Read Between the Lines? Benchmarking LLMs on Financial Transcripts"** submitted for external publication.
                     """)
                 st.markdown("</div>", unsafe_allow_html=True)
-
-    
