@@ -382,16 +382,6 @@ def render_about_us_tab(microsoft_colors: dict):
     st.markdown('<div class="about-container">', unsafe_allow_html=True)
     
     # Header section
-    st.markdown("""
-    <div class="team-header">
-        <h1 class="team-title">Meet Our Team</h1>
-        <p class="team-description">
-            We are a group of passionate data scientists and financial analysts 
-            working to revolutionize how earnings calls are analyzed through 
-            cutting-edge machine learning and intuitive design.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
     
     # Team grid
     st.markdown('<div class="team-grid">', unsafe_allow_html=True)
