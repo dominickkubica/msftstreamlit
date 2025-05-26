@@ -105,7 +105,7 @@ def render_our_project_tab(microsoft_colors):
                     # Display the benchmarking performance chart
                     st.image("Updated Accuracy.png", 
                             caption="Model Performance Comparison on Financial Phrasebank Dataset",
-                            use_column_width=True)
+                            use_container_width=True)
 
                 st.markdown("</div>", unsafe_allow_html=True)
 
@@ -135,7 +135,7 @@ def render_our_project_tab(microsoft_colors):
                     # Display the Microsoft sentiment analysis chart
                     st.image("image.png", 
                             caption="Positive Sentiment by Business Line - Microsoft Earnings Analysis",
-                            use_column_width=True)
+                            use_container_width=True)
 
                 st.markdown("</div>", unsafe_allow_html=True)
 
