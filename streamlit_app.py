@@ -84,10 +84,10 @@ def display_header():
             f"""
             <div style="display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
                 <svg width="40" height="40" viewBox="0 0 23 23">
-                    <rect x="1"  y="1"  width="10" height="10" fill="{microsoft_colors["primary"]}"/>
+                    <rect x="1"  y="1"  width="10" height="10" fill="{microsoft_colors["danger"]}"/>
                     <rect x="12" y="1"  width="10" height="10" fill="{microsoft_colors["success"]}"/>
-                    <rect x="1"  y="12" width="10" height="10" fill="{microsoft_colors["accent"]}"/>
-                    <rect x="12" y="12" width="10" height="10" fill="{microsoft_colors["danger"]}"/>
+                    <rect x="1"  y="12" width="10" height="10" fill="{microsoft_colors["primary"]}"/>
+                    <rect x="12" y="12" width="10" height="10" fill="{microsoft_colors["accent"]}"/>
                 </svg>
                 <h1 style="margin-left:10px;">Reading Between the Lines</h1>
             </div>
