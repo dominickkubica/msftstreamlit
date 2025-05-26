@@ -264,11 +264,30 @@ def render_about_us_tab(microsoft_colors: dict):
         color: #0078d4;
         text-decoration: none;
         transition: color 0.2s ease;
+        margin-right: 0.5rem;
     }
     
     .profile-contact a:hover {
         color: #106ebe;
         text-decoration: underline;
+    }
+    
+    .linkedin-link {
+        display: inline-block;
+        color: #0077b5;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    
+    .linkedin-link:hover {
+        color: #005885;
+        text-decoration: underline;
+    }
+    
+    .contact-separator {
+        color: #718096;
+        margin: 0 0.5rem;
     }
     
     /* Header styling */
@@ -335,11 +354,20 @@ def render_about_us_tab(microsoft_colors: dict):
         .profile-name {
             font-size: 1.3rem;
         }
+        
+        .profile-contact {
+            font-size: 0.85rem;
+        }
+        
+        .contact-separator {
+            display: block;
+            margin: 0.25rem 0;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
 
-    # Team data
+    # Team data with LinkedIn profiles
     team_members = [
         {
             "name": "Dominick Kubica",
@@ -347,6 +375,7 @@ def render_about_us_tab(microsoft_colors: dict):
             "about": "Dominick is an aspiring home-grown data scientist with a passion for finance and technology. ML and AI enthusiast focused on practical applications.",
             "interests": "Singularity, Weightlifting, Cooking",
             "contact": "dominickkubica@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/dominick-kubica/",
         },
         {
             "name": "Dylan Gordon",
@@ -354,6 +383,7 @@ def render_about_us_tab(microsoft_colors: dict):
             "about": "Dylan is a former chemical engineer turned data scientist. He specializes in optimization and machine learning, bringing analytical precision to financial data analysis.",
             "interests": "Stocks, Pickleball, Boxing",
             "contact": "dtgordon@scu.edu",
+            "linkedin": "https://www.linkedin.com/in/dylan-gordon-746398255/",
         },
         {
             "name": "Nanami Emura",
@@ -361,6 +391,7 @@ def render_about_us_tab(microsoft_colors: dict):
             "about": "Nanami developed the core sentiment analysis algorithm and specializes in transformer models for financial text analysis, pushing the boundaries of NLP in finance.",
             "interests": "Tennis, Scuba Diving, Travel", 
             "contact": "nemura@scu.edu",
+            "linkedin": "https://www.linkedin.com/in/nanami-emura/",
         },
         {
             "name": "Derleen Saini",
@@ -368,6 +399,7 @@ def render_about_us_tab(microsoft_colors: dict):
             "about": "Derleen specializes in data visualization and user-experience design, making complex data accessible and beautiful.",
             "interests": "Soccer, Dance, Traveling",
             "contact": "dsaini@scu.edu",
+            "linkedin": "https://www.linkedin.com/in/derleen-saini/",
         },
         {
             "name": "Charles Goldenberg", 
@@ -375,6 +407,7 @@ def render_about_us_tab(microsoft_colors: dict):
             "about": "Charles is the leader of our practicum project and has extensive experience working with technical projects, guiding the team toward innovative solutions.",
             "interests": "Statistical Modeling, Travel, Jazz",
             "contact": "cgoldenberg@scu.edu",
+            "linkedin": "https://www.linkedin.com/in/charlesgoldenberg/",
         },
     ]
 
@@ -408,7 +441,11 @@ def render_about_us_tab(microsoft_colors: dict):
                     </p>
                     <p class="profile-contact">
                         <strong>Contact:</strong> 
-                        <span><a href="mailto:{member['contact']}">{member['contact']}</a></span>
+                        <span>
+                            <a href="mailto:{member['contact']}">{member['contact']}</a>
+                            <span class="contact-separator">|</span>
+                            <a href="{member['linkedin']}" target="_blank" class="linkedin-link">LinkedIn</a>
+                        </span>
                     </p>
                 </div>
             </div>
