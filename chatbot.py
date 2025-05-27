@@ -6,6 +6,82 @@ import openai
 from datetime import datetime, timedelta
 import os.path
 import re
+import unicodedata
+
+def clean_text(text):
+    """
+    Clean text by removing non-ASCII characters and fixing formatting issues.
+    """
+    # Normalize Unicode characters to their ASCII equivalents where possible
+    text = unicodedata.normalize("NFKD", text)
+    
+    # Replace common Unicode punctuation with ASCII equivalents
+    replacements = {
+        "—": "-",  # EM dash
+        "–": "-",  # EN dash
+        """: '"',  # Left double quote
+        """: '"',  # Right double quote
+        "'": "'",  # Left single quote
+        "'": "'",  # Right single quote
+        "…": "...",  # Ellipsis
+        " ": " ",  # Non-breaking space
+        "\u2013": "-",  # EN dash (by code)
+        "\u2014": "-",  # EM dash (by code)
+        "\u2018": "'",  # Left single quote (by code)
+        "\u2019": "'",  # Right single quote (by code)
+        "\u201C": '"',  # Left double quote (by code)
+        "\u201D": '"',  # Right double quote (by code)
+        "\u2026": "...",  # Ellipsis (by code)
+        "\u00A0": " ",  # Non-breaking space (by code)
+    }
+    
+    for unicode_char, ascii_char in replacements.items():
+        text = text.replace(unicode_char, ascii_char)
+    
+    # Fix multiple spaces and remove extra whitespace
+    text = re.sub(r'\s{2,}', ' ', text)
+    
+    # Ensure spaces around punctuation aren't lost
+    text = re.sub(r'(\w)([,.])', r'\1 \2', text)
+    text = re.sub(r'([,.])(\w)', r'\1 \2', text)
+    
+    # Clean up any remaining non-ASCII characters
+    # This keeps only ASCII characters plus common Latin-1 supplement
+    text = ''.join(char if ord(char) < 128 else ' ' for char in text)
+    
+    # Final cleanup of spaces
+    text = re.sub(r'\s{2,}', ' ', text)
+    
+    return text.strip()
+
+def generate_stock_summary_sentence(stock_data, start_date, end_date, date_col='Date', price_col='Close/Last'):
+    """
+    Generate a stock summary sentence with controlled formatting to avoid Unicode issues.
+    """
+    try:
+        # Ensure dates are pandas Timestamps
+        start_date = pd.to_datetime(start_date)
+        end_date = pd.to_datetime(end_date)
+        
+        # Find the data for these dates
+        start_data = stock_data[stock_data[date_col].dt.date == start_date.date()]
+        end_data = stock_data[stock_data[date_col].dt.date == end_date.date()]
+        
+        if not start_data.empty and not end_data.empty:
+            start_price = float(start_data.iloc[0][price_col])
+            end_price = float(end_data.iloc[0][price_col])
+            
+            # Generate the sentence with plain ASCII formatting
+            if end_price > start_price:
+                summary = f"On {start_date.strftime('%Y-%m-%d')} the stock closed at ${start_price:.2f}, but by {end_date.strftime('%Y-%m-%d')} it had risen to ${end_price:.2f}."
+            else:
+                summary = f"On {start_date.strftime('%Y-%m-%d')} the stock closed at ${start_price:.2f}, and by {end_date.strftime('%Y-%m-%d')} it had fallen to ${end_price:.2f}."
+            
+            return summary
+    except Exception as e:
+        return None
+    
+    return None
 
 def load_stock_data():
     """Load stock data from the CSV file with proper date handling"""
@@ -167,6 +243,19 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
                 thirty_day_change = ((newest_price - recent_stock.iloc[19][price_col]) / recent_stock.iloc[19][price_col]) * 100
                 stock_summary += f"30-day performance: {thirty_day_change:.2f}%.\n"
             
+            # Generate controlled ASCII-only date-specific sentences
+            if len(date_objects) >= 2:
+                # Try to generate a comparison sentence
+                comparison_sentence = generate_stock_summary_sentence(
+                    stock_data, 
+                    date_objects[0], 
+                    date_objects[1], 
+                    date_col, 
+                    price_col
+                )
+                if comparison_sentence:
+                    stock_summary += f"\n{comparison_sentence}\n"
+            
             # Specific date information
             date_specific_info = ""
             for date_obj in date_objects:
@@ -298,10 +387,13 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
         # Compile context
         full_context = "\n\n".join(context)
         
-        # Simple system message - let AI format naturally
+        # Enhanced system message with ASCII-only instruction
         system_message = """You are a financial analysis assistant for Microsoft's January 29, 2025 earnings call. 
         Answer questions about Microsoft's stock performance and earnings call sentiment analysis using the provided data.
-        Be accurate and only use the data provided. Format your response clearly with bullet points for key information."""
+        Be accurate and only use the data provided. Format your response clearly with bullet points for key information.
+        
+        IMPORTANT: Use only plain ASCII characters in your response. Do not use smart quotes, em dashes, en dashes, or any special Unicode characters. 
+        Use straight quotes ("), hyphens (-), and standard punctuation only."""
         
         messages = [
             {"role": "system", "content": system_message},
@@ -315,7 +407,10 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
             max_tokens=1000
         )
         
-        return response.choices[0].message.content
+        # Clean the response text to ensure ASCII-only output
+        cleaned_response = clean_text(response.choices[0].message.content)
+        
+        return cleaned_response
     
     except Exception as e:
         return f"Error processing query: {str(e)}"
