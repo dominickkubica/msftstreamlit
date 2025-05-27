@@ -56,7 +56,7 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None):
     
     return response.choices[0].message.content
 
-def init_chat_interface(sentiment_data=None, stock_data=None):
+def init_chat_interface(sentiment_data=None, stock_data=None, date_col='Date', price_col='Close/Last'):
     """Initialize chat interface"""
     st.header("Financial Analysis Chatbot")
     
@@ -69,7 +69,7 @@ def init_chat_interface(sentiment_data=None, stock_data=None):
     
     return True, True
 
-def process_chat_input(chat_prompt, sentiment_data=None, stock_data=None):
+def process_chat_input(chat_prompt, sentiment_data=None, stock_data=None, date_col='Date', price_col='Close/Last'):
     """Process chat input"""
     if not chat_prompt:
         return
