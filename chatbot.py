@@ -44,6 +44,7 @@ def clean_text(text):
     
     # Critical: Insert spaces between digits and letters that are stuck together
     # This fixes issues like "442.33ontheearningsannouncementdayto447.20"
+    # Using lookahead/lookbehind to only insert spaces at digit-letter boundaries
     text = re.sub(r'(?<=\d)(?=[A-Za-z])', ' ', text)  # 123Word → 123 Word
     text = re.sub(r'(?<=[A-Za-z])(?=\d)', ' ', text)  # Word123 → Word 123
     
@@ -59,6 +60,7 @@ def clean_text(text):
 def generate_stock_summary_sentence(stock_data, start_date, end_date, date_col='Date', price_col='Close/Last'):
     """
     Generate a stock summary sentence with controlled formatting to avoid Unicode issues.
+    This prevents the LLM from creating run-on text.
     """
     try:
         # Ensure dates are pandas Timestamps
@@ -74,6 +76,7 @@ def generate_stock_summary_sentence(stock_data, start_date, end_date, date_col='
             end_price = float(end_data.iloc[0][price_col])
             
             # Generate the sentence with plain ASCII formatting
+            # This ensures proper spacing and no run-on text
             if end_price > start_price:
                 summary = f"On {start_date.strftime('%Y-%m-%d')} the stock closed at ${start_price:.2f}, but by {end_date.strftime('%Y-%m-%d')} it had risen to ${end_price:.2f}."
             else:
