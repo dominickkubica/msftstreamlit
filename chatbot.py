@@ -59,7 +59,7 @@ def fix_response_formatting(text):
     # Fix variations of this pattern
     text = re.sub(r'from\$?(\d+\.?\d*)onthe', r'from $\1 on the', text)
     text = re.sub(r'from(\d+\.?\d*)onthe', r'from $\1 on the', text)
-    text = re.sub(r'dayto\$?(\d+\.?\d*)', r'day to $\2', text)
+    text = re.sub(r'dayto\$?(\d+\.?\d*)', r'day to $\1', text)  # FIXED: Changed \2 to \1
     
     # Fix number+word combinations (no space between)
     text = re.sub(r'(\d+\.?\d*)([A-Za-z]+)', r'\1 \2', text)
