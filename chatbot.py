@@ -49,42 +49,39 @@ def fix_response_formatting(text):
     Apply targeted formatting fixes to model responses
     to ensure consistent and readable text output
     """
-    # Fix specific financial term spacing issues
-    text = re.sub(r'(\d+\.?\d*)billion', r'\1 billion', text)
-    text = re.sub(r'(\d+\.?\d*)million', r'\1 million', text)
-    text = re.sub(r'(\d+\.?\d*)trillion', r'\1 trillion', text)
+    # First, protect "stock" from being split
+    text = text.replace('sto ck', 'stock')
+    
+    # Fix number+word combinations (no space between)
+    text = re.sub(r'(\d+\.?\d*)([A-Za-z]+)', r'\1 \2', text)
+    
+    # Fix word+number combinations (no space between)
+    text = re.sub(r'([A-Za-z]+)(\d+\.?\d*)', r'\1 \2', text)
+    
+    # Fix specific financial terms
+    text = re.sub(r'(\d+\.?\d*)\s*billion', r'\1 billion', text)
+    text = re.sub(r'(\d+\.?\d*)\s*million', r'\1 million', text)
+    text = re.sub(r'(\d+\.?\d*)\s*trillion', r'\1 trillion', text)
+    text = re.sub(r'(\d+\.?\d*)\s*percent', r'\1 percent', text)
     
     # Fix dollar sign spacing
-    text = re.sub(r'\$\s+(\d)', r'$\1', text)
+    text = re.sub(r'\$\s*(\d)', r'$\1', text)
     
     # Fix percentage spacing
     text = re.sub(r'(\d+\.?\d*)\s*%', r'\1%', text)
     
-    # Fix specific problematic patterns observed in outputs
+    # Fix common problematic patterns
     text = text.replace('andincreased', 'and increased')
     text = text.replace('increasedto', 'increased to')
-    text = text.replace('billionto', 'billion to')
-    text = text.replace('billionand', 'billion and')
-    text = text.replace('millionand', 'million and')
-    text = text.replace('observationsfrom', 'observations from')
-    text = text.replace('reactioninclude', 'reaction include')
-    text = text.replace('billionwas', 'billion was')
-    text = text.replace('stockreaction', 'stock reaction')
-    text = text.replace('tock', 'to ck')  # Fix for "s to ck" issue
-    text = text.replace('contribut', 'contributed')
-    text = text.replace('expectation', 'expectation')
-    text = text.replace('growthincluded', 'growth included')
-    text = text.replace('quarterof', 'quarter of')
-    text = text.replace('stronggrowth', 'strong growth')
-    text = text.replace('commitments', 'commitments')
-    text = text.replace('platform', 'platform')
-    text = text.replace('confidence', 'confidence')
-    text = text.replace('tostor', 'to stor')
-    text = text.replace('andthe', 'and the')
-    text = text.replace('andincrease', 'and increase')
-    text = text.replace('fromthe', 'from the')
-    text = text.replace('wasup', 'was up')
-    text = text.replace('revenueup', 'revenue up')
+    text = text.replace('dayto', 'day to')
+    text = text.replace('fromto', 'from to')
+    text = text.replace('announcementdayto', 'announcement day to')
+    text = text.replace('contributededed', 'contributed')
+    text = text.replace('priceof', 'price of')
+    
+    # Ensure space before numbers that follow text
+    text = re.sub(r'([A-Za-z])(\$\d)', r'\1 \2', text)
+    text = re.sub(r'([A-Za-z])(\d+)', r'\1 \2', text)
     
     # Fix sentence spacing (but only after punctuation)
     text = re.sub(r'\.([A-Z])', r'. \1', text)
@@ -98,6 +95,9 @@ def fix_response_formatting(text):
     # Remove any markdown formatting
     text = text.replace("**", "").replace("*", "").replace("__", "").replace("_", "")
     text = text.replace("###", "").replace("##", "").replace("#", "")
+    
+    # Final pass to ensure "stock" stays intact
+    text = text.replace('sto ck', 'stock')
     
     return text.strip()
 
@@ -469,52 +469,50 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
         
         ABSOLUTELY CRITICAL FORMATTING RULES:
         
-        1. WORD SPACING - THIS IS THE MOST IMPORTANT RULE:
-           - ALWAYS put a space between EVERY word
-           - ALWAYS put a space after punctuation marks
-           - ALWAYS put a space between numbers and words
-           - Examples of CORRECT spacing:
-             ✓ "The stock price was $442.33"
-             ✓ "Revenue was $69.6 billion"
-             ✓ "Growth was 10% year over year"
-             ✓ "On January 29, 2025, the price increased"
-           - Examples of INCORRECT spacing:
-             ✗ "The stockprice was$442.33"
-             ✗ "Revenue was$69.6billion"
-             ✗ "Growthwas10%yearoveryear"
+        1. WORD SPACING - FOLLOW THESE RULES EXACTLY:
+           - Put a space between EVERY word
+           - Put a space after ALL punctuation marks
+           - Put a space between numbers and words (e.g., "69.6 billion" not "69.6billion")
+           - Put a space before numbers that follow words (e.g., "day 1" not "day1")
+           - Keep common words intact (e.g., "stock" not "sto ck")
+           
+        2. CORRECT EXAMPLES:
+           ✓ "The stock price was $442.33 on January 29, 2025"
+           ✓ "Revenue was $69.6 billion, up 12% year over year"
+           ✓ "From $442.33 to $447.20"
+           ✓ "On the earnings announcement day to $447.20"
+           
+        3. INCORRECT EXAMPLES TO AVOID:
+           ✗ "The stockprice was$442.33onJanuary29,2025"
+           ✗ "Revenue was$69.6billion,up12%yearoveryear"
+           ✗ "From$442.33to$447.20"
+           ✗ "442.33ontheearningsannouncementdayto447.20"
         
-        2. NUMBER FORMATTING:
-           - Currency: "$69.6 billion" (space between number and "billion")
-           - Percentages: "10%" (no space before %)
+        4. NUMBER FORMATTING RULES:
+           - Currency: Always "$X.XX" with no space after $
+           - With units: "69.6 billion" (space before "billion/million/trillion")
+           - Percentages: "12%" (no space before %)
            - Dates: "January 29, 2025" (spaces between all parts)
         
-        3. TEXT STRUCTURE FOR READABILITY:
-           - Break your response into short paragraphs (2-3 sentences each)
-           - Leave a blank line between paragraphs
-           - Use numbered lists like this:
+        5. TEXT STRUCTURE:
+           - Use short paragraphs (2-3 sentences)
+           - Leave blank lines between paragraphs
+           - Use numbered lists for multiple points:
              1. First point
              2. Second point
-             3. Third point
-           - For key facts, put them on their own line
+           - Start with a summary, end with a conclusion
         
-        4. RESPONSE FORMAT:
-           - Start with a brief summary sentence
-           - Then provide supporting details in organized paragraphs
-           - Use lists for multiple related points
-           - End with a concise conclusion
+        6. DATA ACCURACY:
+           - Only use explicitly provided data
+           - Never make up numbers
+           - Say "I don't have that data" if information is missing
         
-        5. DATA ACCURACY:
-           - Only use data that is explicitly provided
-           - Never make up numbers or dates
-           - If data is not available, say so clearly
+        7. NEVER USE:
+           - Markdown formatting (no *, **, #)
+           - Run-on text without spaces
+           - Made-up data or numbers
         
-        6. FORBIDDEN:
-           - NO markdown formatting (no *, **, #, etc.)
-           - NO run-on sentences without proper spacing
-           - NO combining words without spaces
-        
-        BEFORE RESPONDING: Double-check that EVERY word has proper spacing around it. 
-        This is extremely important for readability."""
+        CRITICAL: Before responding, mentally check that there is proper spacing between ALL words and numbers. This is essential for readability."""
         
         # Create the messages for the chat model
         messages = [
