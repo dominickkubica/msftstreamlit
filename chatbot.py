@@ -7,7 +7,6 @@ import openai
 from datetime import datetime, timedelta
 import os.path
 import re
-from pathlib import Path
 
 # Setup logger
 logger = logging.getLogger("earnings_analyzer")
@@ -16,7 +15,7 @@ def load_stock_data():
     """
     Load stock data from the CSV file with proper date handling
     """
-    file_path = "HistoricalData_1747025804532.csv"
+    file_path = Path(__file__).parent / "HistoricalData_1747025804532.csv"
     
     if not os.path.exists(file_path):
         st.error(f"Stock data file not found at: {file_path}")
@@ -47,204 +46,73 @@ def load_stock_data():
 def fix_response_formatting(text):
     """
     Apply comprehensive formatting fixes to model responses
-    to ensure consistent and readable text output with proper spacing and structure
+    to ensure consistent and readable text output
     """
-    # First, protect common words from being split
-    text = text.replace('sto ck', 'stock')
-    text = text.replace('ear nings', 'earnings')
-    text = text.replace('an nouncement', 'announcement')
+    # Initial fixes for financial/numerical content
+    patterns = [
+        # Fix number + word combinations (no space)
+        (r'(\d+\.\d+|\d+)([A-Za-z]+)', r'\1 \2'),
+        
+        # Fix word + number combinations (no space)
+        (r'([A-Za-z]+)(\d+\.\d+|\d+)', r'\1 \2'),
+        
+        # Fix specific financial terms
+        (r'(\d+\.\d+|\d+)billion', r'\1 billion'),
+        (r'(\d+\.\d+|\d+)million', r'\1 million'),
+        (r'(\d+\.\d+|\d+)trillion', r'\1 trillion'),
+        (r'(\d+\.\d+|\d+)percent', r'\1 percent'),
+        
+        # Fix common word joins
+        (r'billionand', r'billion and'),
+        (r'millionand', r'million and'),
+        (r'revenueup', r'revenue up'),
+        (r'revenuewas', r'revenue was'),
+        (r'wasup', r'was up'),
+        (r'grew(\d+)', r'grew \1'),
+        (r'up(\d+)', r'up \1'),
+        (r'down(\d+)', r'down \1'),
+        
+        # Fix "and" joins between words
+        (r'([a-z]+)and([a-z]+)', r'\1 and \2'),
+        
+        # Fix punctuation spacing
+        (r'([,.!?:;])([^\s])', r'\1 \2'),
+        
+        # Fix dollar amount formatting
+        (r'\$\s+(\d+)', r'$\1'),
+        (r'\$(\d+)', r'$\1'),
+        
+        # Fix percentage formatting
+        (r'(\d+)\s+%', r'\1%'),
+        
+        # Remove multiple spaces
+        (r'\s{2,}', r' '),
+    ]
     
-    # Fix the most problematic pattern: numbers mashed with text
-    # Pattern: 442.33ontheearningsannouncementdayto447.20
-    text = re.sub(r'(\d+\.?\d*)\*?ontheearningsannouncementdayto\*?(\d+\.?\d*)', r'$\1 on the earnings announcement day to $\2', text)
-    text = re.sub(r'(\d+\.?\d*)ontheearningsannouncementdayto(\d+\.?\d*)', r'$\1 on the earnings announcement day to $\2', text)
+    # Apply all patterns
+    for pattern, replacement in patterns:
+        text = re.sub(pattern, replacement, text)
     
-    # Fix variations with "fromto" patterns
-    text = re.sub(r'from\$?(\d+\.?\d*)to\$?(\d+\.?\d*)', r'from $\1 to $\2', text)
-    text = re.sub(r'from(\d+\.?\d*)to(\d+\.?\d*)', r'from $\1 to $\2', text)
-    
-    # Fix "onthe" patterns
-    text = re.sub(r'from\$?(\d+\.?\d*)onthe', r'from $\1 on the', text)
-    text = re.sub(r'from(\d+\.?\d*)onthe', r'from $\1 on the', text)
-    text = re.sub(r'(\d+\.?\d*)onthe', r'$\1 on the', text)
-    
-    # Fix "dayto" patterns
-    text = re.sub(r'dayto\$?(\d+\.?\d*)', r'day to $\1', text)
-    text = re.sub(r'announcementdayto\$?(\d+\.?\d*)', r'announcement day to $\1', text)
-    
-    # Fix number+word combinations (no space between) - more comprehensive
-    text = re.sub(r'(\d+\.?\d*)([A-Za-z]{2,})', r'\1 \2', text)
-    text = re.sub(r'(\d+\.?\d*)(billion|million|trillion|percent|day|year|month)', r'\1 \2', text)
-    
-    # Fix word+number combinations (no space between)
-    text = re.sub(r'([A-Za-z]{2,})(\d+\.?\d*)', r'\1 \2', text)
-    text = re.sub(r'(price|stock|day|year|from|to|was|is|at)(\d+\.?\d*)', r'\1 \2', text)
-    
-    # Fix currency formatting
-    text = re.sub(r'([A-Za-z])\$(\d)', r'\1 $\2', text)  # Space before $ when following text
-    text = re.sub(r'\$\s*(\d)', r'$\1', text)  # Remove space after $
-    
-    # Fix specific financial terms with proper spacing
-    text = re.sub(r'(\d+\.?\d*)\s*billion', r'\1 billion', text)
-    text = re.sub(r'(\d+\.?\d*)\s*million', r'\1 million', text)
-    text = re.sub(r'(\d+\.?\d*)\s*trillion', r'\1 trillion', text)
-    text = re.sub(r'(\d+\.?\d*)\s*percent', r'\1 percent', text)
-    
-    # Fix percentage spacing
-    text = re.sub(r'(\d+\.?\d*)\s*%', r'\1%', text)
-    
-    # Fix common word concatenations
-    word_fixes = {
-        'andincreased': 'and increased',
-        'increasedto': 'increased to',
-        'dayto': 'day to',
-        'fromto': 'from to',
-        'announcementdayto': 'announcement day to',
-        'ontheearnings': 'on the earnings',
-        'onthe': 'on the',
-        'contributededed': 'contributed',
-        'priceof': 'price of',
-        'stockprice': 'stock price',
-        'priceincreased': 'price increased',
-        'pricemoved': 'price moved',
-        'tradingday': 'trading day',
-        'nextday': 'next day',
-        'earningsreport': 'earnings report',
-        'earningscall': 'earnings call',
-        'revenuegrowth': 'revenue growth',
-        'yearoveryear': 'year over year'
-    }
-    
-    for wrong, right in word_fixes.items():
-        text = text.replace(wrong, right)
-    
-    # Fix sentence spacing (add space after punctuation when missing)
-    text = re.sub(r'\.([A-Z])', r'. \1', text)
-    text = re.sub(r',([A-Za-z])', r', \1', text)
-    text = re.sub(r':([A-Za-z])', r': \1', text)
-    text = re.sub(r';([A-Za-z])', r'; \1', text)
-    
-    # Remove some markdown formatting but PRESERVE bullet points and structure
-    text = text.replace("**", "").replace("__", "").replace("_", "")
+    # Remove any markdown/formatting characters
+    text = text.replace("**", "").replace("*", "").replace("__", "").replace("_", "")
     text = text.replace("###", "").replace("##", "").replace("#", "")
-    # Keep bullet points: • - * and numbered lists
     
-    # Ensure proper paragraph structure - convert long blocks into readable paragraphs
-    sentences = text.split('. ')
-    if len(sentences) > 3:
-        # Group sentences into paragraphs of 2-3 sentences each
-        paragraphs = []
-        current_para = []
-        
-        for i, sentence in enumerate(sentences):
-            current_para.append(sentence)
-            
-            # Create paragraph break every 2-3 sentences or at logical breaks
-            if (len(current_para) >= 2 and 
-                (i == len(sentences) - 1 or 
-                 len(current_para) >= 3 or
-                 any(keyword in sentence.lower() for keyword in ['however', 'additionally', 'furthermore', 'moreover', 'in conclusion']))):
-                
-                para_text = '. '.join(current_para)
-                if not para_text.endswith('.') and i < len(sentences) - 1:
-                    para_text += '.'
-                paragraphs.append(para_text)
-                current_para = []
-        
-        # Add any remaining sentences
-        if current_para:
-            para_text = '. '.join(current_para)
-            paragraphs.append(para_text)
-        
-        text = '\n\n'.join(paragraphs)
+    # Fix LaTeX-style formatting
+    text = re.sub(r'\\[a-z]+\{([^}]*)\}', r'\1', text)
     
-    # If the text doesn't contain bullet points, try to convert numbered lists to bullets
-    if not any(marker in text for marker in ['•', '- ', '* ']):
-        # Convert numbered lists to bullet points
-        text = re.sub(r'\n\s*(\d+)\.\s+', r'\n• ', text)
-        text = re.sub(r'^(\d+)\.\s+', r'• ', text, flags=re.MULTILINE)
+    # Remove any HTML-like tags
+    text = re.sub(r'<[^>]+>', '', text)
     
-    return text.strip()
-
-def ensure_bullet_points(text):
-    """
-    Ensure the response has proper bullet points and structure
-    """
-    lines = text.split('\n')
-    new_lines = []
+    # Ensure proper spacing between sentences
+    text = re.sub(r'\.([A-Z])', r'. \1', text)
     
-    # Look for numbered lists or key points that should be bullets
-    in_list_section = False
+    # Make sure there's not excessive space after periods
+    text = re.sub(r'\.\s{2,}', '. ', text)
     
-    for line in lines:
-        line = line.strip()
-        
-        # Skip empty lines
-        if not line:
-            new_lines.append('')
-            continue
-            
-        # Check if this looks like it should be a bullet point
-        should_be_bullet = False
-        
-        # Pattern 1: Numbered lists (1. 2. 3.)
-        if re.match(r'^\d+\.\s+', line):
-            should_be_bullet = True
-            line = re.sub(r'^\d+\.\s+', '• ', line)
-        
-        # Pattern 2: Lines that start with key indicators
-        elif any(line.lower().startswith(phrase) for phrase in [
-            'revenue for', 'windows oem', 'the segment', 'growth was', 
-            'results were', 'this growth', 'overall']):
-            should_be_bullet = True
-            if not line.startswith('• '):
-                line = '• ' + line
-        
-        # Pattern 3: Lines in a list context (after "key points", "here are", etc.)
-        elif in_list_section and len(line) > 20 and not line.startswith('•'):
-            # Check if it's a substantial statement that should be a bullet
-            if ('.' in line and any(word in line.lower() for word in 
-                ['revenue', 'growth', 'increased', 'decreased', 'billion', 'million', '%'])):
-                should_be_bullet = True
-                line = '• ' + line
-        
-        # Detect list sections
-        if any(phrase in line.lower() for phrase in [
-            'key points', 'here are some', 'the data shows', 'key findings']):
-            in_list_section = True
-        elif line and not should_be_bullet and not line.startswith('•'):
-            in_list_section = False
-        
-        new_lines.append(line)
+    # Fix any remaining spacing issues
+    text = re.sub(r'\s{2,}', ' ', text)
     
-    result = '\n'.join(new_lines)
-    
-    # If still no bullets found, try to identify key sentences and convert them
-    if '•' not in result:
-        lines = result.split('\n')
-        processed_lines = []
-        
-        for line in lines:
-            line = line.strip()
-            if not line:
-                processed_lines.append('')
-                continue
-                
-            # Look for sentences with financial data that should be bullets
-            if (len(line) > 30 and 
-                any(indicator in line.lower() for indicator in 
-                    ['billion', 'million', 'increased by', 'decreased by', 'revenue', 
-                     'growth', 'year over year', 'better than expected']) and
-                not line.endswith(':') and
-                '.' in line):
-                
-                line = '• ' + line
-            
-            processed_lines.append(line)
-        
-        result = '\n'.join(processed_lines)
-    
-    return result
+    return text
 
 def find_closest_trading_date(stock_data, target_date, date_col='Date'):
     """
@@ -612,74 +480,40 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
         system_message = """You are a financial analysis assistant specifically focused on Microsoft's January 29, 2025 earnings call. 
         Use the provided data to answer questions about Microsoft's stock performance and earnings call sentiment analysis.
         
-        ABSOLUTELY CRITICAL FORMATTING AND STRUCTURE RULES:
+        CRITICAL INSTRUCTIONS:
+        1. NEVER make up stock prices or trading volumes for dates not in your dataset
+        2. If specific data isn't available, clearly state "I don't have data for that date" 
+        3. Be 100% consistent with all numerical values - do not provide different prices for the same date
+        4. ALWAYS maintain proper spacing between words and numbers - no run-on text
+        5. When reporting stock prices, always format as: "On [DATE], the stock price was $[PRICE]."
+        6. DO NOT use ANY special characters or formatting in your responses - no asterisks, markdown, italics, bold, etc.
+        7. The number of sentences in the sentiment dataset is EXACTLY the number stated in the context
+        8. SEARCH THOROUGHLY through all provided transcript sentences when asked about specific products or terms
+        9. Format all numbers consistently - for example "$69.6 billion" not "69.6billion"
+        10. ALWAYS include proper spacing in numbers and currency - "$438.73" not "$438. 73" or "$438.73$"
+        11. Maintain consistent spacing between sentences - no run-on or broken sentences
         
-        1. RESPONSE STRUCTURE - ALWAYS USE THIS FORMAT:
-           - Start with a brief summary paragraph (2-3 sentences)
-           - Use bullet points for key findings (• symbol)
-           - Break content into short paragraphs (2-3 sentences max)
-           - End with a conclusion paragraph
-           - Leave blank lines between sections
-           
-        2. WORD SPACING - NO EXCEPTIONS:
-           - Put a space between EVERY word
-           - Put a space after ALL punctuation marks
-           - Put a space between numbers and words (e.g., "69.6 billion" not "69.6billion")
-           - Put a space before numbers that follow words (e.g., "day 447" not "day447")
-           - Keep common words intact (e.g., "stock" not "sto ck")
-           
-        3. ALWAYS INCLUDE BULLET POINTS FOR:
-           - Key findings or metrics
-           - Multiple data points
-           - Comparisons
-           - Important highlights
-           
-        4. EXAMPLE GOOD STRUCTURE:
-           "Microsoft's stock showed positive movement following the earnings call.
-           
-           Key findings from the analysis:
-           • Stock price increased from $442.33 to $447.20 (1.10% gain)
-           • Gaming sentiment was predominantly positive
-           • Revenue growth exceeded expectations
-           • Cloud services showed strong performance
-           
-           The market responded favorably to the earnings report."
-           
-        5. CORRECT FORMATTING EXAMPLES:
-           ✓ "The stock price increased from $442.33 on January 29, 2025 to $447.20"
-           ✓ "Revenue was $69.6 billion, up 12% year over year"
-           ✓ "Gaming revenue declined by 7% due to hardware challenges"
-           
-        6. INCORRECT EXAMPLES TO NEVER USE:
-           ✗ "stockpricewas$442.33onJanuary29,2025"
-           ✗ "442.33ontheearningsannouncementdayto447.20"
-           ✗ "Revenue$69.6billionup12%"
-           
-        7. NUMBER FORMATTING RULES:
-           - Currency: "$442.33" (no space after $)
-           - Large numbers: "69.6 billion" (space before unit)
-           - Percentages: "12%" (no space before %)
-           - Dates: "January 29, 2025" (spaces between all parts)
+        When discussing sentiment from the earnings call transcript:
+        1. ALWAYS cite SPECIFIC SENTENCES from the transcript with their exact sentiment
+        2. Use REAL DATA from the transcript - never make up hypothetical examples
+        3. If asked about negative sentiment, focus on the actual negative sentences if any exist
+        4. If no negative sentiment exists in the data, clearly state this fact
+        5. If a specific term (like a product name) is mentioned, QUOTE THE EXACT SENTENCES that contain that term
         
-        8. PARAGRAPH RULES:
-           - Maximum 3 sentences per paragraph
-           - Use double line breaks between paragraphs
-           - Use bullet points for lists of 2+ items
-           - Never write wall-of-text responses
+        FORMATTING REQUIREMENTS FOR READABILITY:
+        1. Break up your response into short paragraphs (2-3 sentences maximum per paragraph)
+        2. Use line breaks between paragraphs to make the text easier to read
+        3. For quotes or important information, place them on their own line
+        4. When listing multiple items, put each on a separate line with a clear indicator (such as "First:" or "Point 1:")
+        5. When sharing numerical data, use clear spacing and formatting
+        6. Format currency values properly: $69.6 billion (not $69.6billion or $69. 6 billion)
+        7. Format percentages properly: 12.94% (not 12. 94% or 12.94 %)
+        8. Start with a concise summary of the answer before providing details
+        9. For longer answers, break content into logical sections with empty lines between them
+        10. Conclude with a brief summary of the key points
         
-        9. DATA ACCURACY:
-           - Only use explicitly provided data
-           - Never make up numbers or dates
-           - Say "I don't have that specific data" if information is missing
-           - Always cite the source period when mentioning figures
-        
-        10. MANDATORY RESPONSE ELEMENTS:
-            - Summary paragraph at start
-            - Bullet points for key data
-            - Proper paragraph breaks
-            - Conclusion paragraph at end
-        
-        CRITICAL: Every response must be well-structured with proper spacing, bullet points, and paragraph breaks. No exceptions."""
+        Format your responses in a clear, professional manner that is easy to read at a glance. Prioritize readability over dense text.
+        Always provide factual, evidence-based answers using ONLY the provided data."""
         
         # Create the messages for the chat model
         messages = [
@@ -700,9 +534,6 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
         
         # Apply our comprehensive formatting fixes
         result = fix_response_formatting(result)
-        
-        # Post-process to ensure bullet points are present
-        result = ensure_bullet_points(result)
         
         return result
     
@@ -726,6 +557,11 @@ def init_chat_interface(sentiment_data=None, stock_data=None, date_col='Date', p
     has_stock = safe_check_dataframe(stock_data)
     has_sentiment = safe_check_dataframe(sentiment_data)
     
+
+    
+    # Debug information about stock data
+
+    
     # Initialize chat history if it doesn't exist
     if 'messages' not in st.session_state:
         st.session_state.messages = []
@@ -743,6 +579,11 @@ def init_chat_interface(sentiment_data=None, stock_data=None, date_col='Date', p
         for message in st.session_state.messages:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
+                
+        # Display stock data preview if available
+    
+    # Note: We don't handle the chat input here to avoid 
+    # Streamlit container errors. The input will be handled in the main app.
     
     return has_sentiment, has_stock
 
