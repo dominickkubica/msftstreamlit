@@ -46,34 +46,51 @@ def load_stock_data():
 
 def fix_response_formatting(text):
     """
-    Apply comprehensive formatting fixes to model responses
+    Apply targeted formatting fixes to model responses
     to ensure consistent and readable text output
     """
-    # Fix spacing issues with dollar amounts first
-    text = re.sub(r'\$\s*(\d+)', r'$\1', text)
-    text = re.sub(r'(\d+)\s*billion', r'\1 billion', text)
-    text = re.sub(r'(\d+)\s*million', r'\1 million', text)
-    text = re.sub(r'(\d+)\s*trillion', r'\1 trillion', text)
+    # Fix specific financial term spacing issues
+    text = re.sub(r'(\d+\.?\d*)billion', r'\1 billion', text)
+    text = re.sub(r'(\d+\.?\d*)million', r'\1 million', text)
+    text = re.sub(r'(\d+\.?\d*)trillion', r'\1 trillion', text)
     
-    # Fix percentage formatting
+    # Fix dollar sign spacing
+    text = re.sub(r'\$\s+(\d)', r'$\1', text)
+    
+    # Fix percentage spacing
     text = re.sub(r'(\d+\.?\d*)\s*%', r'\1%', text)
     
-    # Fix common word combinations
-    text = re.sub(r'(\w+)on(\w+)', r'\1 on \2', text)
-    text = re.sub(r'(\w+)the(\w+)', r'\1 the \2', text)
-    text = re.sub(r'(\w+)and(\w+)', r'\1 and \2', text)
-    text = re.sub(r'(\w+)to(\w+)', r'\1 to \2', text)
-    text = re.sub(r'(\w+)from(\w+)', r'\1 from \2', text)
-    text = re.sub(r'(\w+)was(\w+)', r'\1 was \2', text)
-    text = re.sub(r'(\w+)increased(\w+)', r'\1 increased \2', text)
+    # Fix specific problematic patterns observed in outputs
+    text = text.replace('andincreased', 'and increased')
+    text = text.replace('increasedto', 'increased to')
+    text = text.replace('billionto', 'billion to')
+    text = text.replace('billionand', 'billion and')
+    text = text.replace('millionand', 'million and')
+    text = text.replace('observationsfrom', 'observations from')
+    text = text.replace('reactioninclude', 'reaction include')
+    text = text.replace('billionwas', 'billion was')
+    text = text.replace('stockreaction', 'stock reaction')
+    text = text.replace('tock', 'to ck')  # Fix for "s to ck" issue
+    text = text.replace('contribut', 'contributed')
+    text = text.replace('expectation', 'expectation')
+    text = text.replace('growthincluded', 'growth included')
+    text = text.replace('quarterof', 'quarter of')
+    text = text.replace('stronggrowth', 'strong growth')
+    text = text.replace('commitments', 'commitments')
+    text = text.replace('platform', 'platform')
+    text = text.replace('confidence', 'confidence')
+    text = text.replace('tostor', 'to stor')
+    text = text.replace('andthe', 'and the')
+    text = text.replace('andincrease', 'and increase')
+    text = text.replace('fromthe', 'from the')
+    text = text.replace('wasup', 'was up')
+    text = text.replace('revenueup', 'revenue up')
     
-    # Fix date formatting
-    text = re.sub(r'onJanuary', r'on January', text)
-    text = re.sub(r'January(\d+)', r'January \1', text)
-    
-    # Fix sentence spacing
-    text = re.sub(r'\.(\w)', r'. \1', text)
-    text = re.sub(r',(\w)', r', \1', text)
+    # Fix sentence spacing (but only after punctuation)
+    text = re.sub(r'\.([A-Z])', r'. \1', text)
+    text = re.sub(r',([A-Za-z])', r', \1', text)
+    text = re.sub(r':([A-Za-z])', r': \1', text)
+    text = re.sub(r';([A-Za-z])', r'; \1', text)
     
     # Remove multiple spaces
     text = re.sub(r'\s{2,}', r' ', text)
@@ -450,59 +467,54 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
         system_message = """You are a financial analysis assistant specifically focused on Microsoft's January 29, 2025 earnings call. 
         Use the provided data to answer questions about Microsoft's stock performance and earnings call sentiment analysis.
         
-        CRITICAL FORMATTING RULES - YOU MUST FOLLOW THESE EXACTLY:
+        ABSOLUTELY CRITICAL FORMATTING RULES:
         
-        1. SPACING AND READABILITY:
-           - ALWAYS ensure proper spacing between ALL words
-           - Format currency as: "$69.6 billion" NOT "$69.6billion"
-           - Format percentages as: "12.94%" NOT "12.94 %"
-           - No run-on text - space between every word
-           - Break response into short paragraphs (2-3 sentences max)
-           - Add blank lines between paragraphs
-           - Use bullet points or numbered lists for multiple items
+        1. WORD SPACING - THIS IS THE MOST IMPORTANT RULE:
+           - ALWAYS put a space between EVERY word
+           - ALWAYS put a space after punctuation marks
+           - ALWAYS put a space between numbers and words
+           - Examples of CORRECT spacing:
+             ✓ "The stock price was $442.33"
+             ✓ "Revenue was $69.6 billion"
+             ✓ "Growth was 10% year over year"
+             ✓ "On January 29, 2025, the price increased"
+           - Examples of INCORRECT spacing:
+             ✗ "The stockprice was$442.33"
+             ✗ "Revenue was$69.6billion"
+             ✗ "Growthwas10%yearoveryear"
         
-        2. DATA ACCURACY:
-           - NEVER make up stock prices or data
-           - If data isn't available, say "I don't have data for that date"
-           - Be 100% consistent with numerical values
-           - The sentiment dataset has EXACTLY the number stated in context
+        2. NUMBER FORMATTING:
+           - Currency: "$69.6 billion" (space between number and "billion")
+           - Percentages: "10%" (no space before %)
+           - Dates: "January 29, 2025" (spaces between all parts)
         
-        3. RESPONSE STRUCTURE:
-           - Start with a brief summary answering the question
-           - Use numbered lists for multiple points:
-             1. First point here
-             2. Second point here
-           - Or use bullet points:
-             • First item
-             • Second item
-           - Include specific data points on separate lines
-           - End with a brief conclusion
+        3. TEXT STRUCTURE FOR READABILITY:
+           - Break your response into short paragraphs (2-3 sentences each)
+           - Leave a blank line between paragraphs
+           - Use numbered lists like this:
+             1. First point
+             2. Second point
+             3. Third point
+           - For key facts, put them on their own line
         
-        4. WHEN DISCUSSING SENTIMENT:
-           - Quote EXACT sentences from the transcript
-           - Include the sentiment label for each quote
-           - If no negative sentiment exists, clearly state this
-           - For specific terms, quote the EXACT sentences containing them
+        4. RESPONSE FORMAT:
+           - Start with a brief summary sentence
+           - Then provide supporting details in organized paragraphs
+           - Use lists for multiple related points
+           - End with a concise conclusion
         
-        5. NEVER USE:
-           - Markdown formatting (no *, **, #, etc.)
-           - Special characters for emphasis
-           - Run-on sentences without spaces
+        5. DATA ACCURACY:
+           - Only use data that is explicitly provided
+           - Never make up numbers or dates
+           - If data is not available, say so clearly
         
-        Example of GOOD formatting:
-        "The stock price on January 29, 2025 was $442.33. This represents a 1.10% increase from the previous day.
+        6. FORBIDDEN:
+           - NO markdown formatting (no *, **, #, etc.)
+           - NO run-on sentences without proper spacing
+           - NO combining words without spaces
         
-        Key observations:
-        1. Strong performance following earnings
-        2. Revenue grew to $69.6 billion
-        3. Cloud services showed 175% growth
-        
-        The overall sentiment was positive across all segments."
-        
-        Example of BAD formatting:
-        "The stock priceonJanuary29,2025was$442.33andthisincreasedto447.20 which represents1.10%growth"
-        
-        Make responses scannable and easy to read at a glance."""
+        BEFORE RESPONDING: Double-check that EVERY word has proper spacing around it. 
+        This is extremely important for readability."""
         
         # Create the messages for the chat model
         messages = [
