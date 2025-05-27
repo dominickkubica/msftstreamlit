@@ -124,17 +124,10 @@ def fix_response_formatting(text):
     text = re.sub(r':([A-Za-z])', r': \1', text)
     text = re.sub(r';([A-Za-z])', r'; \1', text)
     
-    # Remove multiple spaces
-    text = re.sub(r'\s{2,}', r' ', text)
-    
-    # Remove any markdown formatting that might interfere
-    text = text.replace("**", "").replace("*", "").replace("__", "").replace("_", "")
+    # Remove some markdown formatting but PRESERVE bullet points and structure
+    text = text.replace("**", "").replace("__", "").replace("_", "")
     text = text.replace("###", "").replace("##", "").replace("#", "")
-    
-    # Final protection pass for important words
-    text = text.replace('sto ck', 'stock')
-    text = text.replace('ear nings', 'earnings')
-    text = text.replace('an nouncement', 'announcement')
+    # Keep bullet points: • - * and numbered lists
     
     # Ensure proper paragraph structure - convert long blocks into readable paragraphs
     sentences = text.split('. ')
@@ -165,7 +158,93 @@ def fix_response_formatting(text):
         
         text = '\n\n'.join(paragraphs)
     
+    # If the text doesn't contain bullet points, try to convert numbered lists to bullets
+    if not any(marker in text for marker in ['•', '- ', '* ']):
+        # Convert numbered lists to bullet points
+        text = re.sub(r'\n\s*(\d+)\.\s+', r'\n• ', text)
+        text = re.sub(r'^(\d+)\.\s+', r'• ', text, flags=re.MULTILINE)
+    
     return text.strip()
+
+def ensure_bullet_points(text):
+    """
+    Ensure the response has proper bullet points and structure
+    """
+    lines = text.split('\n')
+    new_lines = []
+    
+    # Look for numbered lists or key points that should be bullets
+    in_list_section = False
+    
+    for line in lines:
+        line = line.strip()
+        
+        # Skip empty lines
+        if not line:
+            new_lines.append('')
+            continue
+            
+        # Check if this looks like it should be a bullet point
+        should_be_bullet = False
+        
+        # Pattern 1: Numbered lists (1. 2. 3.)
+        if re.match(r'^\d+\.\s+', line):
+            should_be_bullet = True
+            line = re.sub(r'^\d+\.\s+', '• ', line)
+        
+        # Pattern 2: Lines that start with key indicators
+        elif any(line.lower().startswith(phrase) for phrase in [
+            'revenue for', 'windows oem', 'the segment', 'growth was', 
+            'results were', 'this growth', 'overall']):
+            should_be_bullet = True
+            if not line.startswith('• '):
+                line = '• ' + line
+        
+        # Pattern 3: Lines in a list context (after "key points", "here are", etc.)
+        elif in_list_section and len(line) > 20 and not line.startswith('•'):
+            # Check if it's a substantial statement that should be a bullet
+            if ('.' in line and any(word in line.lower() for word in 
+                ['revenue', 'growth', 'increased', 'decreased', 'billion', 'million', '%'])):
+                should_be_bullet = True
+                line = '• ' + line
+        
+        # Detect list sections
+        if any(phrase in line.lower() for phrase in [
+            'key points', 'here are some', 'the data shows', 'key findings']):
+            in_list_section = True
+        elif line and not should_be_bullet and not line.startswith('•'):
+            in_list_section = False
+        
+        new_lines.append(line)
+    
+    result = '\n'.join(new_lines)
+    
+    # If still no bullets found, try to identify key sentences and convert them
+    if '•' not in result:
+        lines = result.split('\n')
+        processed_lines = []
+        
+        for line in lines:
+            line = line.strip()
+            if not line:
+                processed_lines.append('')
+                continue
+                
+            # Look for sentences with financial data that should be bullets
+            if (len(line) > 30 and 
+                any(indicator in line.lower() for indicator in 
+                    ['billion', 'million', 'increased by', 'decreased by', 'revenue', 
+                     'growth', 'year over year', 'better than expected']) and
+                not line.endswith(':') and
+                '.' in line):
+                
+                line = '• ' + line
+            
+            processed_lines.append(line)
+        
+        result = '\n'.join(processed_lines)
+    
+    return result
 
 def find_closest_trading_date(stock_data, target_date, date_col='Date'):
     """
@@ -621,6 +700,9 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
         
         # Apply our comprehensive formatting fixes
         result = fix_response_formatting(result)
+        
+        # Post-process to ensure bullet points are present
+        result = ensure_bullet_points(result)
         
         return result
     
