@@ -38,18 +38,20 @@ def clean_text(text):
     for unicode_char, ascii_char in replacements.items():
         text = text.replace(unicode_char, ascii_char)
     
-    # Fix multiple spaces and remove extra whitespace
-    text = re.sub(r'\s{2,}', ' ', text)
+    # Clean up any remaining non-ASCII characters
+    # This keeps only ASCII characters plus common Latin-1 supplement
+    text = ''.join(char if ord(char) < 128 else ' ' for char in text)
+    
+    # Critical: Insert spaces between digits and letters that are stuck together
+    # This fixes issues like "442.33ontheearningsannouncementdayto447.20"
+    text = re.sub(r'(?<=\d)(?=[A-Za-z])', ' ', text)  # 123Word → 123 Word
+    text = re.sub(r'(?<=[A-Za-z])(?=\d)', ' ', text)  # Word123 → Word 123
     
     # Ensure spaces around punctuation aren't lost
     text = re.sub(r'(\w)([,.])', r'\1 \2', text)
     text = re.sub(r'([,.])(\w)', r'\1 \2', text)
     
-    # Clean up any remaining non-ASCII characters
-    # This keeps only ASCII characters plus common Latin-1 supplement
-    text = ''.join(char if ord(char) < 128 else ' ' for char in text)
-    
-    # Final cleanup of spaces
+    # Final cleanup of multiple spaces
     text = re.sub(r'\s{2,}', ' ', text)
     
     return text.strip()
@@ -244,17 +246,19 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
                 stock_summary += f"30-day performance: {thirty_day_change:.2f}%.\n"
             
             # Generate controlled ASCII-only date-specific sentences
+            # This prevents the LLM from creating run-on text like "442.33ontheearningsday"
             if len(date_objects) >= 2:
-                # Try to generate a comparison sentence
-                comparison_sentence = generate_stock_summary_sentence(
-                    stock_data, 
-                    date_objects[0], 
-                    date_objects[1], 
-                    date_col, 
-                    price_col
-                )
-                if comparison_sentence:
-                    stock_summary += f"\n{comparison_sentence}\n"
+                # Generate comparison sentences for date pairs
+                for i in range(len(date_objects) - 1):
+                    comparison_sentence = generate_stock_summary_sentence(
+                        stock_data, 
+                        date_objects[i], 
+                        date_objects[i + 1], 
+                        date_col, 
+                        price_col
+                    )
+                    if comparison_sentence:
+                        stock_summary += f"\n{comparison_sentence}\n"
             
             # Specific date information
             date_specific_info = ""
@@ -387,13 +391,17 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
         # Compile context
         full_context = "\n\n".join(context)
         
-        # Enhanced system message with ASCII-only instruction
+        # Enhanced system message with strict ASCII-only instruction
         system_message = """You are a financial analysis assistant for Microsoft's January 29, 2025 earnings call. 
         Answer questions about Microsoft's stock performance and earnings call sentiment analysis using the provided data.
         Be accurate and only use the data provided. Format your response clearly with bullet points for key information.
         
-        IMPORTANT: Use only plain ASCII characters in your response. Do not use smart quotes, em dashes, en dashes, or any special Unicode characters. 
-        Use straight quotes ("), hyphens (-), and standard punctuation only."""
+        CRITICAL FORMATTING RULES:
+        - Use ONLY plain ASCII characters (no smart quotes, em/en dashes, or Unicode)
+        - Use straight quotes ("), hyphens (-), and standard punctuation
+        - ALWAYS put spaces between numbers and words
+        - When mentioning dates, use the format YYYY-MM-DD with regular hyphens
+        - Do NOT create run-on text like "442.33ontheearningsday" - always separate numbers from words"""
         
         messages = [
             {"role": "system", "content": system_message},
