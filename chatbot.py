@@ -49,71 +49,40 @@ def fix_response_formatting(text):
     Apply comprehensive formatting fixes to model responses
     to ensure consistent and readable text output
     """
-    # Initial fixes for financial/numerical content
-    patterns = [
-        # Fix number + word combinations (no space)
-        (r'(\d+\.\d+|\d+)([A-Za-z]+)', r'\1 \2'),
-        
-        # Fix word + number combinations (no space)
-        (r'([A-Za-z]+)(\d+\.\d+|\d+)', r'\1 \2'),
-        
-        # Fix specific financial terms
-        (r'(\d+\.\d+|\d+)billion', r'\1 billion'),
-        (r'(\d+\.\d+|\d+)million', r'\1 million'),
-        (r'(\d+\.\d+|\d+)trillion', r'\1 trillion'),
-        (r'(\d+\.\d+|\d+)percent', r'\1 percent'),
-        
-        # Fix common word joins
-        (r'billionand', r'billion and'),
-        (r'millionand', r'million and'),
-        (r'revenueup', r'revenue up'),
-        (r'revenuewas', r'revenue was'),
-        (r'wasup', r'was up'),
-        (r'grew(\d+)', r'grew \1'),
-        (r'up(\d+)', r'up \1'),
-        (r'down(\d+)', r'down \1'),
-        
-        # Fix "and" joins between words
-        (r'([a-z]+)and([a-z]+)', r'\1 and \2'),
-        
-        # Fix punctuation spacing
-        (r'([,.!?:;])([^\s])', r'\1 \2'),
-        
-        # Fix dollar amount formatting
-        (r'\$\s+(\d+)', r'$\1'),
-        (r'\$(\d+)', r'$\1'),
-        
-        # Fix percentage formatting
-        (r'(\d+)\s+%', r'\1%'),
-        
-        # Remove multiple spaces
-        (r'\s{2,}', r' '),
-    ]
+    # Fix spacing issues with dollar amounts first
+    text = re.sub(r'\$\s*(\d+)', r'$\1', text)
+    text = re.sub(r'(\d+)\s*billion', r'\1 billion', text)
+    text = re.sub(r'(\d+)\s*million', r'\1 million', text)
+    text = re.sub(r'(\d+)\s*trillion', r'\1 trillion', text)
     
-    # Apply all patterns
-    for pattern, replacement in patterns:
-        text = re.sub(pattern, replacement, text)
+    # Fix percentage formatting
+    text = re.sub(r'(\d+\.?\d*)\s*%', r'\1%', text)
     
-    # Remove any markdown/formatting characters
+    # Fix common word combinations
+    text = re.sub(r'(\w+)on(\w+)', r'\1 on \2', text)
+    text = re.sub(r'(\w+)the(\w+)', r'\1 the \2', text)
+    text = re.sub(r'(\w+)and(\w+)', r'\1 and \2', text)
+    text = re.sub(r'(\w+)to(\w+)', r'\1 to \2', text)
+    text = re.sub(r'(\w+)from(\w+)', r'\1 from \2', text)
+    text = re.sub(r'(\w+)was(\w+)', r'\1 was \2', text)
+    text = re.sub(r'(\w+)increased(\w+)', r'\1 increased \2', text)
+    
+    # Fix date formatting
+    text = re.sub(r'onJanuary', r'on January', text)
+    text = re.sub(r'January(\d+)', r'January \1', text)
+    
+    # Fix sentence spacing
+    text = re.sub(r'\.(\w)', r'. \1', text)
+    text = re.sub(r',(\w)', r', \1', text)
+    
+    # Remove multiple spaces
+    text = re.sub(r'\s{2,}', r' ', text)
+    
+    # Remove any markdown formatting
     text = text.replace("**", "").replace("*", "").replace("__", "").replace("_", "")
     text = text.replace("###", "").replace("##", "").replace("#", "")
     
-    # Fix LaTeX-style formatting
-    text = re.sub(r'\\[a-z]+\{([^}]*)\}', r'\1', text)
-    
-    # Remove any HTML-like tags
-    text = re.sub(r'<[^>]+>', '', text)
-    
-    # Ensure proper spacing between sentences
-    text = re.sub(r'\.([A-Z])', r'. \1', text)
-    
-    # Make sure there's not excessive space after periods
-    text = re.sub(r'\.\s{2,}', '. ', text)
-    
-    # Fix any remaining spacing issues
-    text = re.sub(r'\s{2,}', ' ', text)
-    
-    return text
+    return text.strip()
 
 def find_closest_trading_date(stock_data, target_date, date_col='Date'):
     """
@@ -481,40 +450,59 @@ def analyze_chat_query(query, sentiment_data=None, stock_data=None, date_col='Da
         system_message = """You are a financial analysis assistant specifically focused on Microsoft's January 29, 2025 earnings call. 
         Use the provided data to answer questions about Microsoft's stock performance and earnings call sentiment analysis.
         
-        CRITICAL INSTRUCTIONS:
-        1. NEVER make up stock prices or trading volumes for dates not in your dataset
-        2. If specific data isn't available, clearly state "I don't have data for that date" 
-        3. Be 100% consistent with all numerical values - do not provide different prices for the same date
-        4. ALWAYS maintain proper spacing between words and numbers - no run-on text
-        5. When reporting stock prices, always format as: "On [DATE], the stock price was $[PRICE]."
-        6. DO NOT use ANY special characters or formatting in your responses - no asterisks, markdown, italics, bold, etc.
-        7. The number of sentences in the sentiment dataset is EXACTLY the number stated in the context
-        8. SEARCH THOROUGHLY through all provided transcript sentences when asked about specific products or terms
-        9. Format all numbers consistently - for example "$69.6 billion" not "69.6billion"
-        10. ALWAYS include proper spacing in numbers and currency - "$438.73" not "$438. 73" or "$438.73$"
-        11. Maintain consistent spacing between sentences - no run-on or broken sentences
+        CRITICAL FORMATTING RULES - YOU MUST FOLLOW THESE EXACTLY:
         
-        When discussing sentiment from the earnings call transcript:
-        1. ALWAYS cite SPECIFIC SENTENCES from the transcript with their exact sentiment
-        2. Use REAL DATA from the transcript - never make up hypothetical examples
-        3. If asked about negative sentiment, focus on the actual negative sentences if any exist
-        4. If no negative sentiment exists in the data, clearly state this fact
-        5. If a specific term (like a product name) is mentioned, QUOTE THE EXACT SENTENCES that contain that term
+        1. SPACING AND READABILITY:
+           - ALWAYS ensure proper spacing between ALL words
+           - Format currency as: "$69.6 billion" NOT "$69.6billion"
+           - Format percentages as: "12.94%" NOT "12.94 %"
+           - No run-on text - space between every word
+           - Break response into short paragraphs (2-3 sentences max)
+           - Add blank lines between paragraphs
+           - Use bullet points or numbered lists for multiple items
         
-        FORMATTING REQUIREMENTS FOR READABILITY:
-        1. Break up your response into short paragraphs (2-3 sentences maximum per paragraph)
-        2. Use line breaks between paragraphs to make the text easier to read
-        3. For quotes or important information, place them on their own line
-        4. When listing multiple items, put each on a separate line with a clear indicator (such as "First:" or "Point 1:")
-        5. When sharing numerical data, use clear spacing and formatting
-        6. Format currency values properly: $69.6 billion (not $69.6billion or $69. 6 billion)
-        7. Format percentages properly: 12.94% (not 12. 94% or 12.94 %)
-        8. Start with a concise summary of the answer before providing details
-        9. For longer answers, break content into logical sections with empty lines between them
-        10. Conclude with a brief summary of the key points
+        2. DATA ACCURACY:
+           - NEVER make up stock prices or data
+           - If data isn't available, say "I don't have data for that date"
+           - Be 100% consistent with numerical values
+           - The sentiment dataset has EXACTLY the number stated in context
         
-        Format your responses in a clear, professional manner that is easy to read at a glance. Prioritize readability over dense text.
-        Always provide factual, evidence-based answers using ONLY the provided data."""
+        3. RESPONSE STRUCTURE:
+           - Start with a brief summary answering the question
+           - Use numbered lists for multiple points:
+             1. First point here
+             2. Second point here
+           - Or use bullet points:
+             • First item
+             • Second item
+           - Include specific data points on separate lines
+           - End with a brief conclusion
+        
+        4. WHEN DISCUSSING SENTIMENT:
+           - Quote EXACT sentences from the transcript
+           - Include the sentiment label for each quote
+           - If no negative sentiment exists, clearly state this
+           - For specific terms, quote the EXACT sentences containing them
+        
+        5. NEVER USE:
+           - Markdown formatting (no *, **, #, etc.)
+           - Special characters for emphasis
+           - Run-on sentences without spaces
+        
+        Example of GOOD formatting:
+        "The stock price on January 29, 2025 was $442.33. This represents a 1.10% increase from the previous day.
+        
+        Key observations:
+        1. Strong performance following earnings
+        2. Revenue grew to $69.6 billion
+        3. Cloud services showed 175% growth
+        
+        The overall sentiment was positive across all segments."
+        
+        Example of BAD formatting:
+        "The stock priceonJanuary29,2025was$442.33andthisincreasedto447.20 which represents1.10%growth"
+        
+        Make responses scannable and easy to read at a glance."""
         
         # Create the messages for the chat model
         messages = [
@@ -558,11 +546,6 @@ def init_chat_interface(sentiment_data=None, stock_data=None, date_col='Date', p
     has_stock = safe_check_dataframe(stock_data)
     has_sentiment = safe_check_dataframe(sentiment_data)
     
-
-    
-    # Debug information about stock data
-
-    
     # Initialize chat history if it doesn't exist
     if 'messages' not in st.session_state:
         st.session_state.messages = []
@@ -580,11 +563,6 @@ def init_chat_interface(sentiment_data=None, stock_data=None, date_col='Date', p
         for message in st.session_state.messages:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
-                
-        # Display stock data preview if available
-    
-    # Note: We don't handle the chat input here to avoid 
-    # Streamlit container errors. The input will be handled in the main app.
     
     return has_sentiment, has_stock
 
