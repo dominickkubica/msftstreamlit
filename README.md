@@ -25,7 +25,7 @@ before sell-offs.
 | Tab | What it does |
 |---|---|
 | **Our Project** | The research: benchmarks, real-world testing on Microsoft transcripts, findings, and publications |
-| **Try It Yourself** | Upload a transcript, get sentiment by business line, and chart it against the stock price. Includes a chatbot you can question about the call |
+| **Try It Yourself** | Explore sentiment by business line on a Microsoft earnings call, chart it against the stock price, and question the call with a built-in chatbot |
 | **About Us** | The team |
 
 ## The benchmark
