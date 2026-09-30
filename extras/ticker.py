@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import requests
@@ -27,7 +28,7 @@ def fetch_alpha_vantage(symbol, start_date, end_date):
     logger.info(f"Fetching data for {symbol} from Alpha Vantage")
     
     # Use your provided Alpha Vantage API key
-    api_key = "YOUR_ALPHA_VANTAGE_KEY"
+    api_key = os.environ.get("ALPHA_VANTAGE_API_KEY", "")
     
     try:
         # First try the TIME_SERIES_DAILY endpoint
@@ -88,7 +89,7 @@ def fetch_alpha_vantage_csv(symbol, start_date, end_date):
     logger.info(f"Fetching data for {symbol} from Alpha Vantage (CSV)")
     
     # Use your provided Alpha Vantage API key
-    api_key = "YOUR_ALPHA_VANTAGE_KEY"
+    api_key = os.environ.get("ALPHA_VANTAGE_API_KEY", "")
     
     try:
         # Using the TIME_SERIES_DAILY endpoint with CSV output
@@ -136,7 +137,7 @@ def fetch_alpha_vantage_intraday(symbol, start_date, end_date):
     logger.info(f"Fetching intraday data for {symbol} from Alpha Vantage")
     
     # Use your provided Alpha Vantage API key
-    api_key = "YOUR_ALPHA_VANTAGE_KEY"
+    api_key = os.environ.get("ALPHA_VANTAGE_API_KEY", "")
     
     try:
         # Using the TIME_SERIES_INTRADAY endpoint
@@ -199,7 +200,7 @@ def fetch_alpha_vantage_weekly(symbol, start_date, end_date):
     logger.info(f"Fetching weekly data for {symbol} from Alpha Vantage")
     
     # Use your provided Alpha Vantage API key
-    api_key = "YOUR_ALPHA_VANTAGE_KEY"
+    api_key = os.environ.get("ALPHA_VANTAGE_API_KEY", "")
     
     try:
         # Using the TIME_SERIES_WEEKLY endpoint
